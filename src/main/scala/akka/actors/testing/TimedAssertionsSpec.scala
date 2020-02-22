@@ -48,7 +48,7 @@ class TimedAssertionsSpec extends TestKit(ActorSystem("TimedAssertionsSpec", Con
       within(1.second) { //100.millis fails, as block took 500 millis to execute exceeding 100 millis
         val probe = TestProbe("slave")
         probe.send(workerActor, "work") // here probe acts as sender()
-        probe.expectMsg(WorkResult(42)) // timeout of 0.3 seconds overrides within(1.second)
+        probe.expectMsg(WorkResult(42)) // timeout of 0.6 seconds in application.conf file overrides within(1.second)
 
       }
     }

@@ -42,7 +42,7 @@ class SynchronousTestingSpec extends WordSpecLike with BeforeAndAfterAll {
       val counter = system.actorOf(Props[Counter].withDispatcher(CallingThreadDispatcher.Id))
       val probe = TestProbe()
       probe.send(counter, Read) // due to the fact that counter operates on calling thread dispatcher,
-      // after this line i.e line 35 probe has already received count reply becoz of dispatcher above
+      // after this line i.e line probe.send(counter, Read) probe has already received count reply becoz of dispatcher above
       probe.expectMsg(Duration.Zero, 0) //probe will have already received message 0, becoz line 35 has already happened,
       //so Duration.Zero will have no effect, i.e it should not take any timeout at all
     }
