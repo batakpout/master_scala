@@ -59,6 +59,7 @@ class SupervisionSpec extends TestKit(ActorSystem("SupervisorSpec"))
       watch(child)
 
       child ! "akka is nice"
+
       val terminatedRef = expectMsgType[Terminated]
       assert(terminatedRef.actor == child)
 
