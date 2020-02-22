@@ -66,9 +66,13 @@ class SupervisionSpec extends TestKit(ActorSystem("SupervisorSpec"))
 
     /**
      * When an actor escalates, it stops all its children and escalates error to its parent i.e user-guardian, and user-guardian restarts parents only not children.
+     * In this scenario error is thrown in supervisor actor becoz it got escalated to user guardian, for rest it is thrown in respective child actors.
+     * [ERROR] [02/22/2020 16:38:34.752] [SupervisorSpec-akka.actor.default-dispatcher-4] [akka://SupervisorSpec/user/supervisor] only string are allowed
+     * Mostly error will be thrown in actor which is about to get restarted mostly in the respective child actor
      */
 
     "escalates an error when it doesn't know what to do" in {
+      //
       val supervisor = system.actorOf(Props[Supervisor], "supervisor")
       supervisor ! Props[FussyWordCounter]
       val child = expectMsgType[ActorRef]
@@ -121,8 +125,8 @@ class SupervisionSpec extends TestKit(ActorSystem("SupervisorSpec"))
       }
 
       Thread.sleep(500)
-      //child2 ! Report
-      //expectMsg(0)
+      child2 ! Report
+      expectMsg(0)
 
     }
   }
