@@ -41,7 +41,8 @@ object StringOps extends App {
   println(rr)
 
   // raw-interpolator
-  println(raw"This is a \n newline")
+  //The raw interpolator “performs no escaping of literals within the string.”
+  println(raw"This is a \n newline") // here raw ignores escape character inside raw character in string
   val escaped = "This is a \n newline"
   println(raw"$escaped")
 }

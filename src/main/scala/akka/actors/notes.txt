@@ -1,0 +1,12 @@
+Reference: https://www.youtube.com/watch?v=6Oo-9Can3H8
+
+1.) In java 1 thread = 1 OS thread, thread creation is very expensive operation so,
+
+2.) we create a pool of threads with fixed no of threads, ExecutorService gives fixed no of threads.
+we execute task in this ExecutorService threads, has a blocking queue(thread safe), each thread picks task asynchronously to execute task,
+
+2.) its suggested to have only threads in thread pool equal to no of CPU cores, as for cpu intensive tasks each core can run only 1 thread at a time, means 4 cores will run only 4 threads at a time
+ (Runtime.getRuntime.availableProcessors)
+
+4.) if we are having an IO intensive operation (http calls, database calls) where thread will wait for IO intensive operation response from  OS then all 4 threads in above case if we set them to four will go to waiting state
+and there will be no thread left to fetch next task, so in this IO intensive operations scenario its better to have more threads in thread pool
