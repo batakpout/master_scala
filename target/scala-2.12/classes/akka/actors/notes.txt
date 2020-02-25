@@ -1,0 +1,28 @@
+Reference: https://www.youtube.com/watch?v=6Oo-9Can3H8
+
+ExecutorServices :
+
+1.) In java 1 thread = 1 OS thread, thread creation is very expensive operation so,
+
+2.) we create a pool of threads with fixed no of threads, ExecutorService gives fixed no of threads.
+we execute task in this ExecutorService threads, has a blocking queue(thread safe), each thread picks task asynchronously to execute task,
+
+2.) its suggested to have only threads in thread pool equal to no of CPU cores, as for cpu intensive tasks each core can run only 1 thread at a time, means 4 cores will run only 4 threads at a time
+ (Runtime.getRuntime.availableProcessors)
+
+4.) if we are having an IO intensive operation (http calls, database calls) where thread will wait for IO intensive operation response from  OS then all 4 threads in above case if we set them to four will go to waiting state
+and there will be no thread left to fetch next task, so in this IO intensive operations scenario its better to have more threads in thread pool
+
+What is an Actor?
+An actor is just an abstraction to connect asynchronous processes. Don't think of it as being in a thread doing stuff. All it does is pass messages back and forth.
+Typically, messages in one direction are specifications for tasks, e.g. QueryById(42). In the other direction, the message will be a Future of the result.
+All the actor does is pass the messages back and forth. Thus, actors should never do any real work, like IO; they merely decouple the systems by defining their interactions on messages.
+Let's look at a simple example. We have an HTTP server. It gets a request to look up an entity by id. It puts that id in a case class and sends it to an actor. That actor calls a database to
+look up that entity, which database returns a Future. The actor gives that Future back to the HTTP thread serving the web request which proceeds to evaluate it.
+ Only the HTTP side has the execution context in which the future will run. Neither the actor nor the database have any idea who will run the computation. Note that the exchange of messages just
+ described took milliseconds. No IO was performed. It is imperative that this exchange of messages is fast.
+So, from the HTTP side, all we see is that we put in an id and get a Future of a domain object. We no longer need to know how that gets done. We merely have to provide an execution context to do it.
+
+Actor is not equal to Thread. Actor does not hold thread forever.When Actor gets some task, Thread works for Actor to finish the task.Actor efficiently uses Java threads. You can create thousands of actors,
+get your work done, concurrently.When you use Actor, you no need to worry about locks, and state protection.
+Overall Akka Actor is tool to manage threads, by using it you can focus more on your business problem rather than solving threading problems.
