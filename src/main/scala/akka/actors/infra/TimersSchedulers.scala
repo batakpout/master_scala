@@ -1,6 +1,6 @@
 package akka.actors.infra
 
-import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Cancellable, Props, Timers}
+import akka.actor.{Actor, ActorLogging, ActorSystem, Cancellable, Props, Timers}
 
 import scala.concurrent.duration._
 
@@ -17,6 +17,7 @@ object TimersSchedulers extends App {
   val simpleActor = system.actorOf(Props[SimpleActor])
 
   system.log.info("Scheduling reminder for SimpleActor")
+
 
   //import system.dispatcher
   //implicit val dispatcher = system.dispatcher

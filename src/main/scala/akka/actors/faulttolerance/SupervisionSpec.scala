@@ -140,10 +140,9 @@ object SupervisionSpec {
   class Supervisor extends Actor {
 
     override val supervisorStrategy: SupervisorStrategy = OneForOneStrategy() {
-
+      case _: IllegalArgumentException => Stop
       case _: NullPointerException     => Restart
       case _: RuntimeException         => Resume
-      case _: IllegalArgumentException => Stop
       case _: Exception                => Escalate
 
     }
