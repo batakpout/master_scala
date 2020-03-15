@@ -74,6 +74,7 @@ object Router2 extends App {
 
   val system = ActorSystem("RoutersDemo")
   val master: ActorRef = system.actorOf(RoundRobinPool(5).props(Props[Slave]), "simpleMaster")
+  //  val master: ActorRef = system.actorOf(RoundRobinPool(5, supervisorStrategy = OneForOneStrategy() {}).props(Props[Slave]), "simpleMaster")
 
   for (i <- 1 to 10) {
     master ! s"[$i]-Hello Router"
