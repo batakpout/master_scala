@@ -91,3 +91,10 @@ class Counter(val count: Int = 0) {
 }
 
 // class parameters are NOT FIELDS
+
+object CounterTest extends App {
+
+  val x = new Counter(20)
+  val xNew = x.inc(2)
+  println(xNew.count)
+}
