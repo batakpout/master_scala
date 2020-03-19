@@ -22,14 +22,26 @@ object HOFsCurries extends App {
   // increment10 = ntb(plusOne, 10) = x => plusOne(plusOne....(x))
   // val y = increment10(1)
   def nTimesBetter(f: Int => Int, n: Int): (Int => Int) =
-    if (n <= 0) (x: Int) => x
-    else (x: Int) => nTimesBetter(f, n-1)(f(x))
+    if (n <= 0) {
+      println("nnn f" + n)
+      (x: Int) => {
+        println("last x" + x)
+        x
+      }
+    }
+    else (x: Int) => {
+      println("xxxx" + x)
+      println("nnn" + n)
+      println("f x==> " + f(x))
+      nTimesBetter(f, n-1)(f(x))
+    }
 
-  val plus10 = nTimesBetter(plusOne, 1)
+  val plus10 = nTimesBetter(plusOne, 1)(1)
+
   println("-----")
 
-  println(plus10(1))
-
+  println(plus10)
+  println("-------")
   // curried functions
   val superAdder: Int => (Int => Int) = (x: Int) => (y: Int) => x + y
   val add3 = superAdder(3)  // y => 3 + y

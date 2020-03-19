@@ -25,6 +25,12 @@ abstract class MyList[+A] {
   def ++[B >: A](list: MyList[B]): MyList[B]
 
   def sort(compare: (A, A) => Int): MyList[A]
+
+  def forEach(f: A => Unit):Unit
+
+  def zipWith[B, C](list: MyList[B], zip: (A, B) => C): MyList[C]
+
+  def fold[B](start: B)(f: (B, A) => B): B
 }
 
 trait MyPredicate[-T] {
@@ -74,6 +80,20 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
     }
     insert(h, t.sort(compare))
   }
+
+   def forEach(f: A => Unit): Unit = {
+    f(h)
+    tail.forEach(f)
+  }
+
+  def zipWith[B, C](list: MyList[B], zip: (A, B) => C): MyList[C] = {
+    if (list.isEmpty) throw new RuntimeException("Lists do not have the same length")
+    Cons(zip(head, list.head), tail.zipWith(list.tail, zip))
+  }
+
+  def fold[B](start: B)(f: (B, A) => B): B = {
+    t.fold(f(start, head))(f)
+  }
 }
 
 case object Empty extends MyList[Nothing] {
@@ -97,6 +117,13 @@ case object Empty extends MyList[Nothing] {
 
   def sort(compare: (Nothing, Nothing) => Int): MyList[Nothing] = Empty
 
+  def forEach(f: Nothing => Unit):Unit = ()
+
+  def zipWith[B, C](myList: MyList[B], zip: (Nothing, B) => C): MyList[C] = {
+    if (!myList.isEmpty) throw new RuntimeException("Lists do not have the same length")
+    Empty
+  }
+  def fold[B](start: B)(f: (B, Nothing) => B):B = start
 }
 
 
@@ -119,4 +146,16 @@ object TestingMyList extends App {
   println(result3)
   println(result4)
   println(result5)
+
+  myList.forEach((x:Int) => print(x + ","))
+
+  println()
+  val zipList1 = Cons[String]("Hello", Cons("Bro", Empty))
+  val zipList2 = Cons[Int](1, Cons(2, Empty))
+
+  val result6 = zipList2.zipWith(zipList1, (x: Int, y: String) => x + "--" + y)
+  println(result6)
+
+  val result7 = myList.fold(0)(_ + _)
+  println(result7)
 }
