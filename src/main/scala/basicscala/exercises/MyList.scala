@@ -23,6 +23,8 @@ abstract class MyList[+A] {
   def flatMap[B](f: A => MyList[B]): MyList[B]
 
   def ++[B >: A](list: MyList[B]): MyList[B]
+
+  def sort(compare: (A, A) => Int): MyList[A]
 }
 
 trait MyPredicate[-T] {
@@ -41,7 +43,7 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 
   def isEmpty: Boolean = false
 
-  def add[B >: A](element: B): MyList[B] = new Cons[B](h, this)
+  def add[B >: A](element: B): MyList[B] = new Cons[B](element, this)
 
   def printElements: String = {
     if (t.isEmpty) h + "" else h + " " + t.printElements
@@ -64,6 +66,14 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
     f(h) ++ t.flatMap(f)
   }
 
+  def sort(compare: (A, A) => Int): MyList[A] = {
+    def insert(h: A, sortedTail: MyList[A]): MyList[A] = {
+      if(sortedTail.isEmpty) Cons(h, Empty)
+      else if(compare(h, sortedTail.head) <= 0) Cons(h, sortedTail)
+      else Cons(sortedTail.head, insert(h, sortedTail.tail))
+    }
+    insert(h, t.sort(compare))
+  }
 }
 
 case object Empty extends MyList[Nothing] {
@@ -84,6 +94,9 @@ case object Empty extends MyList[Nothing] {
   def flatMap[B](f: Nothing => MyList[B]): MyList[B] = Empty
 
   def ++[B >: Nothing](list: MyList[B]): MyList[B] = list
+
+  def sort(compare: (Nothing, Nothing) => Int): MyList[Nothing] = Empty
+
 }
 
 
@@ -99,9 +112,11 @@ object TestingMyList extends App {
   val result2 = myList.filter(predicate1)
   val result3 = myList ++ myList
   val result4 = myList.flatMap(transformer2)
+  val result5 = Cons[Int](-2, Cons(7, Cons(1, Cons(5, Empty)))).sort((x:Int, y: Int) => x-y)
 
   println(result1)
   println(result2)
   println(result3)
   println(result4)
+  println(result5)
 }
