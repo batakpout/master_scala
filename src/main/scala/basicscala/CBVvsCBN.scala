@@ -25,3 +25,16 @@ object CBVvsCBN1 extends App {
   //printFirst(infinite(), 10)
   printFirst(10, infinite())
 }
+
+object ThisisFine extends App {
+  def f = 10
+
+  def m(x: Int) = x + 10
+
+  println(f)
+
+  def l(): Int = 1 + l()
+  def g(f: => Int) = f
+  println(g(10))
+
+}

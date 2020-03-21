@@ -159,3 +159,5 @@ object TestingMyList extends App {
   val result7 = myList.fold(0)(_ + _)
   println(result7)
 }
+
+

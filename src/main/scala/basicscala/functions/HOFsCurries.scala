@@ -23,20 +23,18 @@ object HOFsCurries extends App {
   // val y = increment10(1)
   def nTimesBetter(f: Int => Int, n: Int): (Int => Int) =
     if (n <= 0) {
-      println("nnn f" + n)
       (x: Int) => {
         println("last x" + x)
+
         x
       }
     }
     else (x: Int) => {
       println("xxxx" + x)
-      println("nnn" + n)
-      println("f x==> " + f(x))
       nTimesBetter(f, n-1)(f(x))
     }
 
-  val plus10 = nTimesBetter(plusOne, 1)(1)
+  val plus10 = nTimesBetter(plusOne, 2)(1)
 
   println("-----")
 
