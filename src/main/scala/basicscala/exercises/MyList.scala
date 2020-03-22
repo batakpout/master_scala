@@ -163,6 +163,9 @@ object TestingMyList extends App {
 
   val listOfIntegers = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
   val listOfStrings = Cons[String]("Hello", Cons("Mellow", Cons("Hey", Cons("Jimmy", Empty))))
+
+  val result8 = listOfIntegers.flatMap{x => listOfStrings.map{s => x + "-" + s}}
+  println(result8)
   val combinations = for {
     n <- listOfIntegers
     string <- listOfStrings
