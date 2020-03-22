@@ -46,7 +46,7 @@ object Sequences extends App {
   // vectors vs lists
 
   val maxRuns = 1000
-  val maxCapacity = 1000000
+  val maxCapacity = 10000000
 
   def getWriteTime(collection: Seq[Int]): Double = {
     val r = new Random
@@ -66,9 +66,9 @@ object Sequences extends App {
 
   // keeps reference to tail
   // updating an element in the middle takes long
-  println(getWriteTime(numbersList))
+  println("total avg. time for 1k list updates = " + getWriteTime(numbersList))
   // depth of the tree is small
   // needs to replace an entire 32-element chunk
-  println(getWriteTime(numbersVector))
+  println("total avg. time for 1k vector updates = " +getWriteTime(numbersVector))
 
 }

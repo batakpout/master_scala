@@ -1,6 +1,5 @@
 package basicscala.functions
 
-
 import java.util.Random
 
 object Options extends App {
@@ -14,12 +13,14 @@ object Options extends App {
   def unsafeMethod(): String = null
   //  val result = Some(null) // WRONG
   val result = Option(unsafeMethod()) // Some or None
+  val withNull = unsafeMethod()
+  println(withNull)
   println(result)
 
   // chained methods
   def backupMethod(): String = "A valid result"
   val chainedResult = Option(unsafeMethod()).orElse(Option(backupMethod()))
-
+  println("chained result =>" + chainedResult)
   // DESIGN unsafe APIs
   def betterUnsafeMethod(): Option[String] = None
   def betterBackupMethod(): Option[String] = Some("A valid result")
@@ -67,7 +68,7 @@ object Options extends App {
 
     return null
    */
-  val connection = host.flatMap(h => port.flatMap(p => Connection.apply(h, p)))
+  val connection = host.flatMap(h => port.flatMap(p => Connection(h, p)))
   /*
     if (c != null)
       return c.connect
@@ -95,7 +96,7 @@ object Options extends App {
     host <- config.get("host")
     port <- config.get("port")
     connection <- Connection(host, port)
-  } yield connection.connect
+  }    yield connection.connect
   forConnectionStatus.foreach(println)
 
 
