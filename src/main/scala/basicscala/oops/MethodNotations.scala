@@ -35,7 +35,7 @@ object MethodNotations extends App {
   // prefix notation
   val x = -1  // equivalent with 1.unary_-
   val y = 1.unary_-
-  // unary_ prefix only works with - + ~ !
+  // unary_ prefix only works with -  ~ !
 
   println(!mary)
   println(mary.unary_!)

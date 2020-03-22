@@ -16,6 +16,11 @@ object WhatsAFunction extends App {
     override def apply(string: String): Int = string.toInt
   }
 
+  val stringToIntConverter1 = new ((String) => Int) {
+    override def apply(string: String): Int = string.toInt
+  }
+
+
   println(stringToIntConverter("3") + 4)
 
   val adder: ((Int, Int) => Int) = new Function2[Int, Int, Int] {
@@ -44,6 +49,7 @@ object WhatsAFunction extends App {
     override def apply(x: Int): Function1[Int, Int] = new Function1[Int, Int] {
       override def apply(y: Int): Int = x + y
     }
+
   }
 
   val adder3 = superAdder(3)

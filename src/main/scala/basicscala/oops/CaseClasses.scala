@@ -9,7 +9,8 @@ object CaseClasses extends App {
     equals, hashCode, toString
    */
 
-  case class Person(name: String, age: Int)
+  trait Psycho
+  case class Person(name: String, age: Int) extends Psycho
 
   // 1. class parameters are fields
   val jim = Person("Jim", 34)
@@ -29,7 +30,8 @@ object CaseClasses extends App {
 
   // 5. CCs have companion objects
   val thePerson = Person
-
+  println("doubt  " + thePerson)
+  println("doubt  " + thePerson)
   val mary = Person("Mary", 23)
 
   // 6. CCs are serializable

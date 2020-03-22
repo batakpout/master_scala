@@ -26,6 +26,8 @@ object Objects extends App {
 
   val person1 = Person
   val person2 = Person
+  println(person1)
+  println(person2)
   println(person1 == person2)
 
   val bobbie = Person(mary, john)
@@ -34,5 +36,7 @@ object Objects extends App {
 
 
   val k = 6.67e-11
+  println(k)
+  println(new scala.util.Random().shuffle("Arnold".toList).mkString(","))
 
 }

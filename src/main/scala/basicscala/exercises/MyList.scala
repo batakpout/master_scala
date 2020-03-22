@@ -158,6 +158,16 @@ object TestingMyList extends App {
 
   val result7 = myList.fold(0)(_ + _)
   println(result7)
+
+  // for comprehensions
+
+  val listOfIntegers = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
+  val listOfStrings = Cons[String]("Hello", Cons("Mellow", Cons("Hey", Cons("Jimmy", Empty))))
+  val combinations = for {
+    n <- listOfIntegers
+    string <- listOfStrings
+  } yield n + "-" + string
+  println(combinations)
 }
 
 

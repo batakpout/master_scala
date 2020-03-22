@@ -4,7 +4,7 @@ object Inheritance extends App {
 
   // single class inheritance
   sealed class Animal {
-    def creatureType = "wild"
+    def creatureType = "wild" // parameterless methods can be overridden by vals in sub classes.
     protected def eat = println("nomnom")
   }
 
