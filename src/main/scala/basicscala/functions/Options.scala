@@ -11,6 +11,7 @@ object Options extends App {
 
   // WORK with unsafe APIs
   def unsafeMethod(): String = null
+
   //  val result = Some(null) // WRONG
   val result = Option(unsafeMethod()) // Some or None
   val withNull = unsafeMethod()
@@ -19,17 +20,21 @@ object Options extends App {
 
   // chained methods
   def backupMethod(): String = "A valid result"
+
   val chainedResult = Option(unsafeMethod()).orElse(Option(backupMethod()))
   println("chained result =>" + chainedResult)
+
   // DESIGN unsafe APIs
   def betterUnsafeMethod(): Option[String] = None
+
   def betterBackupMethod(): Option[String] = Some("A valid result")
+
   val betterChainedResult = betterUnsafeMethod() orElse betterBackupMethod()
 
 
   // functions on Options
   println(myFirstOption.isEmpty)
-  println(myFirstOption.get)  // USAFE - DO NOT USE THIS
+  println(myFirstOption.get) // USAFE - DO NOT USE THIS
 
   // map, flatMap, filter
   println(myFirstOption.map(_ * 2))
@@ -50,6 +55,7 @@ object Options extends App {
   class Connection {
     def connect = "Connected" // connect to some server
   }
+
   object Connection {
     val random = new Random(System.nanoTime())
 
@@ -96,8 +102,23 @@ object Options extends App {
     host <- config.get("host")
     port <- config.get("port")
     connection <- Connection(host, port)
-  }    yield connection.connect
+  } yield connection.connect
   forConnectionStatus.foreach(println)
 
+
+}
+
+/**
+ *  one case class cannot extend other case class, it can extend normal classes and traits
+ * one case object cannot extend other case objects, it can extend normal classes and traits
+ * one normal object cannot extends other objects but can extend normal classes and traits...
+ */
+
+class X(o :Int)
+case class Y(o:Int) extends X(o)
+
+case object sss extends X(2)
+case object ll extends X(1)
+object jsj extends App {
 
 }
