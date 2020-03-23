@@ -105,3 +105,14 @@ object HOFsCurries extends App {
   println(composed(4))
   println(ordered(4))
 }
+
+object HOFCurries2 extends App {
+  def m(x: Int) (s: String) = (1 to x).map{_ => s}.toList
+  val f1: String => List[String] = m(10)
+  val f12 = m(10) _
+
+  def g(x: Int) (s: => String) = (1 to x).map{_ => s}.toList
+
+  val g1: (=> String) => List[String] = g(10)
+  val g2 = g(10) _
+}
