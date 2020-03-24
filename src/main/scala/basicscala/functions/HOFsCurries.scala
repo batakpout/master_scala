@@ -113,6 +113,6 @@ object HOFCurries2 extends App {
 
   def g(x: Int) (s: => String) = (1 to x).map{_ => s}.toList
 
-  val g1: (=> String) => List[String] = g(10)
+  val g1:  (=> String) => List[String] = g(10)
   val g2 = g(10) _
 }
