@@ -18,14 +18,14 @@ class Directory(override val parentPath: String, override val name: String, val 
     new Directory(parentPath, name, contents :+ newEntry)
   }
 
-  def findEntry(entryName: String): DirEntry = {
-    def findEntryHelper(name: String, contentList: List[DirEntry]): DirEntry = {
+  def findEntry(name: String): DirEntry = {
+    def findEntryHelper(contentList: List[DirEntry]): DirEntry = {
       if (contentList.isEmpty) null
       else if (contentList.head.name.equals(name)) contentList.head
-      else findEntryHelper(name, contentList.tail)
+      else findEntryHelper(contentList.tail)
     }
 
-    findEntryHelper(entryName, contents)
+    findEntryHelper(contents)
   }
 
   def replaceEntry(entryName: String, newEntry: DirEntry): Directory = {
@@ -38,6 +38,9 @@ class Directory(override val parentPath: String, override val name: String, val 
 
   override def asFile: File = throw new FileSystemException("A directory cannot be converted to a file")
 
+  def isRoot:Boolean = parentPath.isEmpty
+  def isDirectory: Boolean = true
+  def isFile: Boolean = false
 }
 
 object Directory {
