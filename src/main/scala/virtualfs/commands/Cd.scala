@@ -53,8 +53,29 @@ class Cd(dir: String) extends Command {
         else findEntryHelper(nextDir.asDirectory, path.tail)
       }
     }
+
+    @tailrec
+    def collapseRelativePath(path: List[String], result: List[String]): List[String] = {
+      if(path.isEmpty) result
+      else if(".".equals(path.head)) collapseRelativePath(path.tail, result)
+      else if("..".equals(path.head)) {
+          if(result.isEmpty) null
+          else collapseRelativePath(path.tail, result.tail)
+      } else collapseRelativePath(path.tail, result :+ path.head)
+    }
     val tokens: List[String] = path.substring(1).split(Directory.SEPARATOR).toList
+    //val newTokens: List[String] = collapseRelativePath(tokens, Nil)
+    //if(newTokens == null)  null
+    //else
     findEntryHelper(root, tokens)
   }
+
+  /*
+   * Relative path inputs:
+   * [a, .] => [a]
+   * [a,b,.,.] => [a,b]
+   * [a,..] => []
+   * [a,b,..] => [a]
+   */
 
 }

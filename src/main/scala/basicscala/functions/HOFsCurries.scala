@@ -104,6 +104,24 @@ object HOFsCurries extends App {
 
   println(composed(4))
   println(ordered(4))
+
+  def rightThenLeft(left: Int => Int, right: Int => Int): Int => Int = {
+    x => left(right(x))
+  }
+
+  val f: Int => Int = _ + 10
+  val g: Int => Int = _ / 2
+
+  val gThenf = f compose g // means f(g(x))
+  val fTheng = f andThen g // means f then g
+  println("fTheng: " + fTheng(2))
+  println("gThenf: " + gThenf(2))
+
+  //same output...order reversal
+  val fTheng1 = g compose  f // means f(g(x))
+  val gThenf1 = g andThen  f // means f then g
+  println("fTheng1: " + fTheng1(2))
+  println("gThenf1: " + gThenf1(2))
 }
 
 object HOFCurries2 extends App {

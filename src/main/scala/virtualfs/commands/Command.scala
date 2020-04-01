@@ -35,7 +35,6 @@ object Command {
     } else if(CD.equals(tokens(0))) {
       if (tokens.length < 2) incompleteCommand(CD)
       else new Cd(tokens(1))
-    }
-    else new UnknownCommand
+    } else new UnknownCommand
   }
 }

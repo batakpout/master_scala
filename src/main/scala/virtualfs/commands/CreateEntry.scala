@@ -4,6 +4,7 @@ import virtualfs.files.{DirEntry, Directory}
 import virtualfs.filesystem.State
 
 abstract class CreateEntry(name: String) extends Command {
+
   override def apply(state: State): State = {
     val wd = state.wd
     if (wd.hasEntry(name)) state.setMessage(s"Entry $name already exists...")
