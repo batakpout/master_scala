@@ -10,7 +10,11 @@ abstract class MyList[+A] {
 
   def isEmpty: Boolean
 
-  def add[B >: A](element: B): MyList[B]
+  //0(1)
+  def prepend[B >: A](element: B): MyList[B]
+
+  //0(n)
+  def append[B >: A](item: B): MyList[B]
 
   def printElements: String
 
@@ -49,7 +53,10 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 
   def isEmpty: Boolean = false
 
-  def add[B >: A](element: B): MyList[B] = new Cons[B](element, this)
+  //Cons(1, Cons(2, Cons(3, Cons(4, Nil))))
+  override def append[B >: A](item: B): MyList[B] = Cons(head, tail.append(item))
+
+  def prepend[B >: A](element: B): MyList[B] = new Cons[B](element, this)
 
   def printElements: String = {
     if (t.isEmpty) h + "" else h + " " + t.printElements
@@ -105,7 +112,9 @@ case object Empty extends MyList[Nothing] {
 
   def printElements: String = ""
 
-  def add[B >: Nothing](element: B): MyList[B] = Cons(element, Empty)
+  def prepend[B >: Nothing](element: B): MyList[B] = Cons(element, Empty)
+
+  def append[B >: Nothing](element: B): MyList[B] = Cons(element, Empty)
 
   def filter(f: Nothing => Boolean): MyList[Nothing] = Empty
 
