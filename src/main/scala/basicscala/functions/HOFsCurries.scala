@@ -13,7 +13,7 @@ object HOFsCurries extends App {
   // nTimes(f, n, x) = f(f(...f(x))) = nTimes(f, n-1, f(x))
   def nTimes(f: Int => Int, n: Int, x: Int): Int =
     if (n <= 0) x
-    else nTimes(f, n-1, f(x))
+    else nTimes(f, n - 1, f(x))
 
   val plusOne = (x: Int) => x + 1
   println(nTimes(plusOne, 10, 1))
@@ -31,7 +31,7 @@ object HOFsCurries extends App {
     }
     else (x: Int) => {
       println("xxxx" + x)
-      nTimesBetter(f, n-1)(f(x))
+      nTimesBetter(f, n - 1)(f(x))
     }
 
   val plus10 = nTimesBetter(plusOne, 2)(1)
@@ -42,7 +42,7 @@ object HOFsCurries extends App {
   println("-------")
   // curried functions
   val superAdder: Int => (Int => Int) = (x: Int) => (y: Int) => x + y
-  val add3 = superAdder(3)  // y => 3 + y
+  val add3 = superAdder(3) // y => 3 + y
   println(add3(10))
   println(superAdder(3)(10))
 
@@ -83,18 +83,20 @@ object HOFsCurries extends App {
     (x, y) => f(x)(y)
 
   // FunctionX
-  def compose[A,B,T](f: A => B, g: T => A): T => B =
+  def compose[A, B, T](f: A => B, g: T => A): T => B =
     x => f(g(x))
 
-  def andThen[A,B,C](f: A => B, g: B => C): A => C =
+  def andThen[A, B, C](f: A => B, g: B => C): A => C =
     x => g(f(x))
 
   def superAdder2: (Int => Int => Int) = toCurry(_ + _)
+
   def add4 = superAdder2(4)
+
   println(add4(17))
 
   val simpleAdder = fromCurry(superAdder)
-  println(simpleAdder(4,17))
+  println(simpleAdder(4, 17))
 
   val add2 = (x: Int) => x + 2
   val times3 = (x: Int) => x * 3
@@ -118,19 +120,32 @@ object HOFsCurries extends App {
   println("gThenf: " + gThenf(2))
 
   //same output...order reversal
-  val fTheng1 = g compose  f // means f(g(x))
-  val gThenf1 = g andThen  f // means f then g
+  val fTheng1 = g compose f // means f(g(x))
+  val gThenf1 = g andThen f // means f then g
   println("fTheng1: " + fTheng1(2))
   println("gThenf1: " + gThenf1(2))
 }
 
 object HOFCurries2 extends App {
-  def m(x: Int) (s: String) = (1 to x).map{_ => s}.toList
+  def m(x: Int)(s: String) = (1 to x).map { _ => s }.toList
+
   val f1: String => List[String] = m(10)
   val f12 = m(10) _
 
-  def g(x: Int) (s: => String) = (1 to x).map{_ => s}.toList
+  def g(x: Int)(s: => String) = (1 to x).map { _ => s }.toList
 
-  val g1:  (=> String) => List[String] = g(10)
+  val g1: (=> String) => List[String] = g(10)
   val g2 = g(10) _
+}
+
+object ComposeTest extends App {
+  val f: String => String = _ + "200"
+  val g: Int => String = _.toString
+
+  val res = f.compose(g)
+  println(res(100))
+
+  val res2 = g.andThen(f)
+  println(res2(100))
+
 }
