@@ -20,3 +20,17 @@ applications on the JVM...
 
 --> tell passes implicitly sender, also forward passes ActorContext implicitly
 --> using Identify(1) on actorSelection and matching ActorIdentity(1, Some(actorRef)) we can get actorRef from it...
+
+--> TestActorRef(synchronous testing), TestProbe() for asynchronous testing
+
+--> Concurrency is about dealing with a lot of things at the same time.
+--> Parallelism is about doing a lot of things at the same time.
+
+--> Concurreny is the property of the program, parallel execution is property of machine
+--> one coffee machine and two queues(concurrency), two coffee machines and two queues (parallelism)
+--> Two or more tasks are considered concurrent, if the order in which they get executed in time is not pre-determined i.e it introduces non-determinism
+--> The concept of progressing multiple tasks at the same time is called Multitasking.
+-- > When we progress tasks concurrently we say they progress in an asynchronous manner.
+     Asynchronous code execution is therefore the way we handle concurrency in programming.
+
+--> Concurrency is about working smarter. Parallelism is a way of throwing more resources at the problem.
