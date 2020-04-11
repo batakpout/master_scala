@@ -43,6 +43,7 @@ object TimeSchedulers2 extends App {
    * if the time window expires, the actor will stop itself
    * if u second another message before this 1 second window, the time window is reset to 1 second again
    **/
+
   import scala.concurrent.ExecutionContext.Implicits.global
 
   class SelfClosingActor extends Actor with ActorLogging {
@@ -88,12 +89,15 @@ object TimeSchedulers2 extends App {
 object TimersSchedulers3 extends App {
 
   /**
-   *Timer
+   * Timer
    **/
 
   case object TimerKey
+
   case object Stop
+
   case object Start
+
   case object Reminder
 
   class TimeBasedHeartbeatActor extends Actor with ActorLogging with Timers {
@@ -101,25 +105,47 @@ object TimersSchedulers3 extends App {
     timers.startSingleTimer(TimerKey, Start, 500.millis)
 
     override def receive: Receive = {
-      case Start => {
+      case Start    => {
         log.info("Bootstrapping")
         timers.startPeriodicTimer(TimerKey, Reminder, 1.second)
       }
       case Reminder => {
         log.info("I'm alive")
       }
-      case Stop => {
+      case Stop     => {
         log.warning("Stopping")
         timers.cancel(TimerKey)
         context.stop(self)
       }
     }
   }
+
   val system = ActorSystem("SchedulersTimersDemo")
 
   val timerHeartbeatActor = system.actorOf(Props[TimeBasedHeartbeatActor], "timerActor")
   system.scheduler.scheduleOnce(10.seconds) {
     timerHeartbeatActor ! Stop
   }(system.dispatcher)
+
+}
+
+object TimersTest extends App {
+
+  class ActorA extends Actor with Timers {
+
+    timers.startPeriodicTimer(
+      "myptimer",
+      "Hi",
+      2.seconds
+    )
+
+    def receive: Receive = {
+      case "Hi" => println("timer called")
+      case _    => println("_____")
+    }
+  }
+
+  val system = ActorSystem("as")
+  val actorRef = system.actorOf(Props[ActorA], "actora")
 
 }

@@ -3,3 +3,20 @@
 2.) https://blog.knoldus.com/performance-benchmarking-akka-actors-vs-java-threads/
 
 https://www.interviewcake.com/article/java/big-o-notation-time-and-space-complexity
+
+Definition:
+Akka is a toolkit and runtime for building highly concurrent, distributed and fault-tolerant message-driven
+applications on the JVM...
+
+---> The actor is the fundamental unit of computation embodying processing, storage and communication....
+      so inside akka, processing(represented as behaviour), storage (as state)
+      so akka is implementation of actor model
+
+-> Each actor has a mailbox and dispatcher, actorRef enqueues in coming messages into mailbox, then
+   the dispatcher schedules message processing. Message delivery and processing are two separate activities,
+   and most probably happens in different threads.
+
+   --> Grafana for monitoring actors
+
+--> tell passes implicitly sender, also forward passes ActorContext implicitly
+--> using Identify(1) on actorSelection and matching ActorIdentity(1, Some(actorRef)) we can get actorRef from it...
