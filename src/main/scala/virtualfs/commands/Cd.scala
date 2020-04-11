@@ -40,6 +40,7 @@ class Cd(dir: String) extends Command {
 
     @tailrec
     def findEntryHelper(currentDirectory: Directory, path: List[String]):DirEntry = {
+      println(path + "ffff")
       if(path.isEmpty || path.head.isEmpty) {
         currentDirectory
       }
@@ -67,6 +68,7 @@ class Cd(dir: String) extends Command {
     //val newTokens: List[String] = collapseRelativePath(tokens, Nil)
     //if(newTokens == null)  null
     //else
+    println(tokens + "dd")
     findEntryHelper(root, tokens)
   }
 
