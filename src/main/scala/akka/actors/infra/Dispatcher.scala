@@ -106,3 +106,10 @@ object Dispatcher3 extends App {
     nonblockingActor ! message
   }
 }
+
+object jj extends App {
+  var a  = 0
+  for(a <- 1 until 5) {
+    println(a)
+  }
+}

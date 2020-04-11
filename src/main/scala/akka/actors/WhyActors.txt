@@ -34,3 +34,5 @@ applications on the JVM...
      Asynchronous code execution is therefore the way we handle concurrency in programming.
 
 --> Concurrency is about working smarter. Parallelism is a way of throwing more resources at the problem.
+
+--> use pipeTo with ask to redirect future to the actor
