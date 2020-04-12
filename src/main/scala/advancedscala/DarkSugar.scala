@@ -9,6 +9,8 @@ object DarkSugars extends App {
 
   val description = singleArgMethod {
     // write some complex code
+    val x =10
+    println(x)
     42
   }
 
@@ -60,11 +62,12 @@ object DarkSugars extends App {
     def -->:(value: T): MyStream[T] = this // actual implementation here
   }
 
-  val myStream = 1 -->: 2 -->: 3 -->: new MyStream[Int]
+  val myStream = 1 -->: 2 -->: 3 -->: new MyStream[Int]()
 
   // syntax sugar #4: multi-word method naming
 
   class TeenGirl(name: String) {
+    var `arnold schrwarn enenjggger`: String = "i slayed predator long back"
     def `and then said`(gossip: String) = println(s"$name said $gossip")
   }
 
