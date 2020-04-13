@@ -170,11 +170,15 @@ object TestingMyList extends App {
 
   // for comprehensions
 
-  val listOfIntegers = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
+  val listOfIntegers: MyList[Int] = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
   val listOfStrings = Cons[String]("Hello", Cons("Mellow", Cons("Hey", Cons("Jimmy", Empty))))
 
-  val result8 = listOfIntegers.flatMap{x => listOfStrings.map{s => x + "-" + s}}
+  val result8 = listOfIntegers.map[MyList[String]]{x => listOfStrings.map[String]{s => x + "-" + s}}
+  val result9 = listOfIntegers.flatMap[String]{x => listOfStrings.map[String]{s => x + "-" + s}}
+
   println(result8)
+  println(result9)
+  println("*" * 30)
   val combinations = for {
     n <- listOfIntegers
     string <- listOfStrings

@@ -76,7 +76,8 @@ object DarkSugars extends App {
 
   // syntax sugar #5: infix types
   class Composite[A, B]
-  val composite: Int Composite String = ???
+  val composite1: Int Composite String = ???
+  val composite: Composite[Int, String] = ???
 
   class -->[A, B]
   val towards: Int --> String = ???
