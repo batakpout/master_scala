@@ -99,3 +99,14 @@ object AllThePatterns extends App {
   // JVM trick question
 
 }
+
+object PatternTest extends App {
+  case class Male(name: String)
+  case class Female(name: String)
+  val m = Male("somename")
+  m match {
+    case Male(s) => println(s"$s")
+    //cte case Female(s) => println(s"$s")
+    case _ => println("None")
+  }
+}
