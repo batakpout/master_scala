@@ -94,13 +94,41 @@ object AdvancedPatternMatching1 extends App {
   val myList: MyList[Int] = Cons(1, Cons(2, Cons(3, Cons(4, Empty))))
 
   object MyList {
-    def unapply[A](myList: MyList[A]): Option[MyList[A]] = Some(Empty)
-  }
-  println {
-    myList match {
-      case MyList(1, 2, _*) => s"my big list"
+    def unapplySeq[A](myList: MyList[A]): Option[Seq[A]] = {
+      if (myList == Empty) Some(Seq()) else {
+        unapplySeq(myList.tail).map(x => myList.head +: x)
+      }
     }
   }
+
+  println {
+    myList match {
+      case MyList(1, 2, _*) => s"my big list...."
+    }
+  }
+  // custom return types for unapply
+  // isEmpty: Boolean, get: something.
+  abstract class Wrapper[T] {
+    def isEmpty: Boolean
+
+    def get: T
+  }
+
+  object PersonWrapper {
+
+    def unapply(arg: Person): Wrapper[String] = new Wrapper[String] {
+      def isEmpty = false
+
+      def get: String = arg.name
+    }
+  }
+
+  println {
+    bob match {
+      case PersonWrapper(n) => s"name is $n"
+    }
+  }
+
 }
 
 object PF extends App {
