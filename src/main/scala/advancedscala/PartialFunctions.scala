@@ -116,10 +116,18 @@ object AlvinAlexanderExample2 extends App {
     //def isDefinedAt(x: Int): Boolean = x != 0 //doesn't work here
   }
 
+  val isDefinedTest:PartialFunction[Int, String] = {
+    case 1 => "one"
+    case 2 => "two"
+  }
+
   //println(divide2(0))directly calls apply method, so java.lang.ArithmeticException: / by zero
 
   //explicit mention
-  if (divide2.isDefinedAt(0)) println(divide2(0)) // still error, coz isDefinedAt not mentioned inside case, mean no guard defined
+  println(isDefinedTest.isDefinedAt(0))
+  println("--------")
+  println(divide2.isDefinedAt(0))
+  if (divide2.isDefinedAt(0)) println(divide2(0)) // still error, coz isDefinedAt passes for d:Int as 0 is an Int
 }
 
 object AlvinAlexanderExample3 extends App {
