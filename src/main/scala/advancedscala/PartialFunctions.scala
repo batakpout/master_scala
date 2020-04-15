@@ -2,7 +2,12 @@ package advancedscala
 /**
  * Check Partial Functions from scala.PartialFunction
  **/
-
+/**
+ * trait PartialFunction[-A, +B] extends (A => B) {
+ *  def apply(a: A): B
+ *  def isDefinedAt(a: A): Boolean
+ * }
+ */
 object PartialFunctions extends App {
 
   val aFunction = (x: Int) => x + 1 // Function1[Int, Int] === Int => Int
