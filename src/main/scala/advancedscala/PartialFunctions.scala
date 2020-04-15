@@ -42,7 +42,7 @@ object PartialFunctions extends App {
   val pfChain = aPartialFunction.orElse[Int, Int] {
     case 45 => 67
   }
-
+   println("-------")
   println(pfChain(2))
   println(pfChain(45))
 
@@ -88,7 +88,8 @@ object PartialFunctions extends App {
     case "call mom" => "Unable to find your phone without your credit card"
   }
 
-  scala.io.Source.stdin.getLines().map(chatbot).foreach(println)
+  val res: Iterator[String] = scala.io.Source.stdin.getLines().map(chatbot)
+  res.foreach(println)
 
 }
 
