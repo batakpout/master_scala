@@ -81,3 +81,7 @@ LocalTime.now match {
 }
 
 
+val a = 4
+val b = 25
+val c= 100
+scala.util.Try(s"$c/$a=$b")
