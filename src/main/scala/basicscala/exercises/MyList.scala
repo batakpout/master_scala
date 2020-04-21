@@ -30,7 +30,7 @@ abstract class MyList[+A] {
 
   def sort(compare: (A, A) => Int): MyList[A]
 
-  def forEach(f: A => Unit):Unit
+  def forEach(f: A => Unit): Unit
 
   def zipWith[B, C](list: MyList[B], zip: (A, B) => C): MyList[C]
 
@@ -81,14 +81,15 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 
   def sort(compare: (A, A) => Int): MyList[A] = {
     def insert(h: A, sortedTail: MyList[A]): MyList[A] = {
-      if(sortedTail.isEmpty) Cons(h, Empty)
-      else if(compare(h, sortedTail.head) <= 0) Cons(h, sortedTail)
+      if (sortedTail.isEmpty) Cons(h, Empty)
+      else if (compare(h, sortedTail.head) <= 0) Cons(h, sortedTail)
       else Cons(sortedTail.head, insert(h, sortedTail.tail))
     }
+
     insert(h, t.sort(compare))
   }
 
-   def forEach(f: A => Unit): Unit = {
+  def forEach(f: A => Unit): Unit = {
     f(h)
     tail.forEach(f)
   }
@@ -100,6 +101,15 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 
   def fold[B](start: B)(f: (B, A) => B): B = {
     t.fold(f(start, head))(f)
+  }
+
+  def take(n: Int): MyList[A] = {
+    def loop(oldList:MyList[A], newList: MyList[A], index: Int): MyList[A] = {
+      if (index == 0) newList
+      else loop(oldList.tail, newList.prepend(head), index - 1)
+    }
+
+    loop(tail.append(head), Empty, n)
   }
 }
 
@@ -118,7 +128,7 @@ case object Empty extends MyList[Nothing] {
 
   def filter(f: Nothing => Boolean): MyList[Nothing] = Empty
 
-  def map[B](f: Nothing =>  B): MyList[B] = Empty
+  def map[B](f: Nothing => B): MyList[B] = Empty
 
   def flatMap[B](f: Nothing => MyList[B]): MyList[B] = Empty
 
@@ -126,13 +136,14 @@ case object Empty extends MyList[Nothing] {
 
   def sort(compare: (Nothing, Nothing) => Int): MyList[Nothing] = Empty
 
-  def forEach(f: Nothing => Unit):Unit = ()
+  def forEach(f: Nothing => Unit): Unit = ()
 
   def zipWith[B, C](myList: MyList[B], zip: (Nothing, B) => C): MyList[C] = {
     if (!myList.isEmpty) throw new RuntimeException("Lists do not have the same length")
     Empty
   }
-  def fold[B](start: B)(f: (B, Nothing) => B):B = start
+
+  def fold[B](start: B)(f: (B, Nothing) => B): B = start
 }
 
 
@@ -148,7 +159,7 @@ object TestingMyList extends App {
   val result2 = myList.filter(predicate1)
   val result3 = myList ++ myList
   val result4 = myList.flatMap(transformer2)
-  val result5 = Cons[Int](-2, Cons(7, Cons(1, Cons(5, Empty)))).sort((x:Int, y: Int) => x-y)
+  val result5 = Cons[Int](-2, Cons(7, Cons(1, Cons(5, Empty)))).sort((x: Int, y: Int) => x - y)
 
   println(result1)
   println(result2)
@@ -156,7 +167,7 @@ object TestingMyList extends App {
   println(result4)
   println(result5)
 
-  myList.forEach((x:Int) => print(x + ","))
+  myList.forEach((x: Int) => print(x + ","))
 
   println()
   val zipList1 = Cons[String]("Hello", Cons("Bro", Empty))
@@ -170,11 +181,12 @@ object TestingMyList extends App {
 
   // for comprehensions
 
-  val listOfIntegers: MyList[Int] = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
+  val listOfIntegers: Cons[Int] = Cons[Int](1, Cons(2, Cons(3, Cons(4, Empty))))
+  println(s"take test: ${listOfIntegers.take(2)}")
   val listOfStrings = Cons[String]("Hello", Cons("Mellow", Cons("Hey", Cons("Jimmy", Empty))))
 
-  val result8 = listOfIntegers.map[MyList[String]]{x => listOfStrings.map[String]{s => x + "-" + s}}
-  val result9 = listOfIntegers.flatMap[String]{x => listOfStrings.map[String]{s => x + "-" + s}}
+  val result8 = listOfIntegers.map[MyList[String]] { x => listOfStrings.map[String] { s => x + "-" + s } }
+  val result9 = listOfIntegers.flatMap[String] { x => listOfStrings.map[String] { s => x + "-" + s } }
 
   println(result8)
   println(result9)
