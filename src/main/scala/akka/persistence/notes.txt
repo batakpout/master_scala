@@ -14,3 +14,19 @@ Cons:
     -> potential performance issue with long-lived entities because stream of events can be extremely large. (sort with Snapshotting)
     -> data model subject to changes with time as our application evolves (sort out through schema evolution techniques)
 
+Persistent actors:
+-> can do everything a normal actor can do.
+-> Extra capabilities:
+  -> have a persistenceID, which identifies this persistent actor in relationship to the persistent store.(best practise, unqiue for every persistent actor)
+  -> persistent actors can persist/send event to a long-term store/persistent store.
+  -> recover state by replaying events from the store.
+  So, when a persistent actor handles a command:
+   . it can (asynchronously) persist event to the store
+   . after the event is persisted, it changes its internal state.
+
+   when a persistent actor starts/restarts
+   . it replays all events with its persistence ID in same order that we have sent so the actor can
+     recover its state as if nothing had happened.
+   . If an actor receives messages during recovery phase, they are simply stashed until the recovery has completed.
+
+
