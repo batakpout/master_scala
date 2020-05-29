@@ -1,0 +1,32 @@
+EventSourcing:
+ --> Instead of storing current state, we store events. It gives a much richer description about state. i.e for an online store instead of traditional RDBMS storage
+ that stores a single record with status as refunded, we can store all the events starting from order to refunded to give us a better description.
+ --> Instead of storing the current state, we store events.
+ --> We can always recreate the current state by replaying the events.
+ Pros:
+   -> high performance: event are append only
+   -> avoids relational stores and ORM entirely
+   -> full trace of every state (through events we can go to any state)
+   -> fits the akka actor model perfectly.
+
+Cons:
+    -> querying a state is potentially expensive as we have to replay events (will be sorted out with akka persistence query)
+    -> potential performance issue with long-lived entities because stream of events can be extremely large. (sort with Snapshotting)
+    -> data model subject to changes with time as our application evolves (sort out through schema evolution techniques)
+
+Persistent actors:
+-> can do everything a normal actor can do.
+-> Extra capabilities:
+  -> have a persistenceID, which identifies this persistent actor in relationship to the persistent store.(best practise, unqiue for every persistent actor)
+  -> persistent actors can persist/send event to a long-term store/persistent store.
+  -> recover state by replaying events from the store.
+  So, when a persistent actor handles a command:
+   . it can (asynchronously) persist event to the store
+   . after the event is persisted, it changes its internal state.
+
+   when a persistent actor starts/restarts
+   . it replays all events with its persistence ID in same order that we have sent so the actor can
+     recover its state as if nothing had happened.
+   . If an actor receives messages during recovery phase, they are simply stashed until the recovery has completed.
+
+

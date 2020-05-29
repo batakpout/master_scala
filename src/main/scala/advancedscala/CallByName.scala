@@ -25,7 +25,7 @@ object CallByName1 extends App {
   }
 
   // hold the door
-  val anAttempt = Try(throw new NullPointerException
+  val anAttempt = Try(throw new NullPointerException)
     import scala.concurrent.ExecutionContext.Implicits.global
   val f = Future {
     //hard computation

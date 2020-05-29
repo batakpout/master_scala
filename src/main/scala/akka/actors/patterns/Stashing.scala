@@ -43,12 +43,12 @@ object Stashing1 extends App {
 
     def closed: Receive = {
       case Open    =>
-        log.info("Opening resource")
+        log.info("Closed State: Opening resource")
         // step 3 - unstashAll when you switch the message handler
         unstashAll()
         context.become(open)
       case message =>
-        log.info(s"Stashing $message because I can't handle it in the closed state")
+        log.info(s"Closed State: Stashing $message because I can't handle it in the closed state")
         // step 2 - stash away what you can't handle
         stash()
     }
@@ -56,16 +56,16 @@ object Stashing1 extends App {
     def open: Receive = {
       case Read        =>
         // do some actual computation
-        log.info(s"I have read $innerData")
+        log.info(s"Open State: I have read $innerData")
       case Write(data) =>
-        log.info(s"I am writing $data")
+        log.info(s"Open State: I am writing $data")
         innerData = data
       case Close       =>
-        log.info("Closing resource")
+        log.info("Open State: Closing resource")
         unstashAll()
         context.become(closed)
       case message     =>
-        log.info(s"Stashing $message because I can't handle it in the open state")
+        log.info(s"Open State: Stashing $message because I can't handle it in the open state")
         stash()
     }
   }
@@ -73,6 +73,7 @@ object Stashing1 extends App {
   val resourceActor = system.actorOf(Props[ResourceActor])
 
 
+  resourceActor ! Read // stashed
   resourceActor ! Read // stashed
   resourceActor ! Open // switch to open; I have read ""
   resourceActor ! Open // stashed
