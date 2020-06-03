@@ -1,4 +1,4 @@
-[warn] zkclient-0.10-sources.jar no longer exists at \Users\aamirfayaz\Library\Caches\Coursier\v1\https\repo1.maven.org\maven2\com\101tec\zkclient\0.10\zkclient-0.10-sources.jar
-[debug] "not up to date. inChanged = false, force = false
+[debug] "not up to date. inChanged = true, force = false
 [debug] Updating ProjectRef(uri("file:/D:/code/udemy_courses/"), "udemy_courses")...
 [debug] Done updating ProjectRef(uri("file:/D:/code/udemy_courses/"), "udemy_courses")
+[warn] There may be incompatibilities among your library dependencies; run 'evicted' to see detailed eviction warnings.
