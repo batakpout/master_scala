@@ -70,7 +70,6 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
     Cons(f(h), t.map(f))
   }
 
-
   def ++[B >: A](list: MyList[B]): MyList[B] = {
     Cons(h, t ++ (list))
   }
@@ -111,6 +110,8 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
 
     loop(tail.append(head), Empty, n)
   }
+
+  val res= List(1,2).flatMap(y => List(3, 4).map{ x => x + y})
 }
 
 case object Empty extends MyList[Nothing] {
@@ -185,7 +186,7 @@ object TestingMyList extends App {
   println(s"take test: ${listOfIntegers.take(2)}")
   val listOfStrings = Cons[String]("Hello", Cons("Mellow", Cons("Hey", Cons("Jimmy", Empty))))
 
-  val result8 = listOfIntegers.map[MyList[String]] { x => listOfStrings.map[String] { s => x + "-" + s } }
+  val result8: MyList[MyList[String]] = listOfIntegers.map[MyList[String]] { x => listOfStrings.map[String] { s => x + "-" + s } }
   val result9 = listOfIntegers.flatMap[String] { x => listOfStrings.map[String] { s => x + "-" + s } }
 
   println(result8)
