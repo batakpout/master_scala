@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/scala" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/test/scala" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/test" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -36,7 +37,7 @@
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-serialization-jackson_2.12:2.6.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-slf4j_2.12:2.6.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.akka:akka-stream_2.12:2.6.5:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-testkit_2.12:2.5.13:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.akka:akka-testkit_2.12:2.6.5:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:build-link:2.8.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-exceptions:2.8.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.typesafe.play:play-functional_2.12:2.8.1:jar" level="project" />
