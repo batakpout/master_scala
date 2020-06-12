@@ -112,6 +112,8 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
   }
 
   val res= List(1,2).flatMap(y => List(3, 4).map{ x => x + y})
+
+
 }
 
 case object Empty extends MyList[Nothing] {

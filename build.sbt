@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
   "org.typelevel" %% "cats-core" % "2.1.0",
   "org.scalatest" %% "scalatest" % "3.0.5",
   "org.apache.kafka" %% "kafka" % "2.1.0",
-  "com.typesafe.play" %% "play" % "2.8.2"
+  "com.typesafe.play" %% "play" % "2.8.2",
+ "org.mockito" % "mockito-core" % "3.3.3" % Test
 
 
 )

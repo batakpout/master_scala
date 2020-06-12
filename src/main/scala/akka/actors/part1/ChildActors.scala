@@ -35,8 +35,8 @@ object ActorPart4 extends App {
   parent ! CreateChild("child-1")
   parent ! TellChild("Hey child....")
 
-  val actorSel = system.actorSelection("/user/parent/child-1") //actorSelection works with context as well
-  actorSel ! "Message, using actor selection to child"
+  //val actorSel = system.actorSelection("/user/parent/child-1") //actorSelection works with context as well
+  //actorSel ! "Message, using actor selection to child"
   /* Every akka ActorSystem has 3 guardians
     Guardian (or supervisors)actors (top-level)
     - /system = system guardian
