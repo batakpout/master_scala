@@ -46,10 +46,33 @@ def myDropWhile[A](list: List[A], f: A => Boolean): List[A] = list match {
   case h :: tail if f(h) => myDropWhile(tail, f)
   case _                 => list
 }
-myDropWhile(List(2,4,3,7,9),(x: Int) => x % 2 == 0 )
+myDropWhile(List(2, 4, 3, 7, 9), (x: Int) => x % 2 == 0)
 
-def myDropWhileCurried[A](list: List[A])(f: A => Boolean):List[A] = list match {
+def myDropWhileCurried[A](list: List[A])(f: A => Boolean): List[A] = list match {
   case h :: tail if f(h) => myDropWhileCurried(tail)(f)
   case _                 => list
 }
-myDropWhileCurried(List(2,4,5,7))((x: Int) => x % 2 == 0)
+myDropWhileCurried(List(2, 4, 5, 7))((x: Int) => x % 2 == 0)
+
+//concat
+def concat[A](list1: List[A], list2: List[A]): List[A] = list1 match {
+  case Nil       => list2
+  case h :: tail => ::(h, concat(tail, list2))
+}
+
+concat(List(1, 2, 3), List(44, 4, 5))
+
+
+def append[T](list: List[T], elem: T): List[T] = list match {
+  case Nil       => List(elem)
+  case h :: tail => ::(h, append(tail, elem))
+}
+append(List(1, 2, 3, 4), 5)
+
+def getAtIndex[T](list: List[T], index: Int): T = (list, index) match {
+  case (Nil, _)       => throw new Exception("doesnt exist")
+  case (h :: tail, 0) => h
+  case (_ :: tail, n) => getAtIndex(tail, n - 1)
+}
+
+getAtIndex(List(1,2,3,4,5,6), 4)
