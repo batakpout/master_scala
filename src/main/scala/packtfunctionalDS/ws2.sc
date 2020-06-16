@@ -75,4 +75,12 @@ def getAtIndex[T](list: List[T], index: Int): T = (list, index) match {
   case (_ :: tail, n) => getAtIndex(tail, n - 1)
 }
 
-getAtIndex(List(1,2,3,4,5,6), 4)
+getAtIndex(List(1, 2, 3, 4, 5, 6), 4)
+
+def addAtIndex[T](list: List[T], index: Int, elem: T): List[T] = (list, index) match {
+  case (Nil, _)       => Nil
+  case (_ :: tail, 0) => ::(elem, tail)
+  case (h :: tail, n) => ::(h, addAtIndex(tail, n - 1, elem))
+}
+
+addAtIndex(List(1,2,3,4,5,6,7,8),3,55)
