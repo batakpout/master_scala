@@ -3,13 +3,13 @@ package akka.actors.infra
 import akka.actor.{Actor, ActorLogging, ActorSystem, Cancellable, Props, Timers}
 
 import scala.concurrent.duration._
-
+//import scala.concurrent.ExecutionContext.Implicits.global
 object TimersSchedulers extends App {
 
   class SimpleActor extends Actor with ActorLogging {
 
     override def receive: Receive = {
-      case message => log.info(s"message : ${message.toString}")
+      case message => println(s"message : ${message.toString}")
     }
   }
 
@@ -22,18 +22,19 @@ object TimersSchedulers extends App {
   //import system.dispatcher
   //implicit val dispatcher = system.dispatcher
 
-  system.scheduler.scheduleOnce(4.second) {
+  /*system.scheduler.scheduleOnce(4.second) {
     simpleActor ! "reminder"
-  }(system.dispatcher)
+  }(system.dispatcher)*/
 
   implicit val dispatcher = system.dispatcher
-  val routine = system.scheduler.schedule(1.second, 2.seconds) {
+  val routine: Cancellable = system.scheduler.schedule(6.second, 2.seconds) {
     simpleActor ! "heart beart"
   }
 
-  system.scheduler.scheduleOnce(10.second) {
+  system.scheduler.scheduleOnce(20.second) {
     routine.cancel()
   }
+
 }
 
 object TimeSchedulers2 extends App {

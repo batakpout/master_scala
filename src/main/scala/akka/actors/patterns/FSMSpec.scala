@@ -21,9 +21,9 @@ class FSMSpec extends TestKit(ActorSystem("FSMSpec"))
     runTestSuite(Props[VendingMachine])
   }
 
-  "A vending machine FSM" should {
+  /*"A vending machine FSM" should {
     runTestSuite(Props[VendingMachineFSM])
-  }
+  }*/
 
   def runTestSuite(props: Props): Unit = {
     "error when not initialized" in {
@@ -145,14 +145,15 @@ object FSMSpec {
         requester ! VendingError("RequestTimedOut")
         if (money > 0) requester ! GiveBackChange(money)
         context.become(operational(inventory, prices))
-      case ReceiveMoney(amount) =>
+      case ReceiveMoney(amount) => {
         moneyTimeoutSchedule.cancel()
         val price = prices(product)
         if (money + amount >= price) {
           // user buys product
           requester ! Deliver(product)
           // deliver the change
-          if (money + amount - price > 0) requester ! GiveBackChange(money + amount - price)
+          val change = money + amount - price
+          if (change >= 0) requester ! GiveBackChange(change)
           // updating inventory
           val newStock = inventory(product) - 1
           val newInventory = inventory + (product -> newStock)
@@ -166,6 +167,7 @@ object FSMSpec {
             startReceiveMoneyTimeoutSchedule, // I need to set the timeout again
             requester))
         }
+      }
     }
 
     def startReceiveMoneyTimeoutSchedule: Cancellable = context.system.scheduler.scheduleOnce(1.second) {

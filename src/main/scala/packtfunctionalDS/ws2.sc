@@ -84,3 +84,9 @@ def addAtIndex[T](list: List[T], index: Int, elem: T): List[T] = (list, index) m
 }
 
 addAtIndex(List(1,2,3,4,5,6,7,8),3,55)
+
+val pl = List(List(2,12,3,4,5))
+pl match {
+  case List(2 :: xs) => println(xs)
+  case _ => println("no match ")
+}
