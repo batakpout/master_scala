@@ -35,3 +35,21 @@ val xss: List[Int] = List(1,2,3,4)
   average(1, xss: _*)
 
 average(1,2,3,4,5)
+
+class BankAccount {
+  private var balance = 0
+  def deposit(amount: Int): Int = {
+    if (amount > 0) balance = balance + amount
+    balance
+  }
+  def withdraw(amount: Int): Int =
+    if (0 < amount && amount <= balance) {
+      balance = balance - amount
+      balance
+    } else throw new Error("insufficient funds")
+}
+val obj = new BankAccount()
+obj.deposit(100)
+obj.withdraw(80)
+
+
