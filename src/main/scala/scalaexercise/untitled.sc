@@ -24,3 +24,14 @@ xs.filter { x =>
      (x, y)
    }
 }
+
+def average(x: Int, xs: Int*): Double =
+  (x :: xs.toList).sum.toDouble / (xs.size + 1)
+val xss: List[Int] = List(1,2,3,4)
+//Sometimes you want to supply each element of a list as many parameters.
+// You can do that by adding a : _* type ascription to your list:
+
+
+  average(1, xss: _*)
+
+average(1,2,3,4,5)
