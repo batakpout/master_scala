@@ -17,13 +17,13 @@ class FSMSpec extends TestKit(ActorSystem("FSMSpec"))
 
   import FSMSpec._
 
-  "A vending machine" should {
+ /* "A vending machine" should {
     runTestSuite(Props[VendingMachine])
-  }
-
-  /*"A vending machine FSM" should {
-    runTestSuite(Props[VendingMachineFSM])
   }*/
+
+  "A vending machine FSM" should {
+    runTestSuite(Props[VendingMachineFSM])
+  }
 
   def runTestSuite(props: Props): Unit = {
     "error when not initialized" in {
@@ -220,6 +220,7 @@ object FSMSpec {
         data = Initialized(Map(coke -> 9), Map(coke -> 1))
      */
     startWith(Idle, Uninitialized)
+
     when(Idle) {
       case Event(Initialize(inventory, prices), Uninitialized) =>
         goto(Operational) using Initialized(inventory, prices)
@@ -273,7 +274,7 @@ object FSMSpec {
     }
 
     onTransition {
-      case stateA -> stateB => log.info(s"Transitioning from $stateA to $stateB")
+      case stateA -> stateB => println(s"Transitioning from $stateA to $stateB")
     }
     initialize()
 
