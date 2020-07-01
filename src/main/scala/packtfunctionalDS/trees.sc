@@ -1,4 +1,3 @@
-import java.awt.geom.Area
 
 sealed trait BinTree[+A]
 
@@ -89,22 +88,79 @@ val postOrderRes = postOrder(buildCompleteTree(1, 3))
 println("-----tree traversal using accumulator-----")
 
 def preOrderUsingAccumulator[A](tree: BinTree[A], acc: List[A]): List[A] = tree match {
-  case Leaf => acc
+  case Leaf            => acc
   case Branch(v, l, r) => v :: preOrderUsingAccumulator(l, preOrderUsingAccumulator(r, acc))
 }
 val preOrderTailRes = preOrderUsingAccumulator(buildCompleteTree(1, 3), Nil)
 
 def inOrderUsingAccumulator[A](tree: BinTree[A], acc: List[A]): List[A] = tree match {
-  case Leaf => acc
+  case Leaf            => acc
   case Branch(v, l, r) => inOrderUsingAccumulator(l, v :: inOrderUsingAccumulator(r, acc))
 }
 val inOrderTailRes = inOrderUsingAccumulator(buildCompleteTree(1, 3), Nil)
 
 def postOrderUsingAccumulator[A](tree: BinTree[A], acc: List[A]): List[A] = tree match {
-  case Leaf => acc
+  case Leaf            => acc
   case Branch(v, l, r) => postOrderUsingAccumulator(l, postOrderUsingAccumulator(r, v :: acc))
 }
 val postOrderTailRes = postOrderUsingAccumulator(buildCompleteTree(1, 3), Nil)
+
+println("---binary search tree------")
+/**
+ * Root node >= left sub-tree value
+ * Root node <= right sub-tree value
+ */
+//dictionary impl. using list is slow, O(n) access, so we will use trees
+type Dictionary[A] = BinTree[(String, A)]
+
+def insert[A](key: String, value: A, dict: Dictionary[A]): Dictionary[A] = dict match {
+  case Leaf                             => Branch((key, value), Leaf, Leaf)
+  case Branch((k, v), l, r) if k == key => {
+    val errMsg = s"$key already exists..."
+    throw new Exception(errMsg)
+  }
+  case Branch((k, v), l, r) if key > k  => Branch((k, v), l, insert(key, value, r))
+  case Branch((k, v), l, r) if key < k  => Branch((k, v), insert(key, value, l), r)
+}
+
+def search[A](key: String, tree: Dictionary[A]): Option[A] = tree match {
+  case Leaf                               => None
+  case Branch((k, v), _, _) if (k == key) => Some(v)
+  case Branch((k, _), l, _) if (k > key)  => search(key, l)
+  case Branch((k, _), l, r) if (k < key)  => search(key, r)
+}
+
+def update[A](key: String, value: A, dict: Dictionary[A]): Dictionary[A] = dict match {
+  case Leaf                             => Branch((key, value), Leaf, Leaf)
+  case Branch((k, v), l, r) if k == key => Branch((k, value), l, r)
+  case Branch((k, v), l, r) if k > key  => Branch((k, v), update(key, value, l), r)
+  case Branch((k, v), l, r) if k < key  => Branch((k, v), l, update(key, value, r))
+}
+
+def empty[A]: Dictionary[A] = Leaf
+val words = List(("so", 8),("that", 16),("is", 4),("jj", 4),("vhen", 14), ("for", 20), ("uhy", 2), ("xo", 6))
+val finalDic: Dictionary[Int] = words.foldLeft(empty[Int])((acc, v) => insert(v._1, v._2, acc))
+
+preOrder(finalDic)
+inorder(finalDic)
+postOrder(finalDic)
+
+val searchRes1 = search("vhen", finalDic)
+val searchRes2 = search("vhesdfsdn", finalDic)
+
+finalDic
+val res = update("xo", 12, finalDic)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
