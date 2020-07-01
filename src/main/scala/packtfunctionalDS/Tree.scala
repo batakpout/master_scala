@@ -1,3 +1,10 @@
+package packtfunctionalDS
+
+object TreeBoot extends App {
+  val binSearchTree = Tree.apply(10,6,12,5,8,11,14)
+  println( binSearchTree.preOrder(Nil) )
+}
+
 abstract sealed class Tree[+A](implicit ev: A => Ordered[A]) {
   def value: A
 
@@ -84,12 +91,15 @@ abstract sealed class Tree[+A](implicit ev: A => Ordered[A]) {
 
   def height: Int = 1 + left.height max right.height
 
-  override def toString: String = if (isEmpty) "." else "{" + left + value + right + "}"
+  def preOrder[B >: A](acc: List[B] = Nil): List[B] = this match {
+    case Leaf               => acc
+    case Branch(v, l, r, _) => v :: (l.preOrder(r.preOrder(acc)))
+  }
 }
 
 case class Branch[A](value: A, left: Tree[A],
                      right: Tree[A],
-                     size: Int) extends Tree[A] {
+                     size: Int)(implicit eval: A => Ordered[A]) extends Tree[A] {
 
 
   override def isEmpty: Boolean = false
@@ -108,13 +118,13 @@ case object Leaf extends Tree[Nothing] {
 }
 
 object Tree {
-  def make[A](value: A, l: Tree[A] = Leaf, r: Tree[A] = Leaf): Tree[A] =
+  def make[A](value: A, l: Tree[A] = Leaf, r: Tree[A] = Leaf)(implicit eval: A => Ordered[A]): Tree[A] =
     Branch(value, l, r, l.size + r.size + 1)
 
   def empty[A]: Tree[A] = Leaf
 
-  def apply[A](xs: A*): Tree[A] = {
-    xs.foldLeft(empty)((acc, x) => acc.add(x))
+  def apply[A](xs: A*)(implicit eval: A => Ordered[A]): Tree[A] = {
+    xs.foldLeft[Tree[A]](empty)((acc, x) => acc.add(x))
   }
 
   def complete(x: Int, d: Int): Tree[Int] = d match {
@@ -124,7 +134,7 @@ object Tree {
     }
   }
 
-  def complete[A](x: A, d: Int): Tree[A] = d match {
+  def complete[A](x: A, d: Int)(implicit eval: A => Ordered[A]): Tree[A] = d match {
     case 0 => empty
     case _ => make(x, complete(x, d - 1), complete(x, d - 1))
   }
