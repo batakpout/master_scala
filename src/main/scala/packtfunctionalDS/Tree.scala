@@ -3,6 +3,8 @@ package packtfunctionalDS
 object TreeBoot extends App {
   val binSearchTree = Tree.apply(10,6,12,5,8,11,14)
   println( binSearchTree.preOrder(Nil) )
+
+
 }
 
 abstract sealed class Tree[+A](implicit ev: A => Ordered[A]) {
