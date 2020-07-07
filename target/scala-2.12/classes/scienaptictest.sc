@@ -22,7 +22,7 @@ val endorsements = List(
   ]*/
 endorsements.groupBy(_.skill)
 
-def cal2(end: List[Endorsement]): List[(String, FinalResult)] = {
+def cal2(end: List[Endorsement]) = {
   end.foldLeft(Map.empty[String, FinalResult]) { (a, b) =>
     val x = a.get(b.skill)
     if (x.isDefined) {
