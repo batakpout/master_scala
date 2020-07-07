@@ -29,6 +29,6 @@ def mult(first: List[Int], second: List[Int]): List[Int] = {
   multiply(first.reverse, second.reverse).reverse
 }
 //  println(s"mul test: ${mult(List(1, 0, 1, 1), List(1,1, 0, 1))}")
-println(s"mul test: ${mult(List(0, 0), List(0, 1))}")
+println(s"mul test: ${mult(List(1, 1, 0),List(1, 0, 1))}")
 
 //https://www.youtube.com/watch?v=Ai5F0KLyh2Q
