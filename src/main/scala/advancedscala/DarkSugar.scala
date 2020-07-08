@@ -80,9 +80,11 @@ object DarkSugars extends App {
   class Composite[A, B]
   val composite1: Int Composite String = ???
   val composite: Composite[Int, String] = ???
+  val composite2: Composite[Int, String] = new Composite[Int, String]()
 
   class -->[A, B]
   val towards: Int --> String = ???
+  val towards2: --> [Int, String] = new -->[Int, String]()
 
   // syntax sugar #6: update() is very special, much like apply()
   val anArray = Array(1,2,3)

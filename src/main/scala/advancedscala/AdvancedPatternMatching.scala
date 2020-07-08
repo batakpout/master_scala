@@ -8,7 +8,7 @@ object AdvancedPatternMatching1 extends App {
 
   object Person {
     def unapply(arg: Person): Option[(String, Int)] = {
-      Some((arg.name, arg.age))
+      Some(("kalumama", 66))
     }
 
     def unapply(age: Int): Option[String] = {
@@ -19,7 +19,10 @@ object AdvancedPatternMatching1 extends App {
   val bob = new Person("bobby", 28)
   println {
     bob match {
-      case Person(n, a) => s"$n is $a years old..."
+      case p@Person(n, a) => {
+        println(s"name binding: name = ${p.name}, age = ${p.age}")
+        s"$n is $a years old..."
+      }
     }
   }
 
@@ -49,12 +52,11 @@ object AdvancedPatternMatching1 extends App {
   println("*" * 40)
 
   object even2 {
-
-    def unapply(x: Int): Boolean = x % 2 == 0
+    def unapply(x: Int): Boolean = false//x % 2 == 0
   }
 
   object singleDigit2 {
-    def unapply(x: Int): Boolean = x > -10 && x < 10
+    def unapply(x: Int): Boolean = true //x > -10 && x < 10
   }
 
   println {
@@ -73,6 +75,7 @@ object AdvancedPatternMatching1 extends App {
   println {
     either match {
       case a Or b => s"$a is written as $b"
+      //case Or(a, b) => s"$a is written as $b"
     }
   }
 
@@ -94,20 +97,26 @@ object AdvancedPatternMatching1 extends App {
   val myList: MyList[Int] = Cons(1, Cons(2, Cons(3, Cons(4, Empty))))
 
   object MyList {
+    //must take seq, return Option of Seq
     def unapplySeq[A](myList: MyList[A]): Option[Seq[A]] = {
       if (myList == Empty) Some(Seq()) else {
-        unapplySeq(myList.tail).map(x => myList.head +: x)
+        unapplySeq(myList.tail).map(x => x :+ myList.head) //:+ appends to Seq()
       }
     }
+ /*   def unapplySeq[A](myList: MyList[A]): Option[Seq[A]] = {
+      Some(Seq(myList.head))
+    }*/
   }
 
   println {
     myList match {
-      case MyList(1, 2, _*) => s"my big list...."
+     //, if we get only 1 item in Seq, then this pattern passes case MyList(x) => println(s"x...." + x)
+      case MyList(4, x,  _*) => println(s"x...." + x)
     }
   }
   // custom return types for unapply
   // isEmpty: Boolean, get: something.
+  //https://stackoverflow.com/questions/46897540/why-i-have-to-return-some-in-unapply-method
   abstract class Wrapper[T] {
     def isEmpty: Boolean
 
