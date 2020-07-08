@@ -103,15 +103,16 @@ object AdvancedPatternMatching1 extends App {
         unapplySeq(myList.tail).map(x => x :+ myList.head) //:+ appends to Seq()
       }
     }
- /*   def unapplySeq[A](myList: MyList[A]): Option[Seq[A]] = {
-      Some(Seq(myList.head))
+   /* def unapply[A](myList: MyList[A]): Option[A] = {
+      Some(myList.head)
     }*/
   }
 
   println {
     myList match {
      //, if we get only 1 item in Seq, then this pattern passes case MyList(x) => println(s"x...." + x)
-      case MyList(4, x,  _*) => println(s"x...." + x)
+    //  case MyList(x) => println(s"x...." + x)
+      case MyList(4, x, _*) => println(s"x...." + x)
     }
   }
   // custom return types for unapply
@@ -135,6 +136,7 @@ object AdvancedPatternMatching1 extends App {
   println {
     bob match {
       case PersonWrapper(n) => s"name is $n"
+      case _ => "An alien"
     }
   }
 
