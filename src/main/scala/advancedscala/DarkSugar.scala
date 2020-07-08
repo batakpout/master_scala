@@ -63,6 +63,7 @@ object DarkSugars extends App {
   }
 
   val myStream = 1 -->: 2 -->: 3 -->: new MyStream[Int]()
+  val myStream2 =  new MyStream[Int]().-->:(1)
 
   // syntax sugar #4: multi-word method naming
 
@@ -73,6 +74,7 @@ object DarkSugars extends App {
 
   val lilly = new TeenGirl("Lilly")
   lilly `and then said` "Scala is so sweet!"
+  lilly.`arnold schrwarn enenjggger`
 
   // syntax sugar #5: infix types
   class Composite[A, B]

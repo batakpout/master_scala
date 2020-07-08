@@ -1,4 +1,4 @@
-/*
+
 import scala.concurrent.Future
 import scala.concurrent.Future
 import scala.util.{Failure,Success, Try}
@@ -17,11 +17,6 @@ val res: Future[Int] = xx match {
   case Success(s) => Future.successful(s)
   case Failure(e) => Future.failed(e)
 }
-
-*/
-
-val l = Left("abc")
-l.isInstanceOf[Left[String, String]]
 
 
 
