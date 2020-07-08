@@ -1,8 +1,8 @@
 package packtfunctionalDS
 
 object TreeBoot extends App {
-  val binSearchTree = Tree.apply(10,6,12,5,8,11,14)
-  println( binSearchTree.preOrder(Nil) )
+  val binSearchTree = Tree.apply(10, 6, 12, 5, 8, 11, 14)
+  println(binSearchTree.preOrder(Nil))
 
 
 }
@@ -52,6 +52,25 @@ abstract sealed class Tree[+A](implicit ev: A => Ordered[A]) {
     else if (x == value) true
     else if (x < value) left.search(x)
     else right.search(x)
+  }
+
+  /**
+   * Time - O(log n)
+   * Space - O(log n)
+   */
+  def delete[B >: A](x: B)(implicit ex: B => Ordered[B]): Tree[B] = {
+    if (isEmpty) println(s"$x not found in binary search tree")
+    if (x < value) Tree.make(value, left.delete(x), right)
+    else if (x > value) Tree.make(value, left, right.delete(x))
+    else {
+      if (left.isEmpty && right.isEmpty) Leaf
+      else if (left.isEmpty) right
+      else if (right.isEmpty) left
+      else {
+        val min = right.min
+        Tree.make(min, left, right.delete(min))
+      }
+    }
   }
 
   /**
