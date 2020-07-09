@@ -1,6 +1,6 @@
 package advancedscala
 /**
- * Check Partial Functions from scala.PartialFunction
+ * Check Partial Functions from scala.PartialFunction (its a unary function)
  **/
 /**
  * trait PartialFunction[-A, +B] extends (A => B) {
@@ -76,23 +76,12 @@ object PartialFunctions extends App {
    * 2 - dumb chatbot as a PF
    */
 
-  val aManualFussyFunction = new PartialFunction[Int, Int] {
-    override def apply(x: Int): Int = x match {
-      case 1 => 42
-      case 2 => 65
-      case 5 => 999
-    }
-
-    override def isDefinedAt(x: Int): Boolean =
-      x == 1 || x == 2 || x == 5
-  }
-
   val chatbot: PartialFunction[String, String] = {
     case "hello" => "Hi, my name is HAL9000"
     case "goodbye" => "Once you start talking to me, there is no return, human!"
     case "call mom" => "Unable to find your phone without your credit card"
   }
-
+  println("Enter line: \n")
   val res: Iterator[String] = scala.io.Source.stdin.getLines().map(chatbot)
   res.foreach(println)
 
@@ -102,6 +91,7 @@ object PartialFunctions extends App {
 import scala.collection.immutable
 
 object AlvinAlexanderExample1 extends App {
+
 
   val divide = new PartialFunction[Int, Int] {
     def apply(x: Int): Int = 42 / x
@@ -143,7 +133,7 @@ object AlvinAlexanderExample3 extends App {
     //def isDefinedAt(x: Int): Boolean = x != 0 doesn't work here
   }
 
-  println(divide2(0))//directly calls apply method, so scala.MatchError
+  //println(divide2(0))//directly calls apply method, so scala.MatchError
 
   //explicit mention
   if (divide2.isDefinedAt(0)) println(divide2(0)) // isDefinedAt works because of guard condition
@@ -209,8 +199,7 @@ object AlvinAlexanderExample6 extends App {
   val result: List[Int] = List(2, 3, 4, 0) collect divide
   /**
    * collect takes partial function as input
-   * collect builds a new collection by applying partial function for all elements
-   * of collection for which that partial function is defined
+   * collect builds a new collection by applying partial function for all elements of collection for which that partial function is defined
    */
 
   List(42, "cat") collect { case i: Int => i + 1 }

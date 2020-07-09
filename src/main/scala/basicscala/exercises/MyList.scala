@@ -200,5 +200,3 @@ object TestingMyList extends App {
   } yield n + "-" + string
   println(combinations)
 }
-
-

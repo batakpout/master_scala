@@ -52,7 +52,7 @@ object AdvancedPatternMatching1 extends App {
   println("*" * 40)
 
   object even2 {
-    def unapply(x: Int): Boolean = false//x % 2 == 0
+    def unapply(x: Int): Boolean = false //x % 2 == 0
   }
 
   object singleDigit2 {
@@ -75,6 +75,15 @@ object AdvancedPatternMatching1 extends App {
   println {
     either match {
       case a Or b => s"$a is written as $b"
+      //case Or(a, b) => s"$a is written as $b"
+    }
+  }
+
+  val intList = List(1, 2, 3)
+  println {
+    intList match {
+      case h :: t   => "" //infix pattern
+      case ::(h, t) => ""
       //case Or(a, b) => s"$a is written as $b"
     }
   }
@@ -103,18 +112,20 @@ object AdvancedPatternMatching1 extends App {
         unapplySeq(myList.tail).map(x => x :+ myList.head) //:+ appends to Seq()
       }
     }
-   /* def unapply[A](myList: MyList[A]): Option[A] = {
-      Some(myList.head)
-    }*/
+
+    /* def unapply[A](myList: MyList[A]): Option[A] = {
+       Some(myList.head)
+     }*/
   }
 
   println {
     myList match {
-     //, if we get only 1 item in Seq, then this pattern passes case MyList(x) => println(s"x...." + x)
-    //  case MyList(x) => println(s"x...." + x)
+      //, if we get only 1 item in Seq, then this pattern passes case MyList(x) => println(s"x...." + x)
+      //  case MyList(x) => println(s"x...." + x)
       case MyList(4, x, _*) => println(s"x...." + x)
     }
   }
+
   // custom return types for unapply
   // isEmpty: Boolean, get: something.
   //https://stackoverflow.com/questions/46897540/why-i-have-to-return-some-in-unapply-method
@@ -136,7 +147,7 @@ object AdvancedPatternMatching1 extends App {
   println {
     bob match {
       case PersonWrapper(n) => s"name is $n"
-      case _ => "An alien"
+      case _                => "An alien"
     }
   }
 
@@ -159,7 +170,11 @@ object PF extends App {
     case Even(n)        => s"An even number ($n)"
     case n              => s"Something else ($n)"
   }
-
+  val classify2: PartialFunction[Int, String] = {
+    case SingleDigit(n) => s"A single digit number ($n)"
+    case Even(n)        => s"An even number ($n)"
+    case n              => s"Something else ($n)"
+  }
   println(classify(8))
   println(classify(16))
   println(classify(25))

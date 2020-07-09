@@ -1,3 +1,5 @@
+import scala.concurrent.Future
+
 trait Animal {
   def eat(): Unit
   def name = "animal"
@@ -25,4 +27,19 @@ o.member
 val s: Seq[Int] = Seq(1,2,3,4)
 val x: Seq[Int] = s :+ 33
 val y = x :+ 331
+
+val pf:PartialFunction[Int, String] = {
+  case 1 => "abc"
+}
+pf.lift
+import scala.concurrent.ExecutionContext.Implicits.global
+
+
+lazy val anEffect = Future { println("hello") }
+
+def twoEffects = (anEffect, anEffect)
+
+twoEffects
+
+
 
