@@ -35,11 +35,11 @@ pf.lift
 import scala.concurrent.ExecutionContext.Implicits.global
 
 
-lazy val anEffect = Future { println("hello") }
+Set(1,3,3) + 4
 
-def twoEffects = (anEffect, anEffect)
-
-twoEffects
-
+val l = List(1,2,3,4,5)
+val l2 = List("Hello", "Hi", "Bye")
+l.zip(l2)
+l.fold()
 
 

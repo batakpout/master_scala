@@ -93,6 +93,8 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
     tail.forEach(f)
   }
 
+  //todo: handle unequal sizes
+
   def zipWith[B, C](list: MyList[B], zip: (A, B) => C): MyList[C] = {
     if (list.isEmpty) throw new RuntimeException("Lists do not have the same length")
     Cons(zip(head, list.head), tail.zipWith(list.tail, zip))
@@ -101,6 +103,13 @@ case class Cons[+A](h: A, t: MyList[A]) extends MyList[A] {
   def fold[B](start: B)(f: (B, A) => B): B = {
     t.fold(f(start, head))(f)
   }
+
+/*  def foldLeft[B](z: B)(op: (B, A) => B): B = {
+    var result = z
+    this foreach (x => result = op(result, x))
+    result
+  }*/
+
 
   def take(n: Int): MyList[A] = {
     def loop(oldList:MyList[A], newList: MyList[A], index: Int): MyList[A] = {
@@ -176,7 +185,7 @@ object TestingMyList extends App {
   val zipList1 = Cons[String]("Hello", Cons("Bro", Empty))
   val zipList2 = Cons[Int](1, Cons(2, Empty))
 
-  val result6 = zipList2.zipWith(zipList1, (x: Int, y: String) => x + "--" + y)
+  val result6: MyList[String] = zipList2.zipWith(zipList1, (x: Int, y: String) => x + "--" + y)
   println(result6)
 
   val result7 = myList.fold(0)(_ + _)
