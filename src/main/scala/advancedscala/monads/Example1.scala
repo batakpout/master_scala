@@ -7,7 +7,7 @@ case class Bag[A](item: A) {
 }
 
 object Bag {
-  def unit[A](v: A) = Bag(v)
+  def unit[A](v: A): Bag[A] = Bag(v)
 }
 
 sealed trait Nuts {

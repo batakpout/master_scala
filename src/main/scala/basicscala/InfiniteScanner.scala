@@ -1,6 +1,6 @@
 package basicscala
 
-import advancedscala.PartialFunctions.chatbot
+import advancedscala.currying.PartialFunctions.chatbot
 
 object InfiniteScanner extends App {
   scala.io.Source.stdin.getLines().foreach{ input =>

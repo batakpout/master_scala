@@ -7,7 +7,7 @@ class Test1 extends WordSpec with Matchers with MockitoSugar {
   "Hospital test" should {
 
     "return m1 as the first member" in {
-      import teachingobaid.unittesting.Program1._
+      import teachingchotu.unittesting.Program1._
       val l = List("m1", "m2")
       val result = getHospitalFirstMemeber(l)
 
@@ -15,7 +15,7 @@ class Test1 extends WordSpec with Matchers with MockitoSugar {
     }
 
     "return default no member when hospital is empty" in {
-      import teachingobaid.unittesting.Program1._
+      import teachingchotu.unittesting.Program1._
       val l = Nil
       val result = getHospitalFirstMemeber(l)
       result shouldBe "no memeber"

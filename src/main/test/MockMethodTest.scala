@@ -1,7 +1,7 @@
 import org.mockito.Mockito._
 import org.scalatest.FunSpec
 import org.scalatest.mockito.MockitoSugar
-import teachingobaid.unittesting.{TestMockMethod, TestMockMethodImpl}
+import teachingchotu.unittesting.{TestMockMethod, TestMockMethodImpl}
 
 
   class MySpec extends FunSpec with MockitoSugar  {
