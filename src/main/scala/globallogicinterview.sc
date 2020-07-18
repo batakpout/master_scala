@@ -18,6 +18,5 @@ val res: Future[Int] = xx match {
   case Failure(e) => Future.failed(e)
 }
 
-
-
-
+val l = List(1,2,3,4)
+l.zip(l.tail)

@@ -65,5 +65,7 @@ object LazyEvaluation extends App {
 object ll extends App {
 
   val z: List[Int] = Stream.from(1).filter(_ < 10).take(10).toList
+  val zz: List[Int] = Stream.from(1).take(10).toList
+
   println(z)
 }

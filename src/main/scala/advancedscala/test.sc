@@ -43,4 +43,3 @@ l.zip(l2)
 
 
 
-Stream.from(1).filter(_ < 10).take(10).toList

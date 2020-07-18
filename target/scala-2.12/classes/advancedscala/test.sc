@@ -40,6 +40,6 @@ Set(1,3,3) + 4
 val l = List(1,2,3,4,5)
 val l2 = List("Hello", "Hi", "Bye")
 l.zip(l2)
-l.fold()
+
 
 
