@@ -96,13 +96,13 @@ object StreamsPlayground extends App {
   val startFrom0 = 0 #:: naturals // naturals.#::(0)
 
   // map, flatMap
- // println(startFrom0.flatMap(x => new Cons(x, new Cons(x + 1, EmptyStream))).take(10).toList())
- // println(startFrom0.filter(_ < 5).take(6).toList())
+  // println(startFrom0.flatMap(x => new Cons(x, new Cons(x + 1, EmptyStream))).take(10).toList())
+  // println(startFrom0.filter(_ < 5).take(6).toList())
 
 }
 
-object AlgosLazily {
-  val fibs:Stream[Int] = 0 #:: 1 #:: (fibs zip fibs.tail).map{ t => t._1 + t._2 }
+object AlgosLazily extends App {
+  val fibs: Stream[Int] = 0 #:: 1 #:: (fibs zip fibs.tail).map { t => t._1 + t._2 }
   fibs take (3)
 
   def fibonacci(first: BigInt, second: BigInt): MyStream[BigInt] =
@@ -119,5 +119,13 @@ object AlgosLazily {
   def eratosthenes(numbers: MyStream[Int]): MyStream[Int] =
     if (numbers.isEmpty) numbers
     else new Cons(numbers.head, eratosthenes(numbers.tail.filter(_ % numbers.head != 0)))
+
+  println(eratosthenes(MyStream.from(2)(_ + 1)).take(10).toList())
+
+  def eratosthenesSieve(stream: Stream[Int]): Stream[Int] = {
+    stream.head #:: eratosthenesSieve(stream.tail.filter(_ % stream.head != 0))
+  }
+
+  println(s"chaani: ${eratosthenesSieve(Stream.from(2)).take(10).toList}")
 
 }

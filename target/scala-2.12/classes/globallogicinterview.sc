@@ -19,5 +19,4 @@ val res: Future[Int] = xx match {
 }
 
 
-
-
+Stream.from(1).take(10).toList
