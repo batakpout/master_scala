@@ -4,3 +4,4 @@ def method1[T](list: List[T])(implicit ev: T => Ordered[T]) = {
 }
 
 method1[Int](List(1,2,3))
+
