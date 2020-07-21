@@ -4,6 +4,10 @@ import scala.concurrent.Promise
 import scala.util.Success
 import scala.concurrent.ExecutionContext.Implicits.global
 
+/**
+ * Futures are immutables, "read-only" objects
+ * Promises are "writable-once" containers over a future
+ */
 val promise = Promise[Int]() // "controller" over a future
 val future = promise.future
 
