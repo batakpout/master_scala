@@ -1,0 +1,10 @@
+-->Monads are a category of data types. Informally, anything that has a type parameter, a constructor that takes an element of that type,
+   and a flatMap method (which has to obey certain laws) is a monad. A monad is a mechanism for sequencing computations.
+
+
+--> A monad is a container with operations (map/flatMap/filter/foreach) that can act on the contents without extracting it first.
+
+--> law1: left-identity: unit(x).flatMap(f) == f(x)
+--> law2: right-identity: aMonadInstance.flatMap(unit) == aMonadInstance
+--> law3: associativity: m.flatMap(f).flatMap(g) = m.flatMap(x => f(x).flatMap(g))
+
