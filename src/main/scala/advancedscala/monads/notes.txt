@@ -8,3 +8,8 @@
 --> law2: right-identity: aMonadInstance.flatMap(unit) == aMonadInstance
 --> law3: associativity: m.flatMap(f).flatMap(g) = m.flatMap(x => f(x).flatMap(g))
 
+
+Links
+-------
+1.) https://miklos-martin.github.io/learn/fp/2016/03/10/monad-laws-for-regular-developers.html
+
