@@ -37,8 +37,11 @@ object Monad1  {
 //monad = unit + map + flatten
 
 object Monad2 extends App {
+
   class Lazy[+A](value: => A) {
-    def flatMap[B](f: A => Lazy[B]):Lazy[B] = f(value)
+    private lazy val internalValue = value
+    def use: A = internalValue
+    def flatMap[B](f: (=>A) => Lazy[B]):Lazy[B] = f(value)
   }
   object Lazy {
     def apply[A](value: => A): Lazy[A] = new Lazy[A](value)
@@ -52,20 +55,30 @@ object Monad2 extends App {
   val flatMapInstance:Lazy[Int] = lazyInstance.flatMap { x => Lazy {
     10 * x
   }}
+  println(flatMapInstance.use)
+  println(flatMapInstance.use)
 
-}
+  /*
+    left-identity
+    unit.flatMap(f) = f(v)
+    Lazy(v).flatMap(f) = f(v)
+    right-identity
+    l.flatMap(unit) = l
+    Lazy(v).flatMap(x => Lazy(x)) = Lazy(v)
+    associativity: l.flatMap(f).flatMap(g) = l.flatMap(x => f(x).flatMap(g))
+    Lazy(v).flatMap(f).flatMap(g) = f(v).flatMap(g)
+    Lazy(v).flatMap(x => f(x).flatMap(g)) = f(v).flatMap(g)
+   */
 
-object test extends App {
-
-  def m(value: => Int, f: ( => Int) => String) = {
-    lazy val x = value
-     f(x)
-  }
-
-  lazy val x = {+
-    println("Inside value")
-    40
-  }
-    m(x, x => x.toString)
+  // 2: map and flatten in terms  of flatMap
+  /*
+    Monad[T] { // List
+      def flatMap[B](f: T => Monad[B]): Monad[B] = ... (implemented)
+      def map[B](f: T => B): Monad[B] = flatMap(x => unit(f(x))) // Monad[B]
+      def flatten(m: Monad[Monad[T]]): Monad[T] = m.flatMap((x: Monad[T]) => x)
+      List(1,2,3).map(_ * 2) = List(1,2,3).flatMap(x => List(x * 2))
+      List(List(1, 2), List(3, 4)).flatten = List(List(1, 2), List(3, 4)).flatMap(x => x) = List(1,2,3,4)
+    }
+   */
 
 }
