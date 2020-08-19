@@ -1,6 +1,6 @@
 package advancedscala.implicits
 
-
+//defined in class, trait, objects, not as top level
 object ImplicitsIntro extends App {
 
   val pair = "Daniel" -> "555"
@@ -20,10 +20,10 @@ object ImplicitsIntro extends App {
   //  implicit def fromStringToA(str: String): A = new A
 
   // implicit parameters
-  def increment(x: Int)(implicit amount: Int) = x + amount
+  def increment(implicit amount: Int) = 90 + amount
   implicit val defaultAmount = 10
 
-  increment(2)
+  increment
   // NOT default args
 
 }

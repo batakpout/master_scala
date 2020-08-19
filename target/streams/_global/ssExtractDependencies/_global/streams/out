@@ -1,8 +1,13 @@
 [error] sbt.librarymanagement.ResolveException: Error downloading org.scalatest:scalatest_2.13:3.0.5
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\Amir%20Fayaz\.ivy2\local\org.scalatest\scalatest_2.13\3.0.5\ivys\ivy.xml
+[error]   not found: /Users/ssspl/.ivy2/local/org.scalatest/scalatest_2.13/3.0.5/ivys/ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.0.5/scalatest_2.13-3.0.5.pom
+[error] Error downloading org.apache.kafka:kafka_2.13:2.1.0
+[error]   Not found
+[error]   Not found
+[error]   not found: /Users/ssspl/.ivy2/local/org.apache.kafka/kafka_2.13/2.1.0/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/apache/kafka/kafka_2.13/2.1.0/kafka_2.13-2.1.0.pom
 [error] 	at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:246)
 [error] 	at lmcoursier.CoursierDependencyResolution.$anonfun$update$34(CoursierDependencyResolution.scala:215)
 [error] 	at scala.util.Either$LeftProjection.map(Either.scala:573)
@@ -36,5 +41,10 @@
 [error] (ssExtractDependencies) sbt.librarymanagement.ResolveException: Error downloading org.scalatest:scalatest_2.13:3.0.5
 [error]   Not found
 [error]   Not found
-[error]   not found: C:\Users\Amir%20Fayaz\.ivy2\local\org.scalatest\scalatest_2.13\3.0.5\ivys\ivy.xml
+[error]   not found: /Users/ssspl/.ivy2/local/org.scalatest/scalatest_2.13/3.0.5/ivys/ivy.xml
 [error]   not found: https://repo1.maven.org/maven2/org/scalatest/scalatest_2.13/3.0.5/scalatest_2.13-3.0.5.pom
+[error] Error downloading org.apache.kafka:kafka_2.13:2.1.0
+[error]   Not found
+[error]   Not found
+[error]   not found: /Users/ssspl/.ivy2/local/org.apache.kafka/kafka_2.13/2.1.0/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/org/apache/kafka/kafka_2.13/2.1.0/kafka_2.13-2.1.0.pom

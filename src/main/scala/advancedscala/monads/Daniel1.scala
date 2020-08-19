@@ -1,5 +1,7 @@
 package advancedscala.monads
 
+import advancedscala.monads.Monad1.{Attempt, Success}
+
 object Monad1  {
 
   trait Attempt[+A] {
@@ -32,6 +34,14 @@ object Monad1  {
 
 }
 
+object Monad1Test extends App {
+  import Attempt._
+
+  val o1: Attempt[Int] = Success[Int](10)
+  val f: Int => Attempt[Int] = (x: Int) => unit(x)
+  val r: Attempt[Int] = o1.flatMap(f)
+}
+
 //lazy monad abstracts away a computation which will only be executed when its needed.
 //monad = unit + flatMap
 //monad = unit + map + flatten
@@ -60,10 +70,10 @@ object Monad2 extends App {
 
   /*
     left-identity
-    unit.flatMap(f) = f(v)
+    unit(v).flatMap(f) = f(v)
     Lazy(v).flatMap(f) = f(v)
     right-identity
-    l.flatMap(unit) = l
+    l.flatMap(x => unit(x)) = l
     Lazy(v).flatMap(x => Lazy(x)) = Lazy(v)
     associativity: l.flatMap(f).flatMap(g) = l.flatMap(x => f(x).flatMap(g))
     Lazy(v).flatMap(f).flatMap(g) = f(v).flatMap(g)

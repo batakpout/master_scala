@@ -1,0 +1,3 @@
+--> A typeclass is an interface or API that represents some functionality, which we want to implement.
+--> Type class instances provide implementation for type classes.
+--> Type class interface is exposing the functionality for the user.
