@@ -2,3 +2,5 @@
 --> Type class instances provide implementation for type classes.
 --> Type class interface is exposing the functionality for the user.
 
+
+===> Enriching existing type with implicits: Pimping Library

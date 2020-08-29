@@ -9,12 +9,10 @@ trait Printable[A] {
 
 //The Type Instance
 object PrintableInstance {
+   //single abstract method
+  implicit val stringInstance: Printable[String] = (value: String) => value.take(4)
 
-  implicit val stringInstance = new Printable[String] {
-    override def format(value: String): String = value.take(4)
-  }
-
-  implicit val intInstance = new Printable[Int] {
+  implicit val intInstance: Printable[Int] = new Printable[Int] {
     override def format(value: Int): String = value.toString.take(2)
   }
 
@@ -29,6 +27,7 @@ object PrintableInstance {
 object Printable {
   def format[A](value: A)(implicit print: Printable[A]): String = print.format(value)
   def print[A](value: A)(implicit print: Printable[A]) = println(print.format(value))
+  def frint[A : Printable](value: A): String = implicitly[Printable[A]].format(value)
 }
 
 //type interface
@@ -41,8 +40,9 @@ object PrintableSyntax {
 object Program1Test extends App {
   import Printable._
   import PrintableInstance._
-  println(format(100).trim())
-  print("yella")
+  //println(format(100).trim())
+  //print("yella")
+  println ( frint[String]("cbella") )
 
 }
 
@@ -76,3 +76,4 @@ object mm extends App {
   "String".trimU
 
 }
+
