@@ -4,3 +4,5 @@
 
 
 ===> Enriching existing type with implicits: Pimping Library
+
+===> magnet pattern: read: https://stackoverflow.com/questions/32064375/magnet-pattern-and-overloaded-methods

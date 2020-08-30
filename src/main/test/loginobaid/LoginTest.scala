@@ -4,7 +4,7 @@ package loginobaid
 import org.mockito.Mockito._
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.mockito.MockitoSugar
-import teachingchotu.unittesting.{LoginService, User}
+import teachingdf.unittesting.{LoginService, User}
 
 class LoginTest extends FunSuite with BeforeAndAfter with MockitoSugar {
 

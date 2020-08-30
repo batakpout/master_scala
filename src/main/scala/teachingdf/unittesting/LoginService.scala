@@ -1,4 +1,4 @@
-package teachingchotu.unittesting
+package teachingdf.unittesting
 
 
 case class User(name: String)

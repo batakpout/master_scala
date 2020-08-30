@@ -28,7 +28,7 @@ object JsonSerialization extends App {
   final case class JSONObject(values: Map[String, JSONValue]) extends JSONValue {
     override def stringify = values.map { case (key, value) =>
       "\"" + key + "\" : " +  value.stringify
-    }.mkString("{", ":", "}")
+    }.mkString("{", ",", "}")
   }
 
   val jsonObject = JSONObject(

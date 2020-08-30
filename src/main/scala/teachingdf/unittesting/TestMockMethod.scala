@@ -1,4 +1,4 @@
-package teachingchotu.unittesting
+package teachingdf.unittesting
 
 trait TestMockMethod {
   def method1(name: String): String
