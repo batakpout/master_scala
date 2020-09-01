@@ -20,31 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d0c131c-72e9-452b-973b-00f362048249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/MagnetPattern.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/JavaScalaConverters.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/JsonSerialization.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/JsonSerialization.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingchotu/Actor1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/teachingdf/Actor1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingchotu/ActorLifeCycle.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/teachingdf/ActorLifeCycle.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingchotu/unittesting/LoginService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/LoginService.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingchotu/unittesting/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/Program1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingchotu/unittesting/TestMockMethod.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/TestMockMethod.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/MockMethodTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/MockMethodTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/Test1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Test1.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/loginobaid/LoginTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/loginobaid/LoginTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/Actor1$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/Actor1$BankAccount$$anonfun$receive$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/Actor1$BankAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/Actor1$delayedInit$body.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/Actor1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/LoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/Program1$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/Program1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/RealLoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/TestMockMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/TestMockMethodImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/User$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/teachingchotu/unittesting/User.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,13 +80,39 @@
       <recent name="$PROJECT_DIR$/src/main/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MagnetPattern3">
-    <configuration name="JsonSerialization" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typeclasses.JsonSerialization" />
+  <component name="RunManager" selected="Application.JavaScalaConverters">
+    <configuration name="ImplicitChoices" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="advancedscala.ImplicitChoices" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typeclasses.*" />
+          <option name="PATTERN" value="advancedscala.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImplicitChoices2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="advancedscala.ImplicitChoices2" />
+      <module name="udemy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="advancedscala.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaScalaConverters" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="advancedscala.JavaScalaConverters" />
+      <module name="udemy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="advancedscala.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,34 +133,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MagnetPattern1" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typeclasses.MagnetPattern1" />
-      <module name="udemy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typeclasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MagnetPattern3" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typeclasses.MagnetPattern3" />
-      <module name="udemy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typeclasses.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QAProgram" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typeclasses.QAProgram" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
@@ -192,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.JavaScalaConverters" />
+        <item itemvalue="Application.ImplicitChoices2" />
+        <item itemvalue="Application.ImplicitChoices" />
         <item itemvalue="Application.MagnetPattern3" />
         <item itemvalue="Application.MagnetPattern" />
-        <item itemvalue="Application.MagnetPattern1" />
-        <item itemvalue="Application.JsonSerialization" />
-        <item itemvalue="Application.QAProgram" />
       </list>
     </recent_temporary>
   </component>
@@ -260,45 +237,49 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="100" y="123" width="1240" height="628" key="DiffContextDialog/0.23.1440.828@0.23.1440.828" timestamp="1596826030916" />
-    <state width="1398" height="179" key="GridCell.Tab.0.bottom" timestamp="1598774686113">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1878" height="179" key="GridCell.Tab.0.bottom" timestamp="1598854607809">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="179" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1598774686113" />
+    <state width="1398" height="179" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1598799145195" />
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1598505639923" />
     <state width="1847" height="325" key="GridCell.Tab.0.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
     <state width="1398" height="182" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219003" />
+    <state width="1878" height="179" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598854607809" />
     <state width="1878" height="233" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573399" />
-    <state width="1398" height="179" key="GridCell.Tab.0.center" timestamp="1598774686112">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1878" height="179" key="GridCell.Tab.0.center" timestamp="1598854607809">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="179" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1598774686112" />
+    <state width="1398" height="179" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1598799145195" />
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
     <state width="1398" height="182" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
+    <state width="1878" height="179" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598854607809" />
     <state width="1878" height="233" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1398" height="179" key="GridCell.Tab.0.left" timestamp="1598774686112">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1878" height="179" key="GridCell.Tab.0.left" timestamp="1598854607809">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="179" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1598774686112" />
+    <state width="1398" height="179" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1598799145194" />
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1598505639919" />
     <state width="1847" height="325" key="GridCell.Tab.0.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
     <state width="1398" height="182" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264497" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590292" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219001" />
+    <state width="1878" height="179" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598854607809" />
     <state width="1878" height="233" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573397" />
-    <state width="1398" height="179" key="GridCell.Tab.0.right" timestamp="1598774686113">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state width="1878" height="179" key="GridCell.Tab.0.right" timestamp="1598854607809">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="179" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1598774686113" />
+    <state width="1398" height="179" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1598799145195" />
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578749" />
     <state width="1398" height="182" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
+    <state width="1878" height="179" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598854607809" />
     <state width="1878" height="233" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
     <state width="1847" height="325" key="GridCell.Tab.1.bottom" timestamp="1595757578752">
       <screen x="0" y="23" width="1920" height="977" />
