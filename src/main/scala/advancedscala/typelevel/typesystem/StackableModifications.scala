@@ -38,8 +38,10 @@ object StackableModifications1 extends App {
     abstract override def put(x: Int): Unit = super.put(x + 1)
   }
 
+  class A
   //Filtering, Incrementing can only be mixin with class that also extends IntQueue
-  val bQ2 = new BasicQueue with Incrementing with Filtering
+  val bQ2 = new BasicQueue  with Incrementing with Filtering
+  //val bQ2 = new BasicQueue extends A with Incrementing with Filtering CTE
   bQ2.put(1)
   bQ2.put(-1)
   bQ2.put(2)

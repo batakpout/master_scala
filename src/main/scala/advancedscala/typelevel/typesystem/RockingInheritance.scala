@@ -27,3 +27,34 @@ object RockingInheritance extends App {
 
   println(new Mutant().name)
 }
+
+object RockingInheritance_Linearization  extends App {
+
+  trait Cold {
+    def print = println("cold")
+  }
+
+  trait Green extends Cold {
+      println("Green")
+      super.print
+  }
+
+  trait Blue extends Cold {
+      println("Blue")
+      super.print
+  }
+
+  class Red {
+    def print = println("red")
+  }
+
+  class White extends Red with Green with Blue {
+    override def print: Unit = {
+      println("white")
+      super.print
+    }
+  }
+
+  val color = new White
+  color.print
+}
