@@ -1,0 +1,8 @@
+--> A type-class is an interface or API that represents some functionality, which we want to implement.
+--> Type class instances provide implementation for type classes.
+--> Type class interface is exposing the functionality for the user.
+
+
+===> Enriching existing type with implicits: Pimping Library
+
+===> magnet pattern: read: https://stackoverflow.com/questions/32064375/magnet-pattern-and-overloaded-methods

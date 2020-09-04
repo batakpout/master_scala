@@ -20,11 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d0c131c-72e9-452b-973b-00f362048249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/GroupBy.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/lowerbounds.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/upperbounds.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/viewbounds.sc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/RockingInheritance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/RockingInheritance.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/StackableModifications.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/StackableModifications.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/generics/ws1.sc" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +82,7 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -84,33 +90,7 @@
       <recent name="$PROJECT_DIR$/src/main/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RockingInheritance_Linearization">
-    <configuration name="ImplicitChoices2" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.ImplicitChoices2" />
-      <module name="udemy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="advancedscala.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaScalaConverters" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.JavaScalaConverters" />
-      <module name="udemy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="advancedscala.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TestCoContra">
     <configuration name="RockingInheritance" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typesystem.RockingInheritance" />
       <module name="udemy" />
@@ -150,6 +130,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCoContra" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.TestCoContra" />
+      <module name="udemy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="advancedscala.typelevel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Variance1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.Variance1" />
+      <module name="udemy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="advancedscala.typelevel.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="testKind" value="Class" />
@@ -173,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestCoContra" />
+        <item itemvalue="Application.Variance1" />
         <item itemvalue="Application.RockingInheritance_Linearization" />
         <item itemvalue="Application.StackableModifications1" />
         <item itemvalue="Application.RockingInheritance" />
-        <item itemvalue="Application.JavaScalaConverters" />
-        <item itemvalue="Application.ImplicitChoices2" />
       </list>
     </recent_temporary>
   </component>
@@ -211,27 +217,29 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="445" y="92" key="#Project_Structure/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595755987609" />
-    <state x="458" y="199" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1598551183052">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="611" y="248" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1599112689315">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="458" y="199" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.828@0.23.1440.828" timestamp="1598551183052" />
     <state x="458" y="199" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1598457450862" />
+    <state x="611" y="248" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/3840.-68.1440.877/1920.-68.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1599112689315" />
     <state x="422" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595756098714">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="422" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595756098714" />
-    <state x="455" y="259" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599033925463">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state x="455" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599230655045">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="455" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1599033925463" />
+    <state x="455" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828@0.23.1440.828" timestamp="1599230655045" />
     <state x="772" y="462" width="395" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1595611362931">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="772" y="462" width="395" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/1920.86.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1595611362931" />
-    <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1598950998895">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1599231531765">
+      <screen x="0" y="23" width="1440" height="828" />
     </state>
-    <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.828@0.23.1440.828" timestamp="1598774754840" />
+    <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.828@0.23.1440.828" timestamp="1599231531765" />
     <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.829@0.23.1440.829" timestamp="1598458443703" />
     <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598950998895" />
     <state x="259" y="119" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1597990138581">
@@ -250,53 +258,57 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="100" y="123" width="1240" height="628" key="DiffContextDialog/0.23.1440.828@0.23.1440.828" timestamp="1596826030916" />
-    <state width="1398" height="188" key="GridCell.Tab.0.bottom" timestamp="1599029587220">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1599198269994">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599029587220" />
-    <state width="1398" height="159" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1598983540678" />
+    <state width="1398" height="242" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
+    <state width="1878" height="242" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1598505639923" />
     <state width="1847" height="325" key="GridCell.Tab.0.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481296" />
     <state width="1398" height="182" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219003" />
-    <state width="1878" height="179" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598952462691" />
+    <state width="1874" height="187" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269994" />
     <state width="1878" height="233" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573399" />
-    <state width="1398" height="188" key="GridCell.Tab.0.center" timestamp="1599029587219">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1599198269993">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599029587219" />
-    <state width="1398" height="159" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1598983540676" />
+    <state width="1398" height="242" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
+    <state width="1878" height="242" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481295" />
     <state width="1398" height="182" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
-    <state width="1878" height="179" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598952462690" />
+    <state width="1874" height="187" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1398" height="188" key="GridCell.Tab.0.left" timestamp="1599029587219">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1599198269992">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599029587219" />
-    <state width="1398" height="159" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1598983540676" />
+    <state width="1398" height="242" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
+    <state width="1878" height="242" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1599111665560" />
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1598505639919" />
     <state width="1847" height="325" key="GridCell.Tab.0.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481295" />
     <state width="1398" height="182" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264497" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590292" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219001" />
-    <state width="1878" height="179" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598952462690" />
+    <state width="1874" height="187" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269992" />
     <state width="1878" height="233" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573397" />
-    <state width="1398" height="188" key="GridCell.Tab.0.right" timestamp="1599029587220">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1599198269993">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
-    <state width="1398" height="188" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599029587220" />
-    <state width="1398" height="159" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1598983540677" />
+    <state width="1398" height="242" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
+    <state width="1878" height="242" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578749" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481296" />
     <state width="1398" height="182" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
-    <state width="1878" height="179" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598952462691" />
+    <state width="1874" height="187" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
     <state width="1847" height="325" key="GridCell.Tab.1.bottom" timestamp="1595757578752">
       <screen x="0" y="23" width="1920" height="977" />
@@ -318,15 +330,21 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="604" y="217" width="707" height="587" key="NewModule_or_Project.wizard/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595755219237" />
-    <state x="445" y="92" key="SettingsEditor" timestamp="1595830520044">
-      <screen x="0" y="23" width="1920" height="977" />
+    <state x="445" y="94" key="SettingsEditor" timestamp="1599198494196">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state x="445" y="92" key="SettingsEditor/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595830520044" />
+    <state x="445" y="94" key="SettingsEditor/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198494196" />
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598550854373">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.828@0.23.1440.828" timestamp="1598550854373" />
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.829@0.23.1440.829" timestamp="1598458482473" />
+    <state x="500" y="135" width="599" height="604" key="find.popup" timestamp="1599232290551">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="500" y="135" width="599" height="604" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1599232290551" />
+    <state x="667" y="159" width="586" height="735" key="find.popup/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599067437182" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1595758961104">
       <screen x="0" y="23" width="1920" height="977" />
     </state>

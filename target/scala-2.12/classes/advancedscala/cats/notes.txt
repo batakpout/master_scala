@@ -1,0 +1,4 @@
+--> Cats is a library which provides abstraction for functional programming in scala
+--> Cats are written using the modular structure, which allows us to choose which type of class,
+    instance, and the interface we want to use
+--> Based on 1.) Type Classes, 2.) Implicits

@@ -1,37 +1,21 @@
-object Program1 extends App {
 
-  class Animal(name: String)
-  class Dog(name: String) extends Animal(name)
+trait Thing
+trait Vehicle extends Thing
+class Car extends Vehicle
+class Jeep extends Car
+class Coupe extends Car
+class Motorcycle extends Vehicle
+class Vegetable
+class Parking[A](val place: A)
 
-  val an: Animal = new Dog("labradog") // normal sub-typing (Polymorphism)
+new Parking[Motorcycle](new Motorcycle)
+new Parking[Vehicle](new Motorcycle)
+//new Parking[Motorcycle](new Car)
 
-  class GenericType[+T](a: T)
+class Parking2[A](val place1: A, val place2: A)
 
-
-
-  val a1 = new Animal("")
-  val d1 = new Dog("")
-
-  var c1: GenericType[Animal] = new GenericType[Animal](a1)
-
-  val c2: GenericType[Dog] = new GenericType[Dog](d1)
+new Parking2[Car](new Jeep, new Coupe)
+//new Parking2[Car](new Jeep, new Motorcycle)
+new Parking2(new Jeep, new Motorcycle) // no type mentioned, so works
 
 
-  val z:GenericType[Animal] = new GenericType[Animal](a1)
-
-  val zz:GenericType[Animal] = c2
-
-  def m1(x :GenericType[Animal]) = {
-
-  }
-
-  m1(c1)
-  m1(c2)
-
-  // if Dog <: Animal
-
-  //then
-
-  //GenericType[Dog] <: Field[Animal]
-
-}
