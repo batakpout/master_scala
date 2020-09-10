@@ -20,16 +20,318 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d0c131c-72e9-452b-973b-00f362048249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/GroupBy.sc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/lowerbounds.sc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/upperbounds.sc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/viewbounds.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/AkhileshTest$.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/GroupBy.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/Varargs$.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/misc.sc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/First.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/Methods.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/MyWorsheet.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/udemy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/udemy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws1.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/generics/ws1.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/AkhileshTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/GroupBy.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/SimpleFileTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/SimpleFileTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Varargs.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/AdvancePatternMatchDates.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/AdvancePatternMatchDates.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/AdvancedPatternMatching.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/AdvancedPatternMatching.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/CallByName.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/CallByName.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/DarkSugar.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/DarkSugar.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/ForComprehension.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/ForComprehension.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/InheritanceTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/InheritanceTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/JavaScalaConverters.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/JavaScalaConverters.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/cats/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/cats/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/collections/MySetImpl.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/collections/MySetImpl.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/concurrent/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/concurrent/Program1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/currying/CurryingPAF.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/currying/CurryingPAF.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/currying/PartialFunctions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/currying/PartialFunctions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/DanielExample.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/DanielExample.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/Example1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/Example1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/Example2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/Example2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/Example3.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/Example3.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/Example4.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/Example4.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/promisesfutures/ws.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/promisesfutures/ws.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/ws1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/ws2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/ws2.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/futures/ws3.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/futures/ws3.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/lowerbounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/typebounds/lowerbounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/upperbounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/typebounds/upperbounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/typebounds/viewbounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/typebounds/viewbounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/ws1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/generics/ws2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/ws2.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/implicits/Daniel1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/implicits/Daniel1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/implicits/f1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/implicits/f1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/lazily/MyStreamImpl.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/lazily/MyStreamImpl.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/lazily/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/lazily/Program1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/monads/Daniel1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/monads/Daniel1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/monads/Example1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/monads/Example1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/monads/Example2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/monads/Example2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/monads/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/monads/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/monads/ws.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/monads/ws.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/parallelcollections/Daniel1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/parallelcollections/Daniel1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/parallelcollections/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/parallelcollections/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/test.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/test.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/AbstractTypes.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/AbstractTypes.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/DependentTypes.scala.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/DependentTypes.scala.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/ImplicitResolutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/ImplicitResolutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/InfixOperator.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/InfixOperator.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/PhanthomTypes.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/PhanthomTypes.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/Variance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/Variance.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/JsonSerialization.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/JsonSerialization.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/MagnetPattern.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/MagnetPattern.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/PimpMyLibrary.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/PimpMyLibrary.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/Program1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/Program2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/Program2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/Program3.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/Program3.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/typeclass1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/typeclass1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typeclasses/typeclass2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typeclasses/typeclass2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/RockingInheritance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typesystem/RockingInheritance.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/typesystem/StackableModifications.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/typesystem/StackableModifications.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/advancedscala/typelevel/ws.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/ws.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/AkkaInternals.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/AkkaInternals.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/EventSourcing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/EventSourcing.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/MultiThreadingRecap.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/MultiThreadingRecap.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/ThreadModelLimitations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/ThreadModelLimitations.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/WhyActors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/WhyActors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/faulttolerance/BackOffSupervisorPattern.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/faulttolerance/BackOffSupervisorPattern.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/faulttolerance/LifeCycle.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/faulttolerance/LifeCycle.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/faulttolerance/StoppingActors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/faulttolerance/StoppingActors.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/faulttolerance/SupervisionSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/faulttolerance/SupervisionSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/infra/BankAccountFSM.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/infra/BankAccountFSM.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/infra/Dispatcher.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/infra/Dispatcher.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/infra/Mailboxes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/infra/Mailboxes.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/infra/Routers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/infra/Routers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/infra/TimersSchedulers.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/infra/TimersSchedulers.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/AkkaConfiguration.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/AkkaConfiguration.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/ChildActors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/ChildActors.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/CommunicatingActorsExample1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/CommunicatingActorsExample1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/Intros.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/Intros.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/Loggings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/Loggings.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/Sender.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/Sender.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/part1/StateChanges.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/part1/StateChanges.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/patterns/AskSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/patterns/AskSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/patterns/FSMSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/patterns/FSMSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/patterns/Stashing.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/patterns/Stashing.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/testing/BasicSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/testing/BasicSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/testing/InterceptingLogsSpecs.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/testing/InterceptingLogsSpecs.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/testing/SynchronousTestingSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/testing/SynchronousTestingSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/testing/TestProbeSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/testing/TestProbeSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/actors/testing/TimedAssertionsSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/actors/testing/TimedAssertionsSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/multithreading/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/multithreading/Program1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/persistence/PersistentActors.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/persistence/PersistentActors.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/akka/persistence/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/akka/persistence/notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/BaseFile.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/BaseFile.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/CBVvsCBN.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/CBVvsCBN.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/Either.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/Either.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/InfiniteScanner.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/InfiniteScanner.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/VectorVsList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/VectorVsList.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/basics/DefaultandNamedargs.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/basics/DefaultandNamedargs.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/basics/StringOps.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/basics/StringOps.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/exercises/MyList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/exercises/MyList.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/AnonymousFunctions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/AnonymousFunctions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/CurryingTestIT.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/CurryingTestIT.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/Functions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/Functions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/HOFsCurries.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/HOFsCurries.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/HandlingFailures.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/HandlingFailures.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/MapFlatMapFilterFor.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/MapFlatMapFilterFor.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/Options.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/Options.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/PartialFunction1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/PartialFunction1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/RightAssociative.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/RightAssociative.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/Sequences.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/Sequences.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/functions/TuplesAndMaps.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/functions/TuplesAndMaps.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/AbstractDataTypes.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/AbstractDataTypes.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/AnonymousClasses.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/AnonymousClasses.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/CaseClasses.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/CaseClasses.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/Exceptions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/Exceptions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/Generics.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/Generics.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/Inheritance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/Inheritance.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/MethodNotations.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/MethodNotations.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/OOBasics.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/OOBasics.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/Objects.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/Objects.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/PackagingAndImports.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/PackagingAndImports.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/TraitRestrictions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/TraitRestrictions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/deadlydiamond.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/deadlydiamond.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/oops/package.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/oops/package.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/patternmatching/AllThePatterns.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/patternmatching/AllThePatterns.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/patternmatching/PatternMatching.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/patternmatching/PatternMatching.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/patternmatching/PatternsEverywhere.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/patternmatching/PatternsEverywhere.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/basicscala/tailrecursion/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/basicscala/tailrecursion/ws1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/caseobjectnormalobject.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/caseobjectnormalobject.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/designpatterns/FactoryPattern.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/designpatterns/FactoryPattern.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/devinsideyou/Literals.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/devinsideyou/Literals.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/devinsideyou/SubRoutine.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/devinsideyou/SubRoutine.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/devinsideyou/Types.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/devinsideyou/Types.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/01 - Scala Properties and State.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/01 - Scala Properties and State.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/02 - Scala Type System, I.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/02 - Scala Type System, I.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/03 - Scala Type System, II.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/03 - Scala Type System, II.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/04 - Scala Type System, III.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/04 - Scala Type System, III.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/05 - Implicit Parameters.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/05 - Implicit Parameters.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/06 - Implicit Constraints and Functions.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/06 - Implicit Constraints and Functions.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/01-uniform-access.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/01-uniform-access.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/02-modifiers.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/02-modifiers.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/03-behind-the-scenes.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/03-behind-the-scenes.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/04-abstracts-and-custom-properties.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/04-abstracts-and-custom-properties.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/05-state-can-bleed.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/05-state-can-bleed.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/06-caching.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/scripts/06-caching.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/Module01.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/Module01.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/Module01Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/Module01Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/BlankValues.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/BlankValues.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/KoanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/KoanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/StopOnFirstFailure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module01/src/test/scala/koans/support/StopOnFirstFailure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/01-generics.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/01-generics.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/02-upper-bounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/02-upper-bounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/03-variance.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/03-variance.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/04-contra-variance.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/04-contra-variance.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/05-function-variance.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/05-function-variance.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/06-lower-bounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/06-lower-bounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/07-contra-lower-bounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/scripts/07-contra-lower-bounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/Module02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/Module02.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/Module02Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/Module02Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/BlankValues.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/BlankValues.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/KoanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/KoanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/StopOnFirstFailure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module02/src/test/scala/koans/support/StopOnFirstFailure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/01-type-params-recap.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/01-type-params-recap.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/02-type-members-intro.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/02-type-members-intro.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/03-singleton-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/03-singleton-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/04-using-parameters-with-members.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/04-using-parameters-with-members.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/05-self-referencing-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/05-self-referencing-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/06-recursive-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/scripts/06-recursive-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/Module03.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/Module03.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/Module03Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/Module03Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/BlankValues.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/BlankValues.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/KoanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/KoanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/StopOnFirstFailure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module03/src/test/scala/koans/support/StopOnFirstFailure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/01-existential-and-structural-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/01-existential-and-structural-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/02-refinement-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/02-refinement-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/03-self-types-and-aliases.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/03-self-types-and-aliases.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/04-infix-types.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/04-infix-types.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/05-enumerations.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/scripts/05-enumerations.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/src/test/scala/koans/Module04.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/src/test/scala/koans/Module04.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/src/test/scala/koans/Module04Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module04/src/test/scala/koans/Module04Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/01-implicit-params.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/01-implicit-params.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/02-type-class.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/02-type-class.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/03-type-class-composition.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/scripts/03-type-class-composition.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/Module05.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/Module05.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/Module05Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/Module05Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/BlankValues.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/BlankValues.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/KoanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/KoanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/StopOnFirstFailure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module05/src/test/scala/koans/support/StopOnFirstFailure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/Module06.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/Module06.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/Module06Solutions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/Module06Solutions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/BlankValues.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/BlankValues.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/KoanSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/KoanSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/StopOnFirstFailure.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/module06/src/test/scala/koans/support/StopOnFirstFailure.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/project/build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/scala-advanced-part-1/exercises-advanced-part-1/project/build.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/dick_wall/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/dick_wall/test.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/globallogicinterview.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/globallogicinterview.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/BinaryNumbers.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/BinaryNumbers.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/CoinAnalysis.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/CoinAnalysis.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/TraitWarnings.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/TraitWarnings.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/Tree.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/Tree.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/test.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/trees.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/trees.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/ws1.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/ws1.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/packtfunctionalDS/ws2.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/packtfunctionalDS/ws2.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/playground/Cinderella.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/playground/Cinderella.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/playground/PrinceCharming.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/playground/PrinceCharming.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/random/untitled.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/random/untitled.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/scalaexercise/untitled.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/scalaexercise/untitled.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/scalaexercise/ww.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/scalaexercise/ww.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/scienaptictest.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/scienaptictest.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingdf/Actor1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/teachingdf/Actor1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingdf/ActorLifeCycle.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/teachingdf/ActorLifeCycle.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/LoginService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/teachingdf/unittesting/LoginService.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/Program1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/teachingdf/unittesting/Program1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/teachingdf/unittesting/TestMockMethod.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/teachingdf/unittesting/TestMockMethod.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/untitledw.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/untitledw.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/Cd.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/Cd.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/Command.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/Command.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/CreateEntry.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/CreateEntry.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/LS.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/LS.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/Mkdir.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/Mkdir.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/PWD.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/PWD.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/Touch.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/Touch.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/commands/UnknownCommand.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/commands/UnknownCommand.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/files/DirEntry.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/files/DirEntry.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/files/Directory.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/files/Directory.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/files/File.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/files/File.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/filesystem/FileSystem.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/filesystem/FileSystem.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/filesystem/FileSystemException.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/filesystem/FileSystemException.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/virtualfs/filesystem/State.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/virtualfs/filesystem/State.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/AkhileshTest$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/AkhileshTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/GroupBy.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Varargs$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/Varargs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/AdvancePatternMatchDates.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/cats/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/futures/promisesfutures/ws.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/futures/ws1.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/futures/ws2.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/futures/ws3.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/generics/ws2.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/implicits/f1.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/monads/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/monads/ws.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/parallelcollections/Notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/test.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/AbstractTypes.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/DependentTypes.scala.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/InfixOperator.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/PhanthomTypes.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra$Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra$Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra$cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra$delayedInit$body.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/TestCoContra.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/typeclasses/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/typeclasses/typeclass1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/typeclasses/typeclass2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/ws.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akka/actors/WhyActors.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akka/actors/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/akka/persistence/notes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/basicscala/functions/CurryingTestIT.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/basicscala/oops/deadlydiamond.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/basicscala/tailrecursion/ws1.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/caseobjectnormalobject.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/01 - Scala Properties and State.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/02 - Scala Type System, I.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/03 - Scala Type System, II.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/04 - Scala Type System, III.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/05 - Implicit Parameters.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/dick_wall/scala-advanced-part-1/06 - Implicit Constraints and Functions.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/globallogicinterview.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/packtfunctionalDS/BinaryNumbers.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/packtfunctionalDS/trees.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/packtfunctionalDS/ws1.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/packtfunctionalDS/ws2.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/random/untitled.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/scalaexercise/untitled.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/scalaexercise/ww.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/scienaptictest.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/untitledw.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/virtualfs/commands/Cd.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/virtualfs/commands/Cd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Attempt$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Attempt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Fail$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Fail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Success$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1$Success.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Monad1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/MonadTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/MySpec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/Test1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/test-classes/loginobaid/LoginTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +361,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Class" />
         <option value="Scala Worksheet" />
       </list>
     </option>
@@ -82,21 +385,22 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/scala/com/aamir" />
       <recent name="$PROJECT_DIR$/src/main/scala/dick_wall" />
       <recent name="$PROJECT_DIR$/src/main/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TestCoContra">
-    <configuration name="RockingInheritance" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typesystem.RockingInheritance" />
+  <component name="RunManager" selected="Application.Methods1">
+    <configuration name="FirstProgram" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.FirstProgram" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typesystem.*" />
+          <option name="PATTERN" value="newbie_training.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +408,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RockingInheritance_Linearization" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typesystem.RockingInheritance_Linearization" />
+    <configuration name="FirstProgram2" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.FirstProgram2" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typesystem.*" />
+          <option name="PATTERN" value="newbie_training.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +421,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StackableModifications1" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="advancedscala.typelevel.typesystem.StackableModifications1" />
+    <configuration name="Methods1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.Methods1" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="advancedscala.typelevel.typesystem.*" />
+          <option name="PATTERN" value="newbie_training.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,11 +483,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Methods1" />
+        <item itemvalue="Application.FirstProgram2" />
+        <item itemvalue="Application.FirstProgram" />
         <item itemvalue="Application.TestCoContra" />
         <item itemvalue="Application.Variance1" />
-        <item itemvalue="Application.RockingInheritance_Linearization" />
-        <item itemvalue="Application.StackableModifications1" />
-        <item itemvalue="Application.RockingInheritance" />
       </list>
     </recent_temporary>
   </component>
@@ -258,93 +562,103 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="100" y="123" width="1240" height="628" key="DiffContextDialog/0.23.1440.828@0.23.1440.828" timestamp="1596826030916" />
-    <state width="1874" height="187" key="GridCell.Tab.0.bottom" timestamp="1599198269994">
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom" timestamp="1599723321379">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
-    <state width="1878" height="242" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
+    <state width="1394" height="143" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1599235209353" />
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1598505639923" />
     <state width="1847" height="325" key="GridCell.Tab.0.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
-    <state width="1874" height="187" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481296" />
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321379" />
     <state width="1398" height="182" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219003" />
     <state width="1874" height="187" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269994" />
     <state width="1878" height="233" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573399" />
-    <state width="1874" height="187" key="GridCell.Tab.0.center" timestamp="1599198269993">
+    <state width="1874" height="327" key="GridCell.Tab.0.center" timestamp="1599723321378">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
-    <state width="1878" height="242" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
+    <state width="1394" height="143" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1599235209352" />
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
-    <state width="1874" height="187" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481295" />
+    <state width="1874" height="327" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321378" />
     <state width="1398" height="182" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
     <state width="1874" height="187" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1874" height="187" key="GridCell.Tab.0.left" timestamp="1599198269992">
+    <state width="1874" height="327" key="GridCell.Tab.0.left" timestamp="1599723321378">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
-    <state width="1878" height="242" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1599111665560" />
+    <state width="1394" height="143" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1599235209351" />
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1598505639919" />
     <state width="1847" height="325" key="GridCell.Tab.0.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
-    <state width="1874" height="187" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481295" />
+    <state width="1874" height="327" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321378" />
     <state width="1398" height="182" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264497" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590292" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219001" />
     <state width="1874" height="187" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269992" />
     <state width="1878" height="233" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573397" />
-    <state width="1874" height="187" key="GridCell.Tab.0.right" timestamp="1599198269993">
+    <state width="1874" height="327" key="GridCell.Tab.0.right" timestamp="1599723321379">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
-    <state width="1878" height="242" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1599111665561" />
+    <state width="1394" height="143" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1599235209352" />
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578749" />
-    <state width="1874" height="187" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599119481296" />
+    <state width="1874" height="327" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321379" />
     <state width="1398" height="182" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
     <state width="1874" height="187" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1847" height="325" key="GridCell.Tab.1.bottom" timestamp="1595757578752">
-      <screen x="0" y="23" width="1920" height="977" />
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom" timestamp="1599723321380">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578752" />
-    <state width="1847" height="325" key="GridCell.Tab.1.center" timestamp="1595757578751">
-      <screen x="0" y="23" width="1920" height="977" />
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
+    <state width="1874" height="327" key="GridCell.Tab.1.center" timestamp="1599723321380">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578751" />
-    <state width="1847" height="325" key="GridCell.Tab.1.left" timestamp="1595757578750">
-      <screen x="0" y="23" width="1920" height="977" />
+    <state width="1874" height="327" key="GridCell.Tab.1.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
+    <state width="1874" height="327" key="GridCell.Tab.1.left" timestamp="1599723321379">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
-    <state width="1847" height="325" key="GridCell.Tab.1.right" timestamp="1595757578752">
-      <screen x="0" y="23" width="1920" height="977" />
+    <state width="1874" height="327" key="GridCell.Tab.1.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321379" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right" timestamp="1599723321380">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578752" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
     <state x="604" y="217" width="707" height="587" key="NewModule_or_Project.wizard" timestamp="1595755219237">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="604" y="217" width="707" height="587" key="NewModule_or_Project.wizard/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595755219237" />
-    <state x="445" y="94" key="SettingsEditor" timestamp="1599198494196">
+    <state x="445" y="94" key="SettingsEditor" timestamp="1599631830742">
       <screen x="0" y="23" width="1920" height="1008" />
     </state>
+    <state x="334" y="81" key="SettingsEditor/0.23.1440.828@0.23.1440.828" timestamp="1599241881377" />
     <state x="445" y="92" key="SettingsEditor/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595830520044" />
+    <state x="445" y="94" key="SettingsEditor/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599631830742" />
     <state x="445" y="94" key="SettingsEditor/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198494196" />
+    <state width="500" height="447" key="SwitcherDM" timestamp="1599578802052">
+      <screen x="0" y="23" width="1920" height="1008" />
+    </state>
+    <state width="500" height="447" key="SwitcherDM/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599578802052" />
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598550854373">
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.828@0.23.1440.828" timestamp="1598550854373" />
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.829@0.23.1440.829" timestamp="1598458482473" />
-    <state x="500" y="135" width="599" height="604" key="find.popup" timestamp="1599232290551">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="667" y="159" width="599" height="735" key="find.popup" timestamp="1599733279640">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state x="500" y="135" width="599" height="604" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1599232290551" />
-    <state x="667" y="159" width="586" height="735" key="find.popup/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599067437182" />
+    <state x="667" y="159" width="599" height="735" key="find.popup/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599733279640" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1595758961104">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
@@ -358,5 +672,9 @@
     </state>
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1598774518682" />
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1598008286990" />
+  </component>
+  <component name="WorksheetDefaultProjectSettings">
+    <option name="compilerProfileName" value="Default" />
+    <option name="moduleName" value="udemy" />
   </component>
 </project>

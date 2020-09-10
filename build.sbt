@@ -1,4 +1,4 @@
-name := "udemy"
+name := "com/aamir"
 
 version := "0.1"
 
