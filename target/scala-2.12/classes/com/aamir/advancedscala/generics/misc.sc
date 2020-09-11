@@ -10,6 +10,7 @@ class Cage[-T](value: T)
 
 val c:Cage[Cat] = new Cage[Animal](new Dog())
 
+
 /////////
 
 class kitty extends Cat

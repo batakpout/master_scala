@@ -34,6 +34,8 @@ class Parking[A >: Bicycle <: Vehicle](val plaza: A)
 
 new Parking(new Bicycle)
 new Parking(new Coupe)
+new Parking(new Jeep)
+new Parking(new Car)
 
 //new Parking(new AnyRef)
 new Parking(new Tricycle) //the type of Parking is now Parking[Bicycle]
