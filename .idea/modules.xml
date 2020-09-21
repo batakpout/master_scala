@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/udemy.iml" filepath="$PROJECT_DIR$/.idea/modules/udemy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/udemy-build.iml" filepath="$PROJECT_DIR$/.idea/modules/udemy-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com_aamir.iml" filepath="$PROJECT_DIR$/.idea/modules/com_aamir.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com_aamir-build.iml" filepath="$PROJECT_DIR$/.idea/modules/com_aamir-build.iml" />
     </modules>
   </component>
 </project>

@@ -20,34 +20,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d0c131c-72e9-452b-973b-00f362048249" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/variance/Variance2.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/DefaultNamedArgs.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/OOPS1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/com_aamir-build.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/com_aamir.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/generics/links" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/TypeMembers.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/FunctionalProgramming1.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/Inheritance.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/MN.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/udemy-build.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/udemy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/Variance.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/variance/Variance.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$95b8153ee8de22f268d8$.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$95b8153ee8de22f268d8.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$95b8153ee8de22f268d8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/variance/Variance2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel/variance/Variance2.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/newbie_training/MyWorsheet.sc" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/MyWorsheet.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$AnotherContravariantCage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Audi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Cage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$CovariantCage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Crocodile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Ferrari.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$FerrariTemp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$InvariantVariableCage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$Kitty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$MyList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$PetShop.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$XCage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1$delayedInit$body.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/advancedscala/typelevel/Variance1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/generics/misc.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/generics/misc.sc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/generics/typebounds/lowerbounds.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/generics/typebounds/lowerbounds.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/newbie_training/OOPS1.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/newbie_training/OOPS1.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/META-INF/udemy.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/typelevel/variance/Variance3$CParking2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/typelevel/variance/Variance3$XParking2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/typelevel/variance/Variance3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/advancedscala/typelevel/variance/Variance3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/01 - Scala Properties and State.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/02 - Scala Type System, I.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/03 - Scala Type System, II.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/04 - Scala Type System, III.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/05 - Implicit Parameters.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/com/aamir/dick_wall/scala-advanced-part-1/06 - Implicit Constraints and Functions.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/MyWorsheet.sc" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/MyWorsheet.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1$Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1$delayedInit$body.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1$delayedInit$body.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/newbie_training/OOPS1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.12/update/update_cache_2.12/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/_global/checkBuildSources/_global/inputFileStamps/previous" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/_global/updateClassifiers/_global/streams/update_cache_2.12/inputs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,19 +110,20 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/scala/com/aamir/advancedscala/typelevel" />
       <recent name="$PROJECT_DIR$/src/main/scala/com/aamir" />
       <recent name="$PROJECT_DIR$/src/main/scala/dick_wall" />
       <recent name="$PROJECT_DIR$/src/main/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Variance2">
-    <configuration name="CallByNameValue" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="newbie_training.CallByNameValue" />
-      <module name="udemy" />
+  <component name="RunManager" selected="Application.TypeMembers1">
+    <configuration name="FunctionalProgramming1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.FunctionalProgramming1" />
+      <module name="com_aamir" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newbie_training.*" />
@@ -124,9 +134,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CallByNameValue1" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="newbie_training.CallByNameValue1" />
-      <module name="udemy" />
+    <configuration name="HandlingException" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.HandlingException" />
+      <module name="com_aamir" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newbie_training.*" />
@@ -137,9 +147,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OOPS1" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="newbie_training.OOPS1" />
-      <module name="udemy" />
+    <configuration name="Inheritance1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.Inheritance1" />
+      <module name="com_aamir" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="newbie_training.*" />
@@ -150,12 +160,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Program2" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="newbie_training.Program2" />
-      <module name="udemy" />
+    <configuration name="TypeMembers1" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.aamir.advancedscala.typelevel.TypeMembers1" />
+      <module name="com_aamir" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="newbie_training.*" />
+          <option name="PATTERN" value="com.aamir.advancedscala.typelevel.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,12 +173,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Variance2" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.aamir.advancedscala.typelevel.variance.Variance2" />
+    <configuration name="WhatToAvoid" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="newbie_training.WhatToAvoid" />
       <module name="udemy" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.aamir.advancedscala.typelevel.variance.*" />
+          <option name="PATTERN" value="newbie_training.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -199,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Variance2" />
-        <item itemvalue="Application.OOPS1" />
-        <item itemvalue="Application.CallByNameValue" />
-        <item itemvalue="Application.CallByNameValue1" />
-        <item itemvalue="Application.Program2" />
+        <item itemvalue="Application.TypeMembers1" />
+        <item itemvalue="Application.FunctionalProgramming1" />
+        <item itemvalue="Application.HandlingException" />
+        <item itemvalue="Application.Inheritance1" />
+        <item itemvalue="Application.WhatToAvoid" />
       </list>
     </recent_temporary>
   </component>
@@ -247,20 +257,24 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="422" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595756098714" />
-    <state x="455" y="261" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599230655045">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="607" y="313" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599846391781">
+      <screen x="0" y="23" width="1920" height="1008" />
     </state>
     <state x="455" y="259" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1599033925463" />
     <state x="455" y="261" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.828@0.23.1440.828" timestamp="1599230655045" />
+    <state x="607" y="313" key="#com.intellij.fileTypes.FileTypeChooser/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599846391780" />
     <state x="772" y="462" width="395" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1595611362931">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="772" y="462" width="395" height="159" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog/1920.86.1440.900/0.0.1920.1080@0.0.1920.1080" timestamp="1595611362931" />
-    <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser" timestamp="1599231531765">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser" timestamp="1600678038819">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.828@0.23.1440.828" timestamp="1599231531765" />
     <state x="524" y="138" key="#com.intellij.ide.util.MemberChooser/0.23.1440.829@0.23.1440.829" timestamp="1598458443703" />
+    <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600678038819" />
+    <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600410584059" />
+    <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600324567104" />
     <state x="699" y="163" key="#com.intellij.ide.util.MemberChooser/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1598950998895" />
     <state x="259" y="119" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1597990138581">
       <screen x="0" y="23" width="1440" height="829" />
@@ -278,96 +292,125 @@
       <screen x="0" y="23" width="1440" height="828" />
     </state>
     <state x="100" y="123" width="1240" height="628" key="DiffContextDialog/0.23.1440.828@0.23.1440.828" timestamp="1596826030916" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom" timestamp="1599842049213">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom" timestamp="1600680714521">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
     <state width="1394" height="143" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1599235209353" />
     <state width="1398" height="180" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1598505639923" />
     <state width="1847" height="325" key="GridCell.Tab.0.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1599842049213" />
-    <state width="1874" height="265" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599807120749" />
+    <state width="1874" height="265" key="GridCell.Tab.0.bottom/1920.87.1920.1006/0.23.1920.1057@0.23.1920.1057" timestamp="1600082199330" />
+    <state width="1874" height="265" key="GridCell.Tab.0.bottom/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1600064397074" />
+    <state width="1874" height="246" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600680714521" />
+    <state width="1874" height="327" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541563" />
+    <state width="1874" height="247" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600411642638" />
+    <state width="1874" height="265" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1600065833743" />
     <state width="1398" height="182" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.bottom/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219003" />
+    <state width="1874" height="175" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600324837187" />
     <state width="1874" height="187" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269994" />
     <state width="1878" height="233" key="GridCell.Tab.0.bottom/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573399" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center" timestamp="1599842049212">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1874" height="246" key="GridCell.Tab.0.center" timestamp="1600680714520">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
     <state width="1394" height="143" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1599235209352" />
     <state width="1398" height="180" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1599842049212" />
-    <state width="1874" height="265" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599807120748" />
+    <state width="1874" height="265" key="GridCell.Tab.0.center/1920.87.1920.1006/0.23.1920.1057@0.23.1920.1057" timestamp="1600082199329" />
+    <state width="1874" height="265" key="GridCell.Tab.0.center/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1600064397073" />
+    <state width="1874" height="246" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600680714520" />
+    <state width="1874" height="327" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541562" />
+    <state width="1874" height="247" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600411642637" />
+    <state width="1874" height="265" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1600065833742" />
     <state width="1398" height="182" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.center/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
+    <state width="1874" height="175" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600324837186" />
     <state width="1874" height="187" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.center/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left" timestamp="1599842049212">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1874" height="246" key="GridCell.Tab.0.left" timestamp="1600680714519">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1599048982169" />
     <state width="1394" height="143" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1599235209351" />
     <state width="1398" height="180" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1598505639919" />
     <state width="1847" height="325" key="GridCell.Tab.0.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578748" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1599842049212" />
-    <state width="1874" height="265" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599807120748" />
+    <state width="1874" height="265" key="GridCell.Tab.0.left/1920.87.1920.1006/0.23.1920.1057@0.23.1920.1057" timestamp="1600082199328" />
+    <state width="1874" height="265" key="GridCell.Tab.0.left/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1600064397072" />
+    <state width="1874" height="246" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600680714519" />
+    <state width="1874" height="327" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541562" />
+    <state width="1874" height="247" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600411642637" />
+    <state width="1874" height="265" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1600065833742" />
     <state width="1398" height="182" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264497" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590292" />
     <state width="1878" height="257" key="GridCell.Tab.0.left/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219001" />
+    <state width="1874" height="175" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600324837185" />
     <state width="1874" height="187" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269992" />
     <state width="1878" height="233" key="GridCell.Tab.0.left/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573397" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right" timestamp="1599842049213">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="1874" height="246" key="GridCell.Tab.0.right" timestamp="1600680714520">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state width="1398" height="242" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1599048982170" />
     <state width="1394" height="143" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1599235209352" />
     <state width="1398" height="180" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1598505639922" />
     <state width="1847" height="325" key="GridCell.Tab.0.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578749" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1599842049213" />
-    <state width="1874" height="265" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599807120749" />
+    <state width="1874" height="265" key="GridCell.Tab.0.right/1920.87.1920.1006/0.23.1920.1057@0.23.1920.1057" timestamp="1600082199329" />
+    <state width="1874" height="265" key="GridCell.Tab.0.right/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1600064397073" />
+    <state width="1874" height="246" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600680714520" />
+    <state width="1874" height="327" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541563" />
+    <state width="1874" height="247" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600411642638" />
+    <state width="1874" height="265" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1600065833742" />
     <state width="1398" height="182" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598009264498" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@0.23.1920.1011" timestamp="1597334590293" />
     <state width="1878" height="257" key="GridCell.Tab.0.right/1920.87.1920.1057/0.23.1920.1011@1920.87.1920.1057" timestamp="1597334219002" />
+    <state width="1874" height="175" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600324837186" />
     <state width="1874" height="187" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198269993" />
     <state width="1878" height="233" key="GridCell.Tab.0.right/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1009@0.23.1920.1009" timestamp="1598268573398" />
-    <state width="1874" height="327" key="GridCell.Tab.1.bottom" timestamp="1599723321380">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom" timestamp="1600273541565">
+      <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.bottom/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578752" />
+    <state width="1874" height="327" key="GridCell.Tab.1.bottom/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541565" />
     <state width="1874" height="327" key="GridCell.Tab.1.bottom/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
-    <state width="1874" height="327" key="GridCell.Tab.1.center" timestamp="1599723321380">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state width="1874" height="327" key="GridCell.Tab.1.center" timestamp="1600273541565">
+      <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.center/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578751" />
+    <state width="1874" height="327" key="GridCell.Tab.1.center/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541565" />
     <state width="1874" height="327" key="GridCell.Tab.1.center/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
-    <state width="1874" height="327" key="GridCell.Tab.1.left" timestamp="1599723321379">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state width="1874" height="327" key="GridCell.Tab.1.left" timestamp="1600273541564">
+      <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.left/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578750" />
+    <state width="1874" height="327" key="GridCell.Tab.1.left/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541564" />
     <state width="1874" height="327" key="GridCell.Tab.1.left/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321379" />
-    <state width="1874" height="327" key="GridCell.Tab.1.right" timestamp="1599723321380">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right" timestamp="1600273541565">
+      <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state width="1847" height="325" key="GridCell.Tab.1.right/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595757578752" />
+    <state width="1874" height="327" key="GridCell.Tab.1.right/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600273541565" />
     <state width="1874" height="327" key="GridCell.Tab.1.right/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599723321380" />
     <state x="604" y="217" width="707" height="587" key="NewModule_or_Project.wizard" timestamp="1595755219237">
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="604" y="217" width="707" height="587" key="NewModule_or_Project.wizard/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595755219237" />
-    <state x="445" y="94" key="SettingsEditor" timestamp="1599631830742">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state x="445" y="93" key="SettingsEditor" timestamp="1600675955792">
+      <screen x="0" y="23" width="1920" height="1005" />
     </state>
     <state x="334" y="81" key="SettingsEditor/0.23.1440.828@0.23.1440.828" timestamp="1599241881377" />
     <state x="445" y="92" key="SettingsEditor/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595830520044" />
-    <state x="445" y="94" key="SettingsEditor/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599631830742" />
+    <state x="445" y="97" key="SettingsEditor/1920.87.1920.1008/0.23.1920.1057@0.23.1920.1057" timestamp="1600064188385" />
+    <state x="445" y="93" key="SettingsEditor/1920.87.1920.1057/0.23.1920.1005@0.23.1920.1005" timestamp="1600675955792" />
+    <state x="445" y="93" key="SettingsEditor/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600236197493" />
+    <state x="445" y="94" key="SettingsEditor/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599846296662" />
+    <state x="445" y="93" key="SettingsEditor/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600322500908" />
     <state x="445" y="94" key="SettingsEditor/3840.-68.1440.877/1920.-68.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599198494196" />
-    <state width="500" height="447" key="SwitcherDM" timestamp="1599809086896">
-      <screen x="0" y="23" width="1920" height="1008" />
+    <state width="500" height="447" key="SwitcherDM" timestamp="1600237038857">
+      <screen x="0" y="23" width="1920" height="1006" />
     </state>
+    <state width="500" height="447" key="SwitcherDM/1920.87.1920.1057/0.23.1920.1006@0.23.1920.1006" timestamp="1600237038857" />
     <state width="500" height="447" key="SwitcherDM/1920.87.1920.1057/0.23.1920.1008@0.23.1920.1008" timestamp="1599809086896" />
     <state x="343" y="55" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1598550854373">
       <screen x="0" y="23" width="1440" height="828" />
@@ -387,11 +430,12 @@
       <screen x="0" y="23" width="1920" height="977" />
     </state>
     <state x="381" y="133" key="new project wizard/1920.23.1920.1057/0.23.1920.977@0.23.1920.977" timestamp="1595755192910" />
-    <state x="385" y="176" width="670" height="676" key="search.everywhere.popup" timestamp="1598774518682">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="513" y="209" width="894" height="823" key="search.everywhere.popup" timestamp="1600410030316">
+      <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1598774518682" />
     <state x="385" y="176" width="670" height="676" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1598008286990" />
+    <state x="513" y="209" width="894" height="823" key="search.everywhere.popup/1920.87.1920.1057/0.23.1920.1007@0.23.1920.1007" timestamp="1600410030316" />
   </component>
   <component name="WorksheetDefaultProjectSettings">
     <option name="compilerProfileName" value="Default" />

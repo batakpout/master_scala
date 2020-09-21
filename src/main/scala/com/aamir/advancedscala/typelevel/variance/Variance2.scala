@@ -103,18 +103,5 @@ object Variance3 extends App {
 
   }
 
-  class CParking2[+T](vehicles: IList[T]) {
-    def park[S >: T](vehicle: S): CParking2[S] = ???
-    def impound[S >: T](vehicles: IList[S]): CParking2[S] = ???
-    def checkVehicles[S >: T](conditions: String): IList[S] = ???
-
-  }
-
-  class XParking2[-T](vehicles: IList[T]) {
-    def park(vehicle: T): XParking2[T] = ???
-    def impound[S <: T](vehicles: IList[S]): XParking2[S] = ???
-    def checkVehicles[S <: T](conditions: String): IList[S] = ???
-  }
-
 }
 
