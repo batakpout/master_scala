@@ -56,5 +56,10 @@ object RockingInheritance_Linearization  extends App {
   }
 
   val color = new White
+  /**
+   *   Green extends Cold
+   *   Blue extends Green extends Cold
+   *   white extends Red with Green with Blue with cold
+   */
   color.print
 }
