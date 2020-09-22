@@ -34,11 +34,6 @@ object TypeMembers1 extends App {
     def add(element: T): MyList
   }
 
-  class NonEmptyList1(value: Int) extends MyList {
-     type T = this.type
-     def add(element: this.type): MyList = ???
-  }
-
   class NonEmptyList(value: Int) extends MyList {
     override type T = Int
 
@@ -63,7 +58,14 @@ object TypeMembers1 extends App {
     type A <: Number
   }
 
-/*   class CustomList(hd: String, tl: CustomList) extends MyCoolList with ApplicableToNumbers {
+  trait NList extends MyCoolList {
+    type S = Int with Double with Float with Byte with Long
+    override type A >: S
+    //override type A >: Int with Double with Float with Byte with Long
+
+  }
+
+/*   class CustomList(hd: String, tl: CustomList) extends MyCoolList with NList {
      type A = String
      def head = hd
      def tail = tl
@@ -71,8 +73,8 @@ object TypeMembers1 extends App {
    }*/
 
 
-  class IntList(hd: Integer, tl: IntList) extends MyCoolList with ApplicableToNumbers {
-    type A =  Integer
+  class IntList(hd: Int, tl: IntList) extends MyCoolList with NList {
+    type A =  Int
     def head = hd
     def tail = tl
 
