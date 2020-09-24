@@ -4,7 +4,7 @@ import scala.annotation.tailrec
 
 object TuplesAndMaps extends App {
 
-  // tuples = finite ordered "lists"
+/*  // tuples = finite ordered "lists"
   val aTuple = (2, "hello, Scala")  // Tuple2[Int, String] = (Int, String)
 
   println(aTuple._1)  // 2
@@ -46,7 +46,7 @@ object TuplesAndMaps extends App {
   println(phonebook.toList)
   println(List(("Daniel", 555)).toMap)
   val names = List("Bob", "James", "Angela", "Mary", "Daniel", "Jim")
-  println(names.groupBy(name => name.charAt(0)))
+  println(names.groupBy(name => name.charAt(0)))*/
 
 
   /*
@@ -66,19 +66,20 @@ object TuplesAndMaps extends App {
         - how many people have NO friends
         - if there is a social connection between two people (direct or not)
    */
+
   def add(network: Map[String, Set[String]], person: String): Map[String, Set[String]] =
     network + (person -> Set())
 
   def friend(network: Map[String, Set[String]], a: String, b: String): Map[String, Set[String]] = {
-    val friendsA = network(a)
-    val friendsB = network(b)
+    val friendsA: Set[String] = network.getOrElse(a, Set())
+    val friendsB = network.getOrElse(b, Set())
 
     network + (a -> (friendsA + b)) + (b -> (friendsB + a))
   }
 
   def unfriend(network: Map[String, Set[String]], a: String, b: String): Map[String, Set[String]] = {
-    val friendsA = network(a)
-    val friendsB = network(b)
+    val friendsA = network.getOrElse(a, Set())
+    val friendsB = network.getOrElse(b, Set())
 
     network + (a -> (friendsA - b)) + (b -> (friendsB - a))
   }
@@ -92,36 +93,15 @@ object TuplesAndMaps extends App {
     unfriended - person
   }
 
-  val empty: Map[String, Set[String]] = Map()
-  val network = add(add(empty, "Bob"), "Mary")
-  println(network)
-  println(friend(network, "Bob", "Mary"))
-  println(unfriend(friend(network, "Bob", "Mary"), "Bob", "Mary"))
-  println(remove(friend(network, "Bob", "Mary"), "Bob"))
-
-  // Jim,Bob,Mary
-  val people = add(add(add(empty, "Bob"), "Mary"), "Jim")
-  val jimBob = friend(people, "Bob", "Jim")
-  val testNet = friend(jimBob, "Bob", "Mary")
-
-  println(testNet)
-
   def nFriends(network: Map[String, Set[String]], person: String): Int =
     if (!network.contains(person)) 0
     else network(person).size
 
-  println(nFriends(testNet, "Bob"))
-
-  def mostFriends(network: Map[String, Set[String]]) =
+  def mostFriends(network: Map[String, Set[String]]): (String, Set[String]) =
     network.maxBy[Int](pair => pair._2.size)
-
-  println("most friends..")
-  println(mostFriends(testNet))
 
   def nPeopleWithNoFriends(network: Map[String, Set[String]]): Int =
     network.count(_._2.isEmpty)
-
-  println(nPeopleWithNoFriends(testNet))
 
   def socialConnection(network: Map[String, Set[String]], a: String, b: String): Boolean = {
     @tailrec
@@ -138,8 +118,51 @@ object TuplesAndMaps extends App {
     bfs(b, Set(), network(a) + a)
   }
 
-  println(socialConnection(testNet, "Mary", "Jim"))
-  println(socialConnection(network, "Mary", "Bob"))
+  //facebook friendlist of persons: ["Mark", Set(no dupliates)]
+  val empty: Map[String, Set[String]] = Map()
+  val network: Map[String, Set[String]] = add(add(add(add(add(empty, "Pooja"),
+    "Reddy"), "Kunal"), "Sonu"), "Shristi")
+  println(network)
+
+  val newSocialNetwork1 = friend(network, "Pooja", "Deena")
+  val newSocialNetwork2 = friend(newSocialNetwork1, "Pooja", "Shristi")
+  val newSocialNetwork3 = friend(newSocialNetwork2, "Sonu", "Pooja")
+  val newSocialNetwork4 = friend(newSocialNetwork3, "Reddy", "Pooja")
+
+  println(newSocialNetwork4)
+  println(s"Poojas friends total: ${nFriends(newSocialNetwork4, "Pooja")}")
+  println(s"Most friends: ${mostFriends(newSocialNetwork4)}")
+  println(s"People count with no friends : ${nPeopleWithNoFriends(newSocialNetwork4)}")
+  println("------")
+  val res = socialConnection(newSocialNetwork4, "Pooja", "Deena")
+  println(res)
+  println("------")
+  val newSocialNetwork5 = unfriend(newSocialNetwork4, "Pooja", "Deena")
+  println(newSocialNetwork5)
+
+  val newSocialNetwork6 =  remove(newSocialNetwork5, "Pooja")
+  println(newSocialNetwork6)
+
+  // Jim,Bob,Mary
+  //val people = add(add(add(empty, "Bob"), "Mary"), "Jim")
+  //val jimBob = friend(people, "Bob", "Jim")
+  //val testNet = friend(jimBob, "Bob", "Mary")
+
+  //println(testNet)
+
+
+
+  //println(nFriends(testNet, "Bob"))
+
+ // println("most friends..")
+  //println(mostFriends(testNet))
+
+  //println(nPeopleWithNoFriends(testNet))
+
+
+
+  //println(socialConnection(testNet, "Mary", "Jim"))
+  //println(socialConnection(network, "Mary", "Bob"))
 
 
 }

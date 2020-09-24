@@ -54,3 +54,4 @@ object PathDependentTypesInnerType extends App {
   //get[StringItem](10)
 
 }
+
