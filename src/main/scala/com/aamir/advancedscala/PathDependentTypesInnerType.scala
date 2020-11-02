@@ -21,7 +21,12 @@ object PathDependentTypesInnerType extends App {
   val o = new Outer
   val inner = new o.Inner
 
+  val x = new Outer
+  val y = new x.Inner
+
    o.print(inner)
+   o.printGeneral(inner)
+   o.printGeneral(y)
 
   val oo = new Outer
   oo.printGeneral(inner)

@@ -23,7 +23,7 @@ val endorsements = List(
 endorsements.groupBy(_.skill)
 
 def cal2(end: List[Endorsement]): List[(String, FinalResult)] = {
-  end.foldLeft(Map.empty[String, FinalResult]) { (a, b) =>
+  end.foldLeeft(Map.empty[String, FinalResult]) { (a, b) =>
     val x = a.get(b.skill)
     if (x.isDefined) {
       val newList: List[String] = b.name :: x.get.people
@@ -36,6 +36,29 @@ def cal2(end: List[Endorsement]): List[(String, FinalResult)] = {
 }
 
 cal2(endorsements)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //check series....
 
 

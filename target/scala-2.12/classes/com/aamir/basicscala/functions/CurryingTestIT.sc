@@ -31,3 +31,8 @@ def check(useNewAuth: Boolean, x: Any) = x match {
 }
 
 val x = check(true, "sss")
+
+def x(x: Int)(implicit y: Double) = x + y
+
+implicit val d:Double = 10.7
+x(10)

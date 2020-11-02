@@ -1,6 +1,7 @@
 object SocialNetwork extends App {
 
   type newSocialNetwork = Map[String, Set[String]]
+
   def add(network: Map[String, Set[String]], person: String): newSocialNetwork = ???
   def friend(network: Map[String, Set[String]], a: String, b: String): newSocialNetwork = ???
   def unfriend(network: Map[String, Set[String]], a: String, b: String): newSocialNetwork = ???

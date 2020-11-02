@@ -1,25 +1,28 @@
 package loginobaid
 
 
-import org.mockito.Mockito._
+import com.aamir.teachingdf.unittesting.{LoginJog, LoginService, RealLoginService, User}
+import org.mockito.Mockito.when
+import org.scalamock.scalatest.MockFactory
 import org.scalatest.{BeforeAndAfter, FunSuite}
 import org.scalatest.mockito.MockitoSugar
-import teachingdf.unittesting.{LoginService, User}
+import org.mockito.Mockito._
 
-class LoginTest extends FunSuite with BeforeAndAfter with MockitoSugar {
+class LoginTest extends FunSuite with BeforeAndAfter with MockFactory {
 
   test("test login service") {
 
-    val service: LoginService = mock[LoginService]
+    val joginService = mock[LoginJog]
+    (joginService.jog_in( _: String))
+      .expects(
+        "johndoe"
+      )
+      .returns("johndoe")
 
-    when(service.login("johndoe", "secret")).thenReturn(Some(User("johndoe")))
-    when(service.login("joehacker", "secret")).thenReturn(None)
-
+    val service = new RealLoginService(joginService)
     val johndoe = service.login("johndoe", "secret")
-    val joehacker = service.login("joehacker", "secret")
 
-    assert(johndoe.get == User("johndoe"))
-    assert(joehacker.isEmpty)
+    assert(johndoe == User("johndoe"))
 
   }
 

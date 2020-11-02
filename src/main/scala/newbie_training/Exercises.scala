@@ -1,3 +1,4 @@
+/*
 package newbie_training
 
 trait NewbieList[+T] {
@@ -5,8 +6,8 @@ trait NewbieList[+T] {
   def head: T
   def tail: NewbieList[T]
   def filter(f: T => Boolean): List[T]
- // def map(f: T => T): List[T]
-  //def flatMap(f: T => List[T]): List[T]
+  def map(f: T => T): List[T]
+  def flatMap(f: T => List[T]): List[T]
   def makeString(): String
   def isEmpty:Boolean
 
@@ -43,3 +44,4 @@ class EmptyNewbieList extends NewbieList[Nothing] {
 
  // override def flatMap(f: Nothing => List[Nothing]): List[Nothing] = ???
 }
+*/

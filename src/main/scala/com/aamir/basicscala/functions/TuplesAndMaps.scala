@@ -118,8 +118,32 @@ object TuplesAndMaps extends App {
     bfs(b, Set(), network(a) + a)
   }
 
-  //facebook friendlist of persons: ["Mark", Set(no dupliates)]
   val empty: Map[String, Set[String]] = Map()
+
+  val network1 = add(empty, "Kunal")
+  val network2 = add(network1, "Pooja")
+  val network3 = add(network2, "Reddy")
+
+  val network4 = friend(network3, "Kunal", "Reddy")
+
+  val network5 = add(network4, "Shristi")
+  val network6 = add(network5, "Deena")
+
+  val network7 = friend(network6, "Kunal", "Deena")
+
+  val network8 = unfriend(network7, "Kunal", "Reddy")
+
+  val network9 = friend(network8, "Pooja", "Shristi")
+
+  val network10 = remove(network9, "Reddy")
+
+  val net11 = friend(network10, "Kunal", "Pooja")
+
+  println(net11)
+  println(socialConnection(net11, "Kunal", "Reddy"))
+
+ // count of persons with no friends
+/*
   val network: Map[String, Set[String]] = add(add(add(add(add(empty, "Pooja"),
     "Reddy"), "Kunal"), "Sonu"), "Shristi")
   println(network)
@@ -142,6 +166,7 @@ object TuplesAndMaps extends App {
 
   val newSocialNetwork6 =  remove(newSocialNetwork5, "Pooja")
   println(newSocialNetwork6)
+*/
 
   // Jim,Bob,Mary
   //val people = add(add(add(empty, "Bob"), "Mary"), "Jim")
@@ -172,4 +197,6 @@ object maby extends App {
   case class G(name:String, price: Int)
   val g = List(G("a", 10), G("c", 22), G("d", 1))
   println(g.maxBy(_.price))
+
+  def duplicate[T](n: Int, l: List[T]): List[T] = ???
 }
