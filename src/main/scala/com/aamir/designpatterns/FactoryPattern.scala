@@ -4,6 +4,12 @@ object FactoryPattern1 extends App {
 
   //https://www.geeksforgeeks.org/the-factory-pattern-in-scala/
 
+  /**
+   * The factory method is used to offer a single interface to instantiate one of the multiple classes.
+   * In the Factory pattern, the objective is to make the object in such a way that it does not expose
+   * to the creation logic to the Client and can always refer to a newly created object with the help of a common interface.
+   */
+
   abstract class Car {
     def bookingPrice: Double
 

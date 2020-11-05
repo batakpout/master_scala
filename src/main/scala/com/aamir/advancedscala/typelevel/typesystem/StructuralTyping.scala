@@ -148,16 +148,21 @@ object E6 extends App {
   val stringsList = CBCons("new Brain str", CBNil)
 
   println {
-    HeadEqualizer.===(brainzList, stringsList)
-  }
-
-  println {
     HeadEqualizer.===(brainzList, new Human)
   }
 
   // problem:
   println{
     HeadEqualizer.===(new Human, stringsList)
-  } // not type safe
+  } // not type safe, comparing human with string, as head of Human is brain, and of string is String.
+  //becoz a.head == b.head relies on reflection i.e ST uses runtime as T is removed by compiler, erasure.
+  /**
+    you shouldn't use type parameters on methods that you know will take a structural type,
+    because the compiler will erase the types and we will end up comparing unrelated things
+   */
 
+  val l: List[Int] = List(1,32,3)
+  val s: List[String] = List("aa", "s")
+
+  l.head == s.head // comparing unrelated types, as this is resolved at Compile time unlike ST
 }
