@@ -4,8 +4,6 @@
     <profile name="sbt 1" modules="udemy,udemy_courses_7881">
       <option name="implicitConversions" value="true" />
     </profile>
-    <profile name="sbt 2" modules="com_aamir">
-      <option name="reflectiveCalls" value="true" />
-    </profile>
+    <profile name="sbt 2" modules="com_aamir" />
   </component>
 </project>

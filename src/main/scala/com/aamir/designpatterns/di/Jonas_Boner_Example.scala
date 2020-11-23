@@ -4,7 +4,7 @@ import com.aamir.designpatterns.di.jonas_boner_example2.ComponentRegistry
 case class User(user_name: String, pass_word: String)
 object Jonas_Boner_Example extends App {
 
-  class UserRepository {
+  /*class UserRepository {
     def authenticate(user: User): User = {
       println("authenticating user: " + user)
       user
@@ -24,7 +24,7 @@ object Jonas_Boner_Example extends App {
 
     def delete(user: User) = All is statically typed.
     userRepository.delete(user)
-  }
+  }*/
 
 }
 

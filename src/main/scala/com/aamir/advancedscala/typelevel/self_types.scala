@@ -83,7 +83,7 @@ object self_types extends App {
     s: ScalaDependentComponent =>
   }
 
-  //layer 1
+  //abstract layer 1
   trait Picture extends ScalaComponent
   trait Stats extends ScalaComponent
 
@@ -93,6 +93,11 @@ object self_types extends App {
 
   //layer 3
   trait AnalyticsApp extends ScalaApplication with Analytics
+
+  /** Difference between DI and cake pattern, Cake pattern dependencies are check at compile time,
+   for di some framework or code take care of it's injection at runtime injected
+   **/
+
 
   // cyclical dependencies
 

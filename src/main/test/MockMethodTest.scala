@@ -23,4 +23,14 @@ import teachingdf.unittesting.{TestMockMethod, TestMockMethodImpl}
       }
     }
 
+    describe("equiality testing") {
+
+      it("should check if two collections are equal") {
+        val l1 = List(1,2,3,4)
+        val l2 = List(1,2,3,4)
+
+        l1 sameElements(l2)
+      }
+    }
+
   }
