@@ -1,4 +1,5 @@
-package akka.actors.infra
+package com.aamir.akka.actors.infra
+
 
 /**
  * Dispatcher are in-charge of delivering and handling messages within an actorsystem.
@@ -7,14 +8,11 @@ package akka.actors.infra
  * 1. implementing scala.concurrent.ExecutionContext
  * 2. registering an actor's mailbox for execution
  *
- * Dispatcher determine execution time and context and therefore provide the physical capabilities for scalaing up
+ * Dispatcher determine execution time and context and therefore provide the physical capabilities for scaling up
  *
  */
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
-import akka.actors.infra.Router3.Slave
-import akka.routing.FromConfig
-import com.typesafe.config.ConfigFactory
 
 import scala.concurrent.{ExecutionContext, Future}
 import scala.util.Random

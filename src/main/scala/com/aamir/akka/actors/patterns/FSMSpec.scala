@@ -1,4 +1,5 @@
-package akka.actors.patterns
+package com.aamir.akka.actors.patterns
+
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Cancellable, FSM, Props}
 import akka.testkit.{ImplicitSender, TestKit}

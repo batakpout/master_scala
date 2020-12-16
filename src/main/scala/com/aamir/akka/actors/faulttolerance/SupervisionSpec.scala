@@ -1,4 +1,5 @@
-package akka.actors.faulttolerance
+package com.aamir.akka.actors.faulttolerance
+
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
 import akka.actor.{Actor, ActorRef, ActorSystem, AllForOneStrategy, OneForOneStrategy, Props, SupervisorStrategy, Terminated}

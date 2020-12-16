@@ -1,7 +1,7 @@
-package akka.actors.faulttolerance
+package com.aamir.akka.actors.faulttolerance
+
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Kill, PoisonPill, Props, Terminated}
-import akka.actors.faulttolerance.StoppingActors.Parent.{StartChild, StopChild}
 
 /**
  * Ways to stop actors,

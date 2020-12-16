@@ -1,5 +1,4 @@
-package akka.actors.part1
-
+package com.aamir.akka.actors.part1
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 
 object ActorPart3 extends App {
@@ -45,7 +44,7 @@ object ActorPart3 extends App {
         kidRef ! Ask("Do you want to play!")
       }
       case KidAccept        => println("Yay, my kid is happy!")
-      case KidReject        => println("My kid is sad but at least he is happy!")
+      case KidReject        => println("My kid is sad but at least he is healthier!")
     }
   }
 

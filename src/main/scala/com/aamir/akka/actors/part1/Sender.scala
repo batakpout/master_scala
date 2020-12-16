@@ -1,7 +1,8 @@
-package akka.actors.part1
+package com.aamir.akka.actors.part1
+
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import akka.actors.part1.ActorIntroPart2Exercise2.Person.LiveTheLife
+import com.aamir.akka.actors.part1.ActorIntroPart2Exercise2.Person.LiveTheLife
 
 object ActorIntroPart2 extends App {
 
@@ -148,7 +149,9 @@ object ActorIntroPart2Exercise2 extends App {
 
   val system = ActorSystem("BankAccount")
   val account = system.actorOf(Props[BankAccount], "bankAccount")
-  val person = system.actorOf(Props[Person], "billionaire")
+
+
+  val person = system.actorOf(Props[Person], "Bill gates")
 
   person ! LiveTheLife(account)
 }

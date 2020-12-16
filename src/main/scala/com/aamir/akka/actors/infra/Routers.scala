@@ -1,4 +1,5 @@
-package akka.actors.infra
+package com.aamir.akka.actors.infra
+
 
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, PoisonPill, Props, Terminated}
 import akka.routing._
@@ -145,7 +146,7 @@ object Router5 extends App {
 
   // .. in another part of my application
   val slaveList = (1 to 5).map(i => system.actorOf(Props[Slave], s"$i-slave")).toList
-  val slavePaths = slaveList.map(_.path.toString)
+  val slavePaths: List[String] = slaveList.map(_.path.toString)
 
 
   val groupMaster = system.actorOf(FromConfig.props(), "groupMaster")

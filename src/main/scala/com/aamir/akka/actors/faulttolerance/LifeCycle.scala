@@ -1,3 +1,5 @@
+package com.aamir.akka.actors.faulttolerance
+
 import akka.actor.{Actor, ActorLogging, ActorSystem, PoisonPill, Props}
 
 /**
@@ -21,9 +23,9 @@ object LifeCycle extends App {
 
   class LifeCycleActor extends Actor with ActorLogging {
 
-    override def preStart(): Unit = log.info("I am Starting...")
+    override def preStart(): Unit = println("I am Starting...")
 
-    override def postStop(): Unit = log.info("I am Stopping...")
+    override def postStop(): Unit = println("I am Stopping...")
 
     override def receive: Receive = {
       case StartChild => {
@@ -61,27 +63,27 @@ object LifeCycle extends App {
   }
 
   class Child extends Actor with ActorLogging {
-    override def preStart(): Unit = log.info("supervised child started...")
+    override def preStart(): Unit = println("supervised child started...")
 
-    override def postStop(): Unit = log.info("I am Stopping...") //called only when actor stopped , not when its restarted
+    override def postStop(): Unit = println("I am Stopping...") //called only when actor stopped , not when its restarted
 
     override def preRestart(reason: Throwable, message: Option[Any]): Unit = {
       super.preRestart(reason, message)
-      log.info(s"supervised actor restarting because of ${reason.getMessage}...")
+      println(s"supervised actor restarting because of ${reason.getMessage}...")
     }
 
     override def postRestart(reason: Throwable): Unit = {
       super.postRestart(reason)
-      log.info(s"supervised actor restarted...message = ${reason.getMessage}")
+      println(s"supervised actor restarted...message = ${reason.getMessage}")
     }
 
     override def receive: Receive = {
       case Fail  => {
-        log.info("child will fail now...")
+        println("child will fail now...")
         throw new RuntimeException("I failed...")
       }
       case Check => {
-        log.info("alive and kicking...")
+        println("alive and kicking...")
       }
     }
   }

@@ -1,8 +1,10 @@
-package akka.actors.part1
+package com.aamir.akka.actors.part1
+
+
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
-import akka.actors.part1.ActorPart4.Parent.{CreateChild, TellChild}
-import akka.actors.part1.NaiveBankAccountApp.CreditCard.{AttachToAccount, CheckStatus}
+import com.aamir.akka.actors.part1.ActorPart4.Parent.{CreateChild, TellChild}
+import com.aamir.akka.actors.part1.NaiveBankAccountApp.CreditCard.{AttachToAccount, CheckStatus}
 
 object ActorPart4 extends App {
 
@@ -122,6 +124,7 @@ object ChildActorExercise extends App {
     case class WordCountTask(id:Int, text: String)
     case class WordCountReply(id:Int, count: Int)
   }
+
   import WordCounterMaster._
   class WordCounterMaster extends Actor {
     override def receive: Receive = {

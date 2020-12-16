@@ -98,13 +98,54 @@ object Program4 extends App {
   //  def processList(list: List[Int]): Int = 43
   //  def processList(list: List[String]): Int = 45
 
-  // to overcome this, we want type to be passed from compile to run time, so
-  //TypeTags
+  /** TypeTags
+   * Reflection Api workaround which allows carrying the complete generic type at compile-time to run-time
+   */
 
   case class Person(name: String) {
     def sayMyName: Unit = println(s"Hi my name is: $name")
   }
   import universe._
   val tt: universe.TypeTag[Person] = typeTag[Person]
-  println(tt.tpe)
+  val t: universe.Type = tt.tpe
+  println(tt.tpe) // fully qualified name of this type
+
+   class MyMap[K, V]
+
+   def getTypeArguments[T: TypeTag](value: T) = typeTag.tpe match {
+     case TypeRef(pre, symb, typeArguments) => {
+       println("pre => " + pre)
+       println("symb => " + symb)
+       typeArguments
+     }
+     case _ => Nil
+   }
+
+
+  val myMap = new MyMap[Int, String]
+  val typeArgs = getTypeArguments(myMap) // implicit --> (typeTag: TypeTag[MyMap[Int, String]])
+  println(typeArgs)
+
+  def isSubType[A, B](implicit typeTagA: TypeTag[A], typeTagB: TypeTag[B]): Boolean = {
+    typeTagA.tpe <:< typeTagB.tpe
+  }
+
+  class Animal
+  class Dog extends Animal
+
+  println(isSubType[Dog, Animal])
+
+  //linking of typetags with reflection Api
+  import scala.reflect.runtime.universe._
+  val methodName = "sayMyName"
+
+
+
+  val p = new Person("jammie")
+  val m: universe.Mirror = universe.runtimeMirror(getClass.getClassLoader)
+  val reflected: universe.InstanceMirror = m.reflect(p)
+  val methodSymbol: universe.MethodSymbol = typeTag[Person].tpe.decl(universe.TermName(methodName)).asMethod
+  val reflectedMethod: universe.MethodMirror = reflected.reflectMethod(methodSymbol)
+  reflectedMethod.apply()
+
 }

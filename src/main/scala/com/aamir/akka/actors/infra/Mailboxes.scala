@@ -1,4 +1,5 @@
-package akka.actors.infra
+package com.aamir.akka.actors.infra
+
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, PoisonPill, Props}
 import akka.dispatch.{ControlMessage, PriorityGenerator, UnboundedControlAwareMailbox, UnboundedPriorityMailbox}

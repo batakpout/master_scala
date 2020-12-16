@@ -1,4 +1,5 @@
-package akka.actors.patterns
+package com.aamir.akka.actors.patterns
+
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props, Stash}
 

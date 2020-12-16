@@ -1,4 +1,5 @@
-package akka.actors
+package com.aamir.akka.actors
+
 
 object MultiThreadingRecap extends App {
 

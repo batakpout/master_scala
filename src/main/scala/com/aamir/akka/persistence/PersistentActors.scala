@@ -1,4 +1,5 @@
-package akka.persistence
+package com.aamir.akka.persistence
+
 
 object PersistentActors extends App {
   /**
