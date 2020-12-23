@@ -1,0 +1,150 @@
+Todos://
+
+
+========================================================================================
+--> how docker/kubernetes deployment happens.
+--> CQRS
+--> Explanation of reactive manifesto
+--> how to mention retries in akka-http
+--> the cap theorm
+--> project explanation on microservices / akka , big one
+--> technical challenge u faced and resolved
+--> Difference between Promise and Future, Await
+
+========================================================================================
+Why Actors are lightweight?
+In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mailboxing, and more, are taken care of by other Akka components.
+
+For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component, mailboxing by the Akka mailbox component, and more.
+
+In the Akka Toolkit, business logic concerns and other concerns are loosely coupled. That's why Akka Actors are very lightweight; they need space to do their job.
+========================================================================================
+Domain Driven Design:
+--> Definition: When we develop a software, our focus shouldn't be primarily on 
+    technology, it should be primarily on business or whatever activity we are trying to assist with the software, the domain. We approach that by trying to develop models for that domain and make our software conformed to that.
+
+--> DDD gives Strategic, Tactical Design tools.
+--> Bounded Context (Sales Department: Customer likes, needs etc, Accounting: Custonmers 
+    mode of payment etc), Relationship between bounded context is called Context Mapping.
+--> Domain model is to bounded context what classes are to objects.
+
+
+-->Creating a communication channel between domain experts and software developers
+--> Take a large system/domain and break it into smaller and smaller pieces. coz hard to model large domain
+--> Domain: Key goal of DDD is to build a model that domain experts understand. A domain model is not part of
+	software application.
+--> The model is not software: model represents our understanding of the domain, software is its implementation.
+--> e.g Banking Software
+--> communication between developers and domain-experts require a common language--Ubiquitous Language.
+========================================================================================
+Micro Service Architecture
+--> Microservice Architecture is an architectural development style which builds an application as a collection of small autonomous services developed for a business domain.
+--> Microservice is a single business unit, all data, all functions which are relevant
+	to a service are put into a single service.
+--> Has api gateway through which call go.	
+--> Advantages:
+	-> Technology diversity, and updating tech stack is easy.
+	-> Independent Deployment and Development.
+	-> Fault Tolerant
+	-> Easier to scale the system 
+		(only relevant microservice to scale with high traffic)
+	-> Parallel develop is easy, as less dependency between services.  
+
+--> DisAdvantages:
+	-> Hight Complexity
+    -> Data Consistency is an issue /cache consistency is an issue (doubtful about it )
+    -> More network calls(RPC), in monolithic, inter-process communication (still doubtful)
+    -> Debugging
+========================================================================================
+Monolithic Architecture:
+is one gaint container in which whole application resides. 
+-->Advantages:
+	-> Less complex
+	-> Easy to Deploy
+	-> less duplication of code
+	-> faster as no RPC calls, all code in one box
+-->Disadvantages:
+	-> Hard to Scale
+	-> Slow Performance
+	-> Slow deployments (Slow CI/CD)
+	-> Single point of failure	
+========================================================================================
+NoSql databases:
+--> MongoDB: record stored as Document inside Collection, so document(records), collection(table)
+--
+> MongoDB stores data as documents in a binary representation called BSON (Binary JSON)
+Mostly in cluster
+--> Sql is vertically scalable and NoSql horizantally Scalable
+--> Sql emphasis on ACID properties (also enforces constraints), 
+     while NoSql on CAP(Consistency, Availability
+	, Partition Tolerance) Theorm
+--> CAP Theorm (Eric Brewers theorm): states that we can only achieve 2 out of 
+	3 guarantees for a database. 1. Consistency: All nodes in cluster will see
+	the same data at the same time or the reader gets most recently written data.
+	2.) Availability: Guarentee that every request receives a response whether its successful or failure 3. Partition Tolerance: guarantee system will continues to 
+	operate despite any failures in system
+	--> In distributed systems, partition tolerance is must, so always trade-off 
+	between Consistency and availability.
+--> Advantages:
+    -> All data in one block json, so insertion and retrieval easier.
+	-> Schema is very flexible (No Specific Schema) as compared to Sql Databases.
+	-> Dynamic Schema as compared to Sql Static Schema
+	-> Build for scale.
+	-> Build for metrics/analysis/aggregations
+
+
+-->	Disadvantages:
+	-> Not build for updates
+	-> Consistency is a problem, ACID is not guarantees. So no transactions consistency
+    -> Reads are not optimized
+    -> Relations are not implicit
+    -> Joins are hard
+	-> You have to rely on community support while SQL has good support
+
+========================================================================================
+Kubernetes (GKE) Google kubernetes Engine: is simply a system for running and coordinating containerized applications
+across a cluster of machines.
+ --> Container>Pod>Node>Cluster
+ --> Pod-smallest unit of kubernetes env, can have many containers
+
+========================================================================================
+Load balancing based on Consistent Hashing.
+========================================================================================
+Akka is a free, open source tookit and runtime for building hightly concurrent,
+distributed, fault-tolerant message driven application on the JVM
+
+Actor is fundamental unit of computation.
+Actors are lightweighted: require fewer resources than threads.
+Actor-Model is conceptual model of concurrent computation.
+
+Actor-model pros: easy to scale, fault tolerant, geographical distribution, overcome
+many concurrency problems as not shared state.
+Actor-model cons: Actor are susceptible to overflowing mailboxes
+========================================================================================
+Database Sharding is splitting data into smaller chunks or shards, where each shard/chunk
+can be deployed on different machine.
+--> Advantage: Data is too large to fit in 1 machine, provides horizontal scaling of db
+--> Distributed processing to speed up computation.
+--> Disadvantage: It's a complex solution, use only when needed.
+--> 2 ways to achieve it: a. in db client in app to write logic to route to a particular shard
+--> b. Db Router, databases level sharding, router in database.
+--> Sharding Strategies- Hashing: Computes a hash of the shard key field's value.Each chunk
+	is assinged a range based on the hashed shard key values.
+--> A range of shared keys whose values are close are more likely to reside on the same 	chunk or machine.
+--> For a order management system, shard on basis of userId
+--> Database for sharding: casandra, HBase etc.
+========================================================================================
+
+What are Domain Specific Languages (DSLs)?
+A Domain Specific Language is a programming language with a higher level of abstraction optimized for a specific class of problems. A DSL uses the concepts and rules from the field or domain.
+
+How are Domain Specific Languages different from "real" programming languages?
+A Domain specific language is usually less complex than a general-purpose language, such as Java, C, or Ruby. Generally, DSLs are developed in close coordination with the experts in the field for which the DSL is being designed. In many cases, DSLs are intended to be used not by software people, but instead by non-programmers who are fluent in the domain the DSL addresses.
+========================================================================================
+reactive Architecture Pattern
+--> RAP has its basis on Reactive manifesto: (RREM) Responsive, Resilient, Elastic, message driven
+--> The system reacts in a consistent,rapid,and timely manner whenever possible (Responsive).
+--> The system stays responsive after a failure through replication, containment, isolation and delegation (Resilient).
+--> the system stays responsive under varying workload (Elastic)
+--> The System relies on asynchronous messaging to ensure loose coupling,
+isolation, location transperancy and error delegation.(Message driven)
