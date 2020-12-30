@@ -3,7 +3,7 @@
    A monad is a mechanism for sequencing computations.
 
 
---> A monad is a container with operations (map/flatMap/filter/foreach) that can act on the contents
+--> A monad is a container with operations(map/flatMap/filter/foreach) that can act on the contents
     without extracting it first.
 
 --> law1: left-identity: unit(x).flatMap(f) == f(x)

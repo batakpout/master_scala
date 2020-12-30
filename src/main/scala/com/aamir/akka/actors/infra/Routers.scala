@@ -68,7 +68,7 @@ object Router2 extends App {
 
   class Slave extends Actor with ActorLogging {
     override def receive: Receive = {
-      case message => log.info(message.toString)
+      case message => println(s"${self.path.toString}: ${message.toString}")
     }
   }
 

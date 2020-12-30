@@ -3,10 +3,7 @@ Todos://
 
 ========================================================================================
 --> how docker/kubernetes deployment happens.
---> CQRS
---> Explanation of reactive manifesto
 --> how to mention retries in akka-http
---> the cap theorm
 --> project explanation on microservices / akka , big one
 --> technical challenge u faced and resolved
 --> Difference between Promise and Future, Await
@@ -21,7 +18,8 @@ In the Akka Toolkit, business logic concerns and other concerns are loosely coup
 ========================================================================================
 Domain Driven Design:
 --> Definition: When we develop a software, our focus shouldn't be primarily on 
-    technology, it should be primarily on business or whatever activity we are trying to assist with the software, the domain. We approach that by trying to develop models for that domain and make our software conformed to that.
+    technology, it should be primarily on business or whatever activity we are trying to assist with the software, the domain.
+     We approach that by trying to develop models for that domain and make our software conformed to that.
 
 --> DDD gives Strategic, Tactical Design tools.
 --> Bounded Context (Sales Department: Customer likes, needs etc, Accounting: Custonmers 
@@ -148,3 +146,9 @@ reactive Architecture Pattern
 --> the system stays responsive under varying workload (Elastic)
 --> The System relies on asynchronous messaging to ensure loose coupling,
 isolation, location transperancy and error delegation.(Message driven)
+
+--> reactive programming is a style of programming where as reactive 
+architecture is way of designing systems using certain reactive
+architecture pattern to be able to acheive RREM.
+--> reactive architecture allows us to create self-healing and self-
+monitoring systems that can automatically configure and repair themselves
