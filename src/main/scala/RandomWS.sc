@@ -1,10 +1,9 @@
-import scala.collection.mutable
 
-var myMap = mutable.Map[Int, List[String]]().empty
+val workers = List("a", "b", "c", "d")
+val sentences = List(1,2,3,4,5,6,7,8,9,10)
+//Iterator.continually(workers).flatten
 
-(1 to 3) foreach { x =>
-  myMap.put(x, List(s"valueA-${x}", s"valueB-${x}"))
-}
-myMap
-myMap.put(1, List("kkbg"))
-myMap
+/*
+  .zip(sentences.iterator).foreach { pair =>
+  val (worker, sentence) = pair
+}*/
