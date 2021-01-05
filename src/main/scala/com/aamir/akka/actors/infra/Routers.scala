@@ -23,16 +23,17 @@ object Routers1 extends App {
   /**
    * #1 - manual router
    */
-
+  case class SyncResult(x: String)
   class Master extends Actor {
 
     private val slaves = for (i <- 1 to 5) yield {
-      val slave = context.actorOf(Props[Slave], s"slave_$i")
+      val slave = context.actorOf(Props[Slave], s"slave-$i")
       ActorRefRoutee(slave)
     }
     private var router = Router(RoundRobinRoutingLogic(), slaves)
 
     override def receive: Receive = {
+      case message         => router.route(message, sender())
       case message         => router.route(message, sender())
       case Terminated(ref) => {
         router = router.removeRoutee(ref)
@@ -40,12 +41,21 @@ object Routers1 extends App {
         context.watch(newSlave)
         router = router.addRoutee(ActorRefRoutee(newSlave))
       }
+      case SyncResult(x) => {
+        println("came here too")
+        println(x)
+      }
     }
   }
 
   class Slave extends Actor with ActorLogging {
     override def receive: Receive = {
-      case message => log.info(message.toString)
+      case message =>
+        if(message == "[9]-Hello Router") {
+          println("came here")
+          println(sender.path.name)
+          sender() ! SyncResult("sync result")
+        } else println(message.toString)
     }
   }
 
@@ -54,6 +64,7 @@ object Routers1 extends App {
   val master = system.actorOf(Props[Master], "Master_Actor")
 
   for (i <- 1 to 10) {
+    Thread.sleep(1000)
     master ! s"[$i]-Hello Router"
   }
 }
