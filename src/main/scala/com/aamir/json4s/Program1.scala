@@ -10,8 +10,8 @@ import scala.util.Try
 
 object MessageParsers {
 
-  def getAcknowledgement(message: String):Try[String] = {
-    Try{
+  def getAcknowledgement(message: String): Try[String] = {
+    Try {
       val jsObject = parse(message).asInstanceOf[JObject]
       val ack = jsObject \ "ack"
       ack.values.toString
@@ -19,24 +19,49 @@ object MessageParsers {
   }
 }
 
+object MakeJsonTest extends App {
+
+  def removeJArrayFields(jValue: JValue, excludedFields: List[String]): Boolean = {
+    val jObject = jValue.asInstanceOf[JObject]
+    jObject.values.keySet.exists(excludedFields.contains(_))
+  }
+
+  val json = s"""{"ack" : "12-09k-9", "temp1" : "ll", "kkbg" : "dade" , "fileMetadatas" : [{"key1":"value1"}, {"key2":"value2"}, {"key3":"value3"}]}"""
+  val jsObject = parse(json).asInstanceOf[JObject]
+
+  val ack = jsObject \ "ack"
+  val temp1 = jsObject \ "temp1"
+
+  val fileMetaData = (jsObject \ "fileMetadatas").asInstanceOf[JArray]
+  val updatedFileMetaData = JArray(fileMetaData.arr.filterNot(x => removeJArrayFields(x, List("kkbg"))))
+  val requestJson = JObject("fileMetadatas" -> updatedFileMetaData, "clientId" -> ack, "sluciotnId" -> temp1)
+  val s = compact(requestJson)
+  println(s)
+}
 object Test extends App {
 
-  def removeFields(jsObject: JValue, fields: List[JValue]):JValue = fields match {
-    case Nil => jsObject
-    case h :: t => removeFields(jsObject.remove(_ == h), t)
+  def removeFields(jsObject: JValue, fields: List[String]): JValue = {
+    def rec(jsObject: JValue, fields: List[JValue]):JValue = fields match {
+      case Nil    => jsObject
+      case h :: t => rec(jsObject.remove(_ == h), t)
+    }
+
+    val res = fields map { field =>
+      jsObject \ field
+    }
+
+    rec(jsObject, res)
+
   }
 
   val json = s"""{"ack" : "12-09k-9", "temp1" : "ll", "fileMetadatas" : [{"key1":"value1"}, {"key2":"value2"}, {"key3":"value3"}]}"""
   val jsObject = parse(json).asInstanceOf[JObject]
 
-  val ack = jsObject \ "ack"
-  val temp1 = jsObject \ "temp1"
-  //println(jsObject)
-  val res = removeFields(jsObject, List(ack, temp1))
- // println(res)
-
-
-
+  val rList = List("ack", "temp1")
+  println(jsObject)
+  val res = removeFields(jsObject, rList)
+  println("********")
+  println(res)
 
 
   val fileMetaData = (jsObject \ "fileMetadatas").asInstanceOf[JArray]
@@ -52,16 +77,16 @@ object Test extends App {
     jObject.values.keySet.exists(l.contains(_))
   }
 
-  val jsonArrayKeys =  fileMetaData.arr.filterNot(f)
+  val jsonArrayKeys = fileMetaData.arr.filterNot(f)
+
 
   println(jsonArrayKeys)
- //
+  //
 
   //println(jValue.values.keys)
 
- /* val x = fileMetaData.arr.filterNot(x => ll.contains(x.))
-  println(x)*/
-
+  /* val x = fileMetaData.arr.filterNot(x => ll.contains(x.))
+   println(x)*/
 
 
 }
