@@ -1,9 +1,10 @@
+val TDE_SYNC_INPUT_URL   = "tdeSyncInputUrl"
+val TDE_ASYNC_INPUT_URL  = "tdeAsyncInputUrl"
+val TDE_ASYNC_TARGET_URL = "tdeAsyncTargetUrl"
+val OCR_INPUT_URL        = "ocrInputUrl"
+val OCR_TARGET_URL       = "ocrTargetUrl"
 
-val workers = List("a", "b", "c", "d")
-val sentences = List(1,2,3,4,5,6,7,8,9,10)
-//Iterator.continually(workers).flatten
+val serviceUrlList = List(TDE_SYNC_INPUT_URL, TDE_ASYNC_INPUT_URL, TDE_ASYNC_TARGET_URL, OCR_INPUT_URL, OCR_TARGET_URL)
 
-/*
-  .zip(sentences.iterator).foreach { pair =>
-  val (worker, sentence) = pair
-}*/
+val map = Map("tdeSyncInputUrl" -> "ss", "tdeAsyncTargetUrl" -> "ssd")
+serviceUrlList diff map.keySet.toList

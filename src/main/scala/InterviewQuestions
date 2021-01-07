@@ -140,12 +140,13 @@ How are Domain Specific Languages different from "real" programming languages?
 A Domain specific language is usually less complex than a general-purpose language, such as Java, C, or Ruby. Generally, DSLs are developed in close coordination with the experts in the field for which the DSL is being designed. In many cases, DSLs are intended to be used not by software people, but instead by non-programmers who are fluent in the domain the DSL addresses.
 ========================================================================================
 reactive Architecture Pattern
---> RAP has its basis on Reactive manifesto: (RREM) Responsive, Resilient, Elastic, message driven
---> The system reacts in a consistent,rapid,and timely manner whenever possible (Responsive).
+--> RAP has its basis on Reactive manifesto (some principles): (RREM) Responsive, Resilient, Elastic, message driven
+--> The system reacts in a consistent,rapid,and timely manner whenever possible, even in case of failure (Responsive).
 --> The system stays responsive after a failure through replication, containment, isolation and delegation (Resilient).
---> the system stays responsive under varying workload (Elastic)
---> The System relies on asynchronous messaging to ensure loose coupling,
-isolation, location transperancy and error delegation.(Message driven)
+--> the system stays responsive under varying workload, system should scale up/down with load/need (Elastic)
+--> The System relies on asynchronous messaging (system works on publish, subscribe methods, system responds to the
+    events as and when they come), (asynchronous processing enables handling of large loads very
+    effectively) to ensure loose coupling, isolation, location transparency and error delegation.(Message driven)
 
 --> reactive programming is a style of programming where as reactive 
 architecture is way of designing systems using certain reactive
