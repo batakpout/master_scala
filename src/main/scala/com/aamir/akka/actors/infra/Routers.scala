@@ -5,6 +5,8 @@ import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, PoisonPill, Props
 import akka.routing._
 import com.typesafe.config.ConfigFactory
 
+import java.util.UUID.randomUUID
+
 
 /**
  * Routers are useful when we want to delegate or spread work in between multiple actors of the same kind
@@ -78,6 +80,11 @@ object Router2 extends App {
    */
 
   class Slave extends Actor with ActorLogging {
+
+    override def preStart(): Unit = {
+      super.preStart()
+      println("prestart===")
+    }
     override def receive: Receive = {
       case message => println(s"${self.path.toString}: ${message.toString}")
     }
@@ -86,11 +93,35 @@ object Router2 extends App {
 
   val system = ActorSystem("RoutersDemo")
   val master: ActorRef = system.actorOf(RoundRobinPool(5).props(Props[Slave]), "simpleMaster")
-  //  val master: ActorRef = system.actorOf(RoundRobinPool(5, supervisorStrategy = OneForOneStrategy() {}).props(Props[Slave]), "simpleMaster")
+
+  println(master.path)
+  println(master.path.name)
+  master ! "abc"
+/*  for (i <- 1 to 10) {
+    master ! s"[$i]-Hello Router"
+  }*/
+}
+
+class SlaveRuntime extends Actor with ActorLogging {
+
+  override def preStart(): Unit = {
+    super.preStart()
+    println("prestart===")
+  }
+  override def receive: Receive = {
+    case message => println(s"${self.path.toString}: ${message.toString}")
+  }
+}
+object RouterRuntime extends App {
+  val system = ActorSystem("RoutersDemo")
+  val fullyQualifiedWorkerName = "com.aamir.akka.actors.infra.SlaveRuntime"
+  val props = Props.apply(Class.forName(fullyQualifiedWorkerName).asInstanceOf[Class[Actor]])
+
+  val master: ActorRef = system.actorOf(RoundRobinPool(5).props(props),randomUUID().toString)
 
   for (i <- 1 to 10) {
-    master ! s"[$i]-Hello Router"
-  }
+      master ! s"[$i]-Hello Router"
+    }
 }
 
 object Router3 extends App {
@@ -101,7 +132,11 @@ object Router3 extends App {
 
   class Slave extends Actor with ActorLogging {
     override def receive: Receive = {
-      case message => log.info(message.toString)
+      case message => {
+        println(message.toString)
+        context.stop(self)
+        context.system.terminate()
+      }
     }
   }
 
@@ -109,9 +144,10 @@ object Router3 extends App {
   val system = ActorSystem("RoutersDemo", ConfigFactory.load().getConfig("routersDemo"))
   val master: ActorRef = system.actorOf(FromConfig.props(Props[Slave]), "poolMaster")
 
-  for (i <- 1 to 10) {
-    master ! s"[$i]-Hello Router"
-  }
+  println(master.path)
+
+    master ! s"[s]-Hello Router"
+     master ! "Abc"
 }
 
 object Router4 extends App {

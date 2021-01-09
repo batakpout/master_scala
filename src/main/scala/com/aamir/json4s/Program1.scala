@@ -159,3 +159,22 @@ object NotPresentFieldsTest extends App {
   val res = (jsObject \ "ack").toSome.map(_.values.toString).getOrElse("")
   println(res)
 }
+
+object FileJArrayTest extends App {
+
+
+  def filterJArrayFields(jValue: JValue, excludedField: String): Boolean = {
+    val jObject = jValue.asInstanceOf[JObject]
+    val optionalField = jObject.values.get(excludedField)
+    if(optionalField.isDefined) optionalField.get == "true" || optionalField.get == true else false
+  }
+  val jsonResponse = """{"fileMetadatas":[{"fileName":"Form-A Template2.0.pdfsss","fileSourceId":"http://s3.us-east-1.amazonaws.com/azure-production/07c47d90-5e82-41d0-aedb-8fcfd1d9e0e1/Form-A+Template2.0.pdf","identified":true,"mimeType":"application/pdf","templateType":"Type-29"},{"fileName":"Form-A Template2.0.pdfaaa","fileSourceId":"http://s3.us-east-1.amazonaws.com/azure-production/07c47d90-5e82-41d0-aedb-8fcfd1d9e0e1/Form-A+Template2.0.pdf","identified":true,"mimeType":"application/pdf","templateType":"Type-29"},{"fileName":"Form-A Template2.0.pdf kkbg","fileSourceId":"http://s3.us-east-1.amazonaws.com/azure-production/07c47d90-5e82-41d0-aedb-8fcfd1d9e0e1/Form-A+Template2.0.pdf","identified":false,"mimeType":"application/pdf","templateType":"Type-29"}],"message":"File type identified successfully","solutionName":"cvcm","solutionProcessId":"5fbba49601ee3c00122ade6f","statusCode":200}""".stripMargin
+
+  val messageJObject = parse(jsonResponse).asInstanceOf[JObject]
+  val fileMetaData   = (messageJObject \ "fileMetadatas").asInstanceOf[JArray]
+  val res = fileMetaData.arr.partition(x => filterJArrayFields(x, "identified"))
+
+  println(compact(JArray(res._1)))
+  println(compact(JArray(res._2)))
+
+}

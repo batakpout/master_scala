@@ -49,7 +49,7 @@ Micro Service Architecture
 	-> Parallel develop is easy, as less dependency between services.  
 
 --> DisAdvantages:
-	-> Hight Complexity
+	-> High Complexity
     -> Data Consistency is an issue /cache consistency is an issue (doubtful about it )
     -> More network calls(RPC), in monolithic, inter-process communication (still doubtful)
     -> Debugging
@@ -142,6 +142,8 @@ A Domain specific language is usually less complex than a general-purpose langua
 reactive Architecture Pattern
 --> RAP has its basis on Reactive manifesto (some principles): (RREM) Responsive, Resilient, Elastic, message driven
 --> The system reacts in a consistent,rapid,and timely manner whenever possible, even in case of failure (Responsive).
+    An application is responsive, if it provides rich, real-time interaction with its users even under load and in
+    presence of failure
 --> The system stays responsive after a failure through replication, containment, isolation and delegation (Resilient).
 --> the system stays responsive under varying workload, system should scale up/down with load/need (Elastic)
 --> The System relies on asynchronous messaging (system works on publish, subscribe methods, system responds to the
@@ -153,3 +155,20 @@ architecture is way of designing systems using certain reactive
 architecture pattern to be able to acheive RREM.
 --> reactive architecture allows us to create self-healing and self-
 monitoring systems that can automatically configure and repair themselves
+=======================================================================================================
+reactive means: react to events (message-driven), load (elastic), failure(resilient), users(responsive)
+=======================================================================================================
+reactive Architecture Pattern
+reactive Programming
+--> A paradigm that allows to program for stream of events
+--> Earlier systems were composed of multiple thread, which communicated with shared, synchronized state
+    Strong coupling hard to compose
+--> Now, Event Driven Systems (Asynchronous systems): systems are composed from loosely coupled event handlers
+--> Events can be handled asynchronously, without blocking
+
+--> scale-up: make use of parallelism in multi-core systems (important for it is minimized shared state)
+--> scale-out: make use of multiple server nodes (important for it is Location Transparency, resilience)
+
+--> Techniques for resilient system are: loose coupling, strong encapsulation of state, pervasive supervisor hierarchies
+
+
