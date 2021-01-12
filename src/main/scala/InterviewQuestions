@@ -1,28 +1,19 @@
-Todos://
-
-
-========================================================================================
---> how docker/kubernetes deployment happens.
---> how to mention retries in akka-http
---> project explanation on microservices / akka , big one
---> technical challenge u faced and resolved
---> Difference between Promise and Future, Await
-
 ========================================================================================
 Why Actors are lightweight?
-In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mailboxing, and more, are taken care of by other Akka components.
+In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mail-boxing, and more, are taken care of by other Akka components.
 
-For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component, mailboxing by the Akka mailbox component, and more.
+For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component, mail-boxing by the Akka mailbox component, and more.
 
 In the Akka Toolkit, business logic concerns and other concerns are loosely coupled. That's why Akka Actors are very lightweight; they need space to do their job.
 ========================================================================================
 Domain Driven Design:
+--> aims to ease the creation of complex applications
 --> Definition: When we develop a software, our focus shouldn't be primarily on 
     technology, it should be primarily on business or whatever activity we are trying to assist with the software, the domain.
      We approach that by trying to develop models for that domain and make our software conformed to that.
 
 --> DDD gives Strategic, Tactical Design tools.
---> Bounded Context (Sales Department: Customer likes, needs etc, Accounting: Custonmers 
+--> Bounded Context (Sales Department: Customer likes, needs etc, Accounting: Customers
     mode of payment etc), Relationship between bounded context is called Context Mapping.
 --> Domain model is to bounded context what classes are to objects.
 
@@ -34,28 +25,63 @@ Domain Driven Design:
 --> The model is not software: model represents our understanding of the domain, software is its implementation.
 --> e.g Banking Software
 --> communication between developers and domain-experts require a common language--Ubiquitous Language.
+
+--> 3 principles
+    focus on core domain and domain-logic
+    find complex designs on models of the domain
+    constantly collaborate with domain experts to improve the application model and to resolve any domain
+    related issues
+--> Why needed?
+    ->Mapping our architecture to a particular domain specifically, so reduces complexities, so
+      reduces testability, maintainability because everybody is on the very same page.
+    -> knowledge rich design, brings service and business together
+    -> context focussed
+
 ========================================================================================
 Micro Service Architecture
---> Microservice Architecture is an architectural development style which builds an application as a collection of small autonomous services developed for a business domain.
+--> Microservice Architecture is an architectural development style which builds an application as a collection
+    of small autonomous services developed for a business domain.
 --> Microservice is a single business unit, all data, all functions which are relevant
 	to a service are put into a single service.
---> Has api gateway through which call go.	
+--> Has api gateway through which call go.
+--> Has management and service discovery portal (keeps track of all service and gives it to management) too
+--> distributed architecture
 --> Advantages:
-	-> Technology diversity, and updating tech stack is easy.
+	-> Technology diversity (mixed technology stack), and updating tech stack is easy.
 	-> Independent Deployment and Development.
-	-> Fault Tolerant
-	-> Easier to scale the system 
+	-> Fault Isolation
+	-> Easier to scale the system (Granular scaling)
 		(only relevant microservice to scale with high traffic)
 	-> Parallel develop is easy, as less dependency between services.  
 
 --> DisAdvantages:
 	-> High Complexity
-    -> Data Consistency is an issue /cache consistency is an issue (doubtful about it )
+	-> Increases troubleshooting challenges
+	-> Increases delay due to network calls (response delay)
+	-> Some security leaks as well (less important)
+	-> Tough to track data across various service boundaries
+    -> Data Consistency is an issue /cache consistency is an issue (doubtful about it )(distributed transaction is an issue)
     -> More network calls(RPC), in monolithic, inter-process communication (still doubtful)
-    -> Debugging
+    -> Configuration Management, Debugging (is a challenge)
+    --> Additional infrastructure cost
+
+--> Features:
+   Decoupling,Componentization, focused business capabilities(focused on one part), Autonomy(small team of developers independent, speedy software delivery),
+   Continuous Delivery(frequent releases), responsibility(helps in much better architecture), decentralized governance, Agility(make and discard them if not needed)
+--> Best Practices
+    Separate data store for each microservice
+    keep code at similar level of maturity (from business domain perspective, each microservice teams on same level)
+    Separate build for each microservice
+    Treat servers as stateless (A Stateless server keeps no state information. This means that every client request is treated independently,
+        and not as a part of a new or existing session)
+    Deploy into containers
+
+ --> Cohesion refers to the degree to which elements inside a module belong together
+ --> A Good design has high cohesion and low coupling
 ========================================================================================
 Monolithic Architecture:
-is one gaint container in which whole application resides. 
+is one giant container in which whole application resides (single db and all services in this container).
+--> centralized architecture
 -->Advantages:
 	-> Less complex
 	-> Easy to Deploy
@@ -63,10 +89,18 @@ is one gaint container in which whole application resides.
 	-> faster as no RPC calls, all code in one box
 -->Disadvantages:
 	-> Hard to Scale
+	-> no fault isolation
 	-> Slow Performance
 	-> Slow deployments (Slow CI/CD)
 	-> Single point of failure	
 ========================================================================================
+SOA : Service Oriented Architecture
+--> similar like microservices , but we have sub domains inside a domain, so we don't have complete modularity
+--> SOA has say 4 features and each of these feature have individual modules inside of them. so not complete modularity
+--> need middleware for communication
+--> modularity is there but there are lot of inter-dependencies
+========================================================================================
+
 NoSql databases:
 --> MongoDB: record stored as Document inside Collection, so document(records), collection(table)
 --
@@ -134,10 +168,13 @@ can be deployed on different machine.
 ========================================================================================
 
 What are Domain Specific Languages (DSLs)?
-A Domain Specific Language is a programming language with a higher level of abstraction optimized for a specific class of problems. A DSL uses the concepts and rules from the field or domain.
+A Domain Specific Language is a programming language with a higher level of abstraction optimized for a specific class of problems.
+ A DSL uses the concepts and rules from the field or domain.
 
 How are Domain Specific Languages different from "real" programming languages?
-A Domain specific language is usually less complex than a general-purpose language, such as Java, C, or Ruby. Generally, DSLs are developed in close coordination with the experts in the field for which the DSL is being designed. In many cases, DSLs are intended to be used not by software people, but instead by non-programmers who are fluent in the domain the DSL addresses.
+A Domain specific language is usually less complex than a general-purpose language, such as Java, C, or Ruby.
+Generally, DSLs are developed in close coordination with the experts in the field for which the DSL is being designed.
+ In many cases, DSLs are intended to be used not by software people, but instead by non-programmers who are fluent in the domain the DSL addresses.
 ========================================================================================
 reactive Architecture Pattern
 --> RAP has its basis on Reactive manifesto (some principles): (RREM) Responsive, Resilient, Elastic, message driven
@@ -152,13 +189,15 @@ reactive Architecture Pattern
 
 --> reactive programming is a style of programming where as reactive 
 architecture is way of designing systems using certain reactive
-architecture pattern to be able to acheive RREM.
+architecture pattern to be able to achieve RREM.
 --> reactive architecture allows us to create self-healing and self-
 monitoring systems that can automatically configure and repair themselves
 =======================================================================================================
 reactive means: react to events (message-driven), load (elastic), failure(resilient), users(responsive)
 =======================================================================================================
 reactive Architecture Pattern
+woes: Message bus is single point of failure, debugging difficult
+=======================================================================================================
 reactive Programming
 --> A paradigm that allows to program for stream of events
 --> Earlier systems were composed of multiple thread, which communicated with shared, synchronized state
@@ -171,4 +210,101 @@ reactive Programming
 
 --> Techniques for resilient system are: loose coupling, strong encapsulation of state, pervasive supervisor hierarchies
 
+=======================================================================================================
+CQRS: Command Query Responsibility Separation
+--> separate reads from writes.
+--> It makes sense when we apply Event Sourcing and Event driven Architecture together-->
+e.g placing a coffee is separate service which sends events to event store, get coffee status is separate service
+    which queries this event store to fetch status, these two are separated from each other
+--> Query side: no side effects here, not allowed to write here, we can do several types of storage which are then
+    optimized, RDMS reading is not optimized, here we can optimize view or cache read part. So it scales better
+Advantages:
+--> realizing consistency through independent systems
+--> scaling independent
+--> read side available in case of failure
+=======================================================================================================
+Event Sourcing:
+--> Instead of storing just the current state of the data in a domain, we use an append-only store to record the full series of actions taken on that data.
+    The store acts as the system of record and can be used to materialize the domain objects.This can simplify tasks in complex domains,
+    by avoiding the need to synchronize the data model and the business domain, while improving performance, scalability, and responsiveness.
+    It can also provide consistency for transactional data, and maintain full audit trails and history that can enable compensating actions.
 
+ --> The CRUD approach has some limitations:
+    CRUD systems perform update operations directly against a data store, which can slow down performance and responsiveness,
+    and limit scalability, due to the processing overhead it requires.
+    In a collaborative domain with many concurrent users, data update conflicts are more likely because the update operations take place on a single item of data.
+    Unless there's an additional auditing mechanism that records the details of each operation in a separate log, history is lost.
+
+--> The events are persisted in an event store that acts as the system of record (the authoritative data source) about the current state of the data.
+    The event store typically publishes these events so that consumers can be notified and can handle them if needed
+
+e.g coffee shop, status of order [status->accepted, type of coffee, origin]
+so events will be:OrderPlaced, OrderAccepted,CoffeeBrewStarted
+--> Events have to be [atomic, immutable,happened in the past, reflect use-cases, single source of truth]
+--> For persistence, give coffee machine example or Accountant Invoices
+
+Advantages:
+Auditing : how u got to ur current state of ur application
+reproducibility, statistics (how often we have did something atomically)
+testing, enables event driven architecture and scalability
+future proof for user cases (how ofter u login in, how often u add item to shopping cart etc)
+we don't need a database schema for storing
+
+==> f(event, state) ==> state
+=======================================================================================================
+Event Driven Architecture:
+--> is a design pattern build around the production, detection and reaction to events that take place in time.
+It consists of Event creator, Event managers and event consumers.
+--> have to have distributed systems
+--> eventually consistent
+--> split up use-cases and transactions [sends events to another system asynchronously]
+--> communicate via events, events are published reliably
+=======================================================================================================
+A Distributed transaction is any situation where in a single event results in mutation of two or more separate sources of data,
+which cannot be committed atomically.
+
+Idempotence is the property of being able to do something twice, in such a way that the end result will be the same as if it has
+been done only once.
+=======================================================================================================
+Reactive extension (Rx) is a design approach in which we collect result by calling multiple services and then compile a
+combined result
+=======================================================================================================
+At api gateway we can do authentication, authorization, routing, policy management
+=======================================================================================================
+Why Scala Hard
+--> Backward compatibility
+--> Hard learning curve
+=======================================================================================================
+Why good:
+--> good concurrent support
+-->High Scalability, productivity
+--> good type safety, statically typed
+--> less error prone due to functional style of code writing
+--> it has no boiler plate code
+=======================================================================================================
+--> A closure is a function whose return value depends upon the variable declared outside of the function
+--> Function literal are anonymous functions called as function values at runtime
+--> pure functions:
+    we can implement function composition (binding multiple functions together).
+    easy to test/debug, encourage safer way of programming
+    memoizable for optimization
+    can be lazy
+=======================================================================================================
+gRPC uses ProtoBuf (like JSON in Rest) for communication between services
+It has native support for streaming in both directions
+gRPC takes a schema-first approach, where the protocol is declared in a Protobuf service descriptor.
+From the service descriptor the source code for the messages, client and server stubs are generated.
+=======================================================================================================
+immutability helps us to take a mathematical approach and create pure function
+immutable objects are more thread safe
+=======================================================================================================
+Principles of Hexagonal Architecture
+The hexagonal architecture is based on three principles and techniques:
+
+Explicitly separate User-Side, Business Logic, and Server-Side (can be tested then independently)
+Dependencies are going from User-Side and Server-Side to the Business Logic
+We isolate the boundaries by using Ports and Adapters
+=======================================================================================================
+In Akka Projections you process a stream of events or records from a source to a projected model or external system.
+ Each event is associated with an offset representing the position in the stream. This offset is used for resuming the stream
+ from that position when the projection is restarted.

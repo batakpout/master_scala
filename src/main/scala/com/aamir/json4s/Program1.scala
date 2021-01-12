@@ -178,3 +178,12 @@ object FileJArrayTest extends App {
   println(compact(JArray(res._2)))
 
 }
+
+object TwoDArray extends App {
+
+   val s = """[{"name":"메뉴1","permission":"1","link":"http://naver.com"},{"name":"메뉴2","permission":"2","link":"http://daum.net","sub":[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]}]""".stripMargin
+
+  val messageJObject = parse(s).asInstanceOf[JArray]
+  val jArray = (messageJObject \ "sub").asInstanceOf[JArray]
+  println(compact(jArray))
+}
