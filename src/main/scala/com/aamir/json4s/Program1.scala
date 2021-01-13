@@ -2,6 +2,8 @@ package com.aamir.json4s
 
 
 import com.aamir.json4s.MakeJsonTest.s
+import com.aamir.json4s.TwoDArray1.s1
+import json.BaseJsonUtilities
 import org.json4s.JsonAST.JValue
 import org.json4s.jackson.JsonMethods._
 import org.json4s.{JArray, JField, JNothing, JObject, JString}
@@ -179,11 +181,105 @@ object FileJArrayTest extends App {
 
 }
 
-object TwoDArray extends App {
+object TwoDArray1 extends App {
 
-   val s = """[{"name":"메뉴1","permission":"1","link":"http://naver.com"},{"name":"메뉴2","permission":"2","link":"http://daum.net","sub":[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]}]""".stripMargin
+  // val s = """[{"name":"메뉴1","permission":"1","link":"http://naver.com"},{"name":"메뉴2","permission":"2","link":"http://daum.net","sub":[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]}]""".stripMargin
 
-  val messageJObject = parse(s).asInstanceOf[JArray]
-  val jArray = (messageJObject \ "sub").asInstanceOf[JArray]
-  println(compact(jArray))
+  val s1 = s"""{"key" : "value"}"""
+  val s2 = s"""[{"key" : "value"}, {"key" : "value"}]"""
+//  println(parse(s2).asInstanceOf[JObject])
+
+  val r1 = parse(s1) match {
+    case x: JArray => true
+    case _ => false
+  }
+  println(r1)
+  println(parse(s1).isInstanceOf[JObject])
+
+  println("---"* 10)
+
+  println(parse(s2).isInstanceOf[JArray])
+  println(parse(s2).isInstanceOf[JObject])
+
+  val ss = s"""[{"key" : "value"}, {"key" : "value"}]"""
+  val ff = parse(s2).asInstanceOf[JArray]
+  val xx = JObject("nerData" -> ff)
+ println(compact(xx))
+}
+
+object TwoDArray2 extends App {
+
+  // val s = """[{"name":"메뉴1","permission":"1","link":"http://naver.com"},{"name":"메뉴2","permission":"2","link":"http://daum.net","sub":[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]}]""".stripMargin
+
+  val s1 = s"""{"narrative" : "value"}"""
+  val r1 = parse(s1)
+
+   val res1 = r1.asInstanceOf[JObject]
+   val res:JValue = res1 \ "narrative"
+
+  val r1d = res match {
+    case x: JArray => true
+    case _ => false
+  }
+
+  println(r1d)
+
+
+}
+
+object ConfumdrTest extends App {
+  case class ConsumerConfig(consumerName: String,
+                            mqConfiguration: MQConfig,
+                            workerConfig: List[WorkerConfig],
+                            serviceUrls: Map[String, String],
+                            batchSize: Option[Int] = Some(1),
+                            createdBy: String,
+                            createdTime: String,
+                            updatedBy: Option[String],
+                            updatedTime: Option[String],
+                            status: String = "active")
+
+  case class MQConfig(mqType: String,
+                      serverUrls: List[String],
+                      userName: Option[String],
+                      password: Option[String],
+                      consumerGroupId: String,
+                      consumerGroupInstanceId: Option[String] = None,
+                      topicName: String,
+                      replica: Int = 1) {
+
+  }
+
+  case class WorkerConfig(workerName: String,
+                          workerType: String,
+                          responseType: String,
+                          packageName: Option[String] = None){
+
+  }
+    val wc = WorkerConfig("w1", "wt", "dd", None)
+    val mq = MQConfig("", Nil, None, None, "dd", None, "edde", 10)
+
+    val cc = ConsumerConfig("myconsumer",mq,List(wc),Map.empty, Some(11), "dd","dd",None,None,"dd")
+
+  import BaseJsonUtilities._
+
+  //val json = cc.asJson
+  //println(json)
+
+  val ccJson = """{"consumerName":"myconsumer","mqConfiguration":{"mqType":"","serverUrls":[],"userName":null,"password":null,"consumerGroupId":"","consumerGroupInstanceId":null,"topicName":"edde","replica":10},"workerConfig":[{"workerName":"w1","workerType":"wt","responseType":"dd","packageName":null}],"serviceUrls":{},"batchSize":11,"createdBy":"dd","createdTime":"dd","updatedBy":null,"updatedTime":null,"status":"dd"}""".stripMargin
+
+  import json.BaseJsonUtilities._
+   extractEntityWithTry[ConsumerConfig](ccJson) match {
+    case scala.util.Success(s) =>
+      println(s)
+    case scala.util.Failure(e) =>
+      println(e.getMessage)
+  }
+
+}
+
+object Program122 extends App {
+
+
+
 }

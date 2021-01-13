@@ -68,6 +68,10 @@
     <orderEntry type="library" name="sbt: org.apache.yetus:audience-annotations:0.5.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.apache.zookeeper:zookeeper:3.4.13:jar" level="project" />
     <orderEntry type="library" name="sbt: org.checkerframework:checker-qual:2.10.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-ast_2.12:3.5.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-core_2.12:3.5.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-jackson_2.12:3.5.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.json4s:json4s-scalap_2.12:3.5.5:jar" level="project" />
     <orderEntry type="library" name="sbt: org.lz4:lz4-java:1.5.0:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.mockito:mockito-core:3.3.3:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="sbt: org.objenesis:objenesis:2.6:jar" level="project" />
