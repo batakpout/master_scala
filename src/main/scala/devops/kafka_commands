@@ -1,0 +1,28 @@
+bin/zookeeper-server-start.sh config/zookeeper.properties (start zk)
+
+bin/kafka-server-start.sh config/server.properties (start kafka broker service or kafka server)
+
+bin/kafka-topics.sh --create --topic pvci-init --bootstrap-server localhost:9092 (create a topic )
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test (to start a producer)
+
+  test-topic (to start a consumer)
+
+
+./bin/kafka-topics.sh --list --zookeeper localhost:2181. (List all topics)
+
+./bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic topic_name (delete a topic)
+
+kafka % bin/kafka-run-class.sh kafka.tools.GetOffsetShell --broker-list localhost:9092  --topic boost-topic (Get message counts in a topic)
+
+bin/kafka-consumer-groups.sh -bootstrap-server localhost:9092 -list (list all consumer groups in kafka)
+
+bin/kafka-consumer-groups.sh -bootstrap-server localhost:9092 --describe --group group_name (describe a consumer group)
+
+bin/kafka-consumer-groups.sh -bootstrap-server localhost:9092 e --group group_name --reset-offsets --to-earliest --execute --topic topic_name (reset offset for a topic)
+
+./bin/kafka-consumer-groups.sh  --list --bootstrap-server localhost:9092. (List all groups in Kafka)
+
+./bin/kafka-consumer-groups.sh --describe --group com.datafoundry.pharma4.dcaservice.kafka.consumers.GenericConsumer  --bootstrap-server localhost:9092 (lag offset about a group)
+
+./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic pvci-init --from-beginning --max-messages 500 (list all messages in a topic)

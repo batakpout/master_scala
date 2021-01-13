@@ -278,9 +278,12 @@ Why Scala Hard
 Why good:
 --> good concurrent support
 -->High Scalability, productivity
+--> Do More With Less Code
 --> good type safety, statically typed
 --> less error prone due to functional style of code writing
 --> it has no boiler plate code
+--> Strong Type System
+--> Statically-Typed Language
 =======================================================================================================
 --> A closure is a function whose return value depends upon the variable declared outside of the function
 --> Function literal are anonymous functions called as function values at runtime
@@ -325,3 +328,27 @@ In Akka Projections you process a stream of events or records from a source to a
     Command
     Chain of responsibility
     Dependency injection
+=======================================================================================================
+ Unlike SOA, microservices have to be deployed independently, otherwise follow all rules of SOA
+ The core of reactive microservices is to find ways to create more isolation between microservices
+ Reactive microservices follow principle of isolation using various isolation techniques
+ The reactive microservices should definitely follow the reactive principles, i.e each microservice must be Reactive manifesto
+
+ Principles of Isolation: Isolation of State, Space, Failure, Time.
+ Isolation of State: RM are accessible only through their API, allows them to evolve internally without affecting outside
+ Isolation of Space: RM are independently deployed, Location of a microservice shall not affect other microservice, allows microservice to scale up/down to meet demand
+ Isolation of Failure: isolate failure, failure in 1 M shall not affect other M, system remains operational despite failure
+ Isolation of Time: RM are asynchronous and non-blocking, eventual consistency is expected within microservices
+
+ Isolation Techniques: Bulk-heading, Circuit Breaker, Message Driven Architecture, Autonomous Service, API gateway service
+ Bulk-Heading: Failure zones are created, failure in 1 M not propogated to another M, overall system remains operational (A M itself can be created as failure zone)
+ Circuit Breaker: if 1M calling other M, if called M is on heavy load, caller will retry he doesn't know, we quarantine the failing service so it will fail fast.
+
+ =======================================================================================================
+ Conflict-free replicated data type CRDT
+  =======================================================================================================
+A Saga is a sequence of local transactions where each transaction updates data within a single service.
+ The first transaction is initiated by an external request corresponding to the system operation,
+ and then each subsequent step is triggered by the completion of the previous one and it
+  contains the mechanism of handling rollback for the whole transaction sequence
+   =======================================================================================================

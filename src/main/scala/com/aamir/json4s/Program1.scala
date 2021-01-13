@@ -278,8 +278,21 @@ object ConfumdrTest extends App {
 
 }
 
-object Program122 extends App {
+object Array2DTest extends App {
 
+  val oldJson = JObject("someKey" -> JString("someValue"))
 
+  val s = """{"nonNarrative":[[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}],[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]]}""".stripMargin
+
+  val j = parse(s).asInstanceOf[JObject]
+
+  val arr = (j \ "nonNarrative").asInstanceOf[JArray]
+
+  arr.arr.foreach { arrayItem =>
+    println(compact(oldJson))
+    val res = oldJson.asInstanceOf[JValue] merge JObject("nonNarrative" -> arrayItem)
+    println(compact(res))
+    println("--" * 10)
+  }
 
 }
