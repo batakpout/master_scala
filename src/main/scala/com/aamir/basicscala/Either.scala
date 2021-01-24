@@ -1,4 +1,5 @@
-package basicscala
+package com.aamir.basicscala
+
 
 object Either1 extends App {
   /**

@@ -52,7 +52,7 @@ object PathDependentTypesInnerType extends App {
   trait IntItem extends Item[Int]
   trait StringItem extends Item[String]
 
-  def get[ItemType <: ItemLike](key: ItemType#Key): ItemType = ???
+  def get[A <: ItemLike](key: A#Key): A = ???
 
   get[IntItem](10)
   get[StringItem]("hello")

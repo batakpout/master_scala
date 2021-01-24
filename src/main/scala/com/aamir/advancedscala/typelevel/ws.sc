@@ -9,3 +9,7 @@ implicit val defaultPermission: Permission = Permission("0896")
 
 val x = implicitly[Permission]
 val x = implicitly[Permission].s
+
+
+
+def x[A: Permission] = implicitly[Permission].s

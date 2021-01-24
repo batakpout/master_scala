@@ -1,15 +1,12 @@
 package com.aamir.akka.actors.infra
 
-
 /**
- * Dispatcher are in-charge of delivering and handling messages within an actorsystem.
+ * Dispatcher are in-charge of delivering and handling messages within an actor-system.
  *
  * Dispatchers are akka's engine...they make akka tick by
  * 1. implementing scala.concurrent.ExecutionContext
  * 2. registering an actor's mailbox for execution
- *
  * Dispatcher determine execution time and context and therefore provide the physical capabilities for scaling up
- *
  */
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}

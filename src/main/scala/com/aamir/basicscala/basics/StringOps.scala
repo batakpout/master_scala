@@ -46,3 +46,12 @@ object StringOps extends App {
   val escaped = "This is a \n newline"
   println(raw"$escaped")
 }
+
+object ParTest extends App {
+  val result1: Int = (0 to 12 by 3).par.map { a =>
+    val adder: Int = 2
+    println(s"#seq> $a + $adder")
+    a + adder
+  }.sum
+  println(result1)
+}

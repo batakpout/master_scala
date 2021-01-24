@@ -2,8 +2,8 @@ class  Animal
 class Dog extends Animal
 class Puppy extends Animal
 
-class AnimalCarer{
-  def display [T >: Puppy](t: T){
+class AnimalCarer {
+  def display [T >: Puppy](t: T) {
     println(t)
   }
 }

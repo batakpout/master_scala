@@ -296,3 +296,18 @@ object Array2DTest extends App {
   }
 
 }
+
+object EmptyArrayAddTest extends App {
+
+  // val s = """[{"name":"메뉴1","permission":"1","link":"http://naver.com"},{"name":"메뉴2","permission":"2","link":"http://daum.net","sub":[{"name":"메뉴2-1","permission":"1","link":"http://google.com"},{"name":"메뉴2-2","permission":"1","link":"http://yahoo.com"}]}]""".stripMargin
+
+  val s1 = s"""{"key" : "value"}"""
+
+  val jObj = parse(s1).asInstanceOf[JObject]
+
+  val jArray = JObject("abc" -> JArray(Nil))
+
+
+  val res = jObj merge jArray merge JObject("def" -> JObject())
+  println(compact(res))
+}

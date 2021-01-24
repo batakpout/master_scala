@@ -1,5 +1,4 @@
-val l = List(Some(1), None, Some(3), None)
-l.flatten
+
 
 import scala.annotation.tailrec
 

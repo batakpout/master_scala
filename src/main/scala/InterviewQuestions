@@ -1,8 +1,10 @@
 ========================================================================================
 Why Actors are lightweight?
-In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mail-boxing, and more, are taken care of by other Akka components.
+In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mail-boxing, and more,
+ are taken care of by other Akka components.
 
-For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component, mail-boxing by the Akka mailbox component, and more.
+For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component,
+mail-boxing by the Akka mailbox component, and more.
 
 In the Akka Toolkit, business logic concerns and other concerns are loosely coupled. That's why Akka Actors are very lightweight; they need space to do their job.
 ========================================================================================
@@ -106,14 +108,15 @@ NoSql databases:
 --
 > MongoDB stores data as documents in a binary representation called BSON (Binary JSON)
 Mostly in cluster
---> Sql is vertically scalable and NoSql horizantally Scalable
+--> Sql is vertically scalable and NoSql horizontally Scalable
 --> Sql emphasis on ACID properties (also enforces constraints), 
      while NoSql on CAP(Consistency, Availability
 	, Partition Tolerance) Theorm
 --> CAP Theorm (Eric Brewers theorm): states that we can only achieve 2 out of 
 	3 guarantees for a database. 1. Consistency: All nodes in cluster will see
 	the same data at the same time or the reader gets most recently written data.
-	2.) Availability: Guarentee that every request receives a response whether its successful or failure 3. Partition Tolerance: guarantee system will continues to 
+	2. Availability: Guarantee that every request receives a response whether its successful or failure
+	3. Partition Tolerance: guarantee system will continues to
 	operate despite any failures in system
 	--> In distributed systems, partition tolerance is must, so always trade-off 
 	between Consistency and availability.
@@ -141,8 +144,8 @@ across a cluster of machines.
 
 ========================================================================================
 Load balancing based on Consistent Hashing.
-========================================================================================
-Akka is a free, open source tookit and runtime for building hightly concurrent,
+==============================Akka==========================================================
+Akka is a free, open source toolkit and runtime for building highly concurrent,
 distributed, fault-tolerant message driven application on the JVM
 
 Actor is fundamental unit of computation.
@@ -162,7 +165,7 @@ can be deployed on different machine.
 --> b. Db Router, databases level sharding, router in database.
 --> Sharding Strategies- Hashing: Computes a hash of the shard key field's value.Each chunk
 	is assinged a range based on the hashed shard key values.
---> A range of shared keys whose values are close are more likely to reside on the same 	chunk or machine.
+--> A range of shared keys whose values are close are more likely to reside on the same chunk or machine.
 --> For a order management system, shard on basis of userId
 --> Database for sharding: casandra, HBase etc.
 ========================================================================================
@@ -336,7 +339,8 @@ In Akka Projections you process a stream of events or records from a source to a
 
  Principles of Isolation: Isolation of State, Space, Failure, Time.
  Isolation of State: RM are accessible only through their API, allows them to evolve internally without affecting outside
- Isolation of Space: RM are independently deployed, Location of a microservice shall not affect other microservice, allows microservice to scale up/down to meet demand
+ Isolation of Space: RM are independently deployed, Location of a microservice shall not affect other microservice,
+    allows microservice to scale up/down to meet demand
  Isolation of Failure: isolate failure, failure in 1 M shall not affect other M, system remains operational despite failure
  Isolation of Time: RM are asynchronous and non-blocking, eventual consistency is expected within microservices
 
@@ -352,3 +356,10 @@ A Saga is a sequence of local transactions where each transaction updates data w
  and then each subsequent step is triggered by the completion of the previous one and it
   contains the mechanism of handling rollback for the whole transaction sequence
    =======================================================================================================
+    A monad is a mechanism for sequencing computations.
+
+
+   --> A monad is a container with operations(map/flatMap/filter/foreach) that can act on the contents
+       without extracting it first.
+          =======================================================================================================
+So backpressure is all about slowing down a fast producer in presence of a slow consumer

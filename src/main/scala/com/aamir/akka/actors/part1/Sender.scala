@@ -89,8 +89,9 @@ object ActorIntroPart2Exercise1 extends App {
 
   (1 to 20).foreach(_ => counter ! Decrement)
   (1 to 20).foreach(_ => counter1 ! Decrement)
-  counter1 ! Print
+ // counter1 ! Print
   counter ! Print
+  counter1 ! Print
  //2 actor , 2 separate mail boxes
  /* println("==end of main==")
   system.terminate()*/

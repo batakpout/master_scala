@@ -10,7 +10,7 @@ object TraitRestrictions1 extends App {
 
   trait Swimmer extends Mobility
 
-  //class Duck extends Omnivore //fine
+  class Duck extends Omnivore //fine
   class Duck extends Omnivore with Swimmer*/
 
   /**

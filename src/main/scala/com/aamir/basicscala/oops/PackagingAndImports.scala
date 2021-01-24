@@ -6,9 +6,7 @@ import playground.{PrinceCharming, Cinderella => Princess}
 import java.util.Date
 import java.sql.{Date => SqlDate}
 
-/**
- * Created by Daniel.
- */
+
 object PackagingAndImports extends App {
 
   // package members are accessible by their simple name

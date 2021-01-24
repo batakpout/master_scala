@@ -1,7 +1,7 @@
 package com.aamir.akka.actors.faulttolerance
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, OneForOneStrategy, Props}
-import akka.pattern.{Backoff, BackoffSupervisor, ask}
+import akka.pattern.{Backoff, BackoffOpts, BackoffSupervisor, ask}
 
 import scala.concurrent.Future
 import scala.concurrent.duration._
@@ -55,7 +55,7 @@ object BackoffSupervisorPattern extends App {
   //Now, we will apply a Back-off Supervision pattern to handle exponential delay based restarts
 
   val simpleSupervisorProps: Props = BackoffSupervisor.props(
-    Backoff.onFailure(
+    BackoffOpts.onFailure(
       Props[FileBasedPersistentActor],
       "simpleBackoffActor",
       6.seconds, // first attempt is 3s then 6s, 12s, 24s

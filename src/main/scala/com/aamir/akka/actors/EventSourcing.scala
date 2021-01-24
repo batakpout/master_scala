@@ -16,7 +16,7 @@ object EventSourcing extends App {
   }
 
   class BookSubscriber extends Actor {
-    override def preStart():Unit = context.system.eventStream.subscribe(self, classOf[Book])
+    override def preStart() :Unit = context.system.eventStream.subscribe(self, classOf[Book])
     def receive: Receive = {
       case book:Book => println(s"My name is ${self.path.name} b.a I have received a book: $book")
     }

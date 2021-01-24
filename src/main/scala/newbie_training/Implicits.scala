@@ -1,3 +1,5 @@
+package newbie_training
+
 /*
 def x(implicit x : Int)
 def x(implicit x : Int, y : Int)
