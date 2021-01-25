@@ -1,4 +1,5 @@
-package basicscala.oops
+package com.aamir.basicscala.oops
+
 
 object Inheritance extends App {
 
@@ -52,4 +53,39 @@ object Inheritance extends App {
   // 1 - use final on member
   // 2 - use final on the entire class
   // 3 - seal the class = extend classes in THIS FILE, prevent extension in other files
+}
+
+
+/**
+ * final members can't be overriden but can be inherited
+ */
+object Inheritance2 extends App {
+
+  trait Animal {
+    def name: String
+    protected def sound: String
+    final def talk(): Unit = println(s"$name says $sound")
+  }
+
+  case class Dog(override val name: String) extends Animal {
+    override protected final lazy val sound = "woof"
+  }
+
+  case class Cat(override val name: String) extends Animal {
+    override protected final lazy val sound = "meow"
+  }
+
+  case class Bird(override val name: String) extends Animal {
+    override protected final lazy val sound = "chirp"
+  }
+
+  val cat: Cat = Cat("Kitty")
+  val dog: Dog = Dog("Snuffles")
+  val bird: Bird = Bird("Coco")
+
+  val myAnimals: List[Animal] = List(cat, dog, bird)
+
+  myAnimals.foreach(a => a.talk())
+
+  assert(myAnimals.map(a => a.name) == List("Kitty", "Snuffles", "Coco"))
 }
