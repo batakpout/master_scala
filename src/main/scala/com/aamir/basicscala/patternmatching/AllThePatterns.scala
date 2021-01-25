@@ -1,6 +1,7 @@
-package lectures.part4pm
+package com.aamir.basicscala.patternmatching
 
-import basicscala.exercises.{Empty, Cons, MyList}
+import com.aamir.basicscala.exercises.{Cons, Empty, MyList}
+
 
 object AllThePatterns extends App {
 

@@ -1,9 +1,11 @@
-package akka.actors.testing
+package com.aamir.akka.actors.testing
+
 
 import akka.actor.{Actor, ActorSystem, Props}
 import akka.testkit.{ImplicitSender, TestKit, TestProbe}
 import com.typesafe.config.ConfigFactory
-import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+import org.scalatest.{BeforeAndAfterAll}
+import org.scalatest.wordspec.AnyWordSpecLike
 
 import scala.collection.immutable
 import scala.concurrent.duration._
@@ -14,7 +16,7 @@ import scala.util.Random
  */
 
 class TimedAssertionsSpec extends TestKit(ActorSystem("TimedAssertionsSpec", ConfigFactory.load().getConfig("specialTimedAssertionsConfig")))
-  with ImplicitSender with WordSpecLike with BeforeAndAfterAll {
+  with ImplicitSender with AnyWordSpecLike with BeforeAndAfterAll {
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)

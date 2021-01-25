@@ -20,6 +20,7 @@ import Implicits._
 val listEnd = 15
 val input = (0 to listEnd).toList
 val output1= input.filter(_.isEven)
-val output = output1.everyNMap(2)(_.increaseByN())
+val f = (x: Int) => x.increaseByN()
+val output = output1.everyNMap(2)(f)
 
 val result = output.sum

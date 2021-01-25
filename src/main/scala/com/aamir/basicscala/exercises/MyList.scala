@@ -1,7 +1,7 @@
+package com.aamir.basicscala.exercises
 
-package basicscala.exercises
 
-import basicscala.oops.Generics.MyList
+
 
 abstract class MyList[+A] {
   def head: A

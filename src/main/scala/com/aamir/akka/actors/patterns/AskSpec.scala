@@ -4,16 +4,17 @@ package com.aamir.akka.actors.patterns
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props, Timers}
 import akka.testkit.{ImplicitSender, TestKit}
 import akka.util.Timeout
-import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+import org.scalatest.{BeforeAndAfterAll}
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._
 import scala.util.{Failure, Success}
 import akka.pattern.ask
 import akka.pattern.pipe
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class AskSpec extends TestKit(ActorSystem("AskSpec"))
-  with ImplicitSender with WordSpecLike with BeforeAndAfterAll {
+  with ImplicitSender with AnyWordSpecLike with BeforeAndAfterAll {
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)

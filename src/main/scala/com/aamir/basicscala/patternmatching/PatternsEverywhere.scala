@@ -1,4 +1,5 @@
-package basicscala.patternmatching
+package com.aamir.basicscala.patternmatching
+
 
 object PatternsEverywhere extends App {
 

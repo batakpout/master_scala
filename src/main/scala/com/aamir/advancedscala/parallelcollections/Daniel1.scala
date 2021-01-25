@@ -1,10 +1,11 @@
-package advancedscala.parallelcollections
+package com.aamir.advancedscala.parallelcollections
 
+
+import java.util.concurrent.ForkJoinPool
 import java.util.concurrent.atomic.AtomicReference
-
+import scala.collection.parallel.CollectionConverters.ImmutableIterableIsParallelizable
 import scala.collection.parallel.ForkJoinTaskSupport
 import scala.collection.parallel.immutable.ParVector
-import scala.concurrent.forkjoin.ForkJoinPool
 
 object ParallelUtils extends App {
 

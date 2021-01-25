@@ -1,3 +1,4 @@
+/*
 package advancedscala.futures.promisesfutures
 
 import scala.concurrent.{Future, Promise}
@@ -28,4 +29,4 @@ object Example1 extends App {
 }
   //The callback passed to onSuccess does not complete the Future, it only listens when the Future is completed
 // and does something.
-//In the case of Promises, you can call its success method to complete its associated Future.
+//In the case of Promises, you can call its success method to complete its associated Future.*/

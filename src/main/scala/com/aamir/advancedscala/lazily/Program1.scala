@@ -1,6 +1,6 @@
-package advancedscala.lazily
+package com.aamir.advancedscala.lazily
 
-import scala.collection.generic.FilterMonadic
+
 
 object LazyEvaluation extends App {
 

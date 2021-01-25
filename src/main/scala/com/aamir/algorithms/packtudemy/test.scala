@@ -1,6 +1,7 @@
-package packtfunctionalDS
+package com.aamir.algorithms.packtudemy
 
-import scala.collection.JavaConversions._
+
+import scala.jdk.CollectionConverters._
 
 object coin {
 

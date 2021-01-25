@@ -1,9 +1,11 @@
-package akka.actors.testing
+package com.aamir.akka.actors.testing
+
 
 import akka.actor.{Actor, ActorLogging, ActorSystem, Props}
 import akka.testkit.{EventFilter, ImplicitSender, TestKit}
 import com.typesafe.config.ConfigFactory
-import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+import org.scalatest.{BeforeAndAfterAll}
+import org.scalatest.wordspec.AnyWordSpecLike
 
 /**
  * Using EventFilters to intercept logs, intercepting exceptions.
@@ -13,7 +15,7 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
  * */
 
 class InterceptingLogsSpecs extends TestKit(ActorSystem("InterceptingLogsSpecs", ConfigFactory.load().getConfig("interceptingLogMessages")))
-  with ImplicitSender with WordSpecLike with BeforeAndAfterAll {
+  with ImplicitSender with AnyWordSpecLike with BeforeAndAfterAll {
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)

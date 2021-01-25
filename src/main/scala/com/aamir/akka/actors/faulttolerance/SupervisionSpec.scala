@@ -4,7 +4,8 @@ package com.aamir.akka.actors.faulttolerance
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
 import akka.actor.{Actor, ActorRef, ActorSystem, AllForOneStrategy, OneForOneStrategy, Props, SupervisorStrategy, Terminated}
 import akka.testkit.{EventFilter, ImplicitSender, TestKit}
-import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+import org.scalatest.{BeforeAndAfterAll}
+import org.scalatest.wordspec.AnyWordSpecLike
 
 /**
  * Parent must decide upon their children's failure
@@ -16,7 +17,7 @@ import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
  * When an actor escalates, it stops all its children and escalates error to its parent i.e user-guardian, and user-guardian restarts parents and children are killed.
  */
 class SupervisionSpec extends TestKit(ActorSystem("SupervisorSpec"))
-  with ImplicitSender with WordSpecLike with BeforeAndAfterAll {
+  with ImplicitSender with AnyWordSpecLike with BeforeAndAfterAll {
 
   override def afterAll(): Unit = {
     TestKit.shutdownActorSystem(system)

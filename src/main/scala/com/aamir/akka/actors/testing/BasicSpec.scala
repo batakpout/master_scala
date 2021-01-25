@@ -1,17 +1,19 @@
-package akka.actors.testing
+package com.aamir.akka.actors.testing
+
 
 import akka.actor.{Actor, ActorSystem, Props}
 
 import scala.concurrent.duration._
 import akka.testkit.{ImplicitSender, TestActors, TestKit}
-import org.scalatest.{BeforeAndAfterAll, WordSpecLike}
+import org.scalatest.{BeforeAndAfterAll}
 
 import scala.collection.immutable
 import scala.util.Random
+import org.scalatest.wordspec.AnyWordSpecLike
 
 class BasicSpec extends TestKit(ActorSystem("BasicSpec"))
       with ImplicitSender
-      with WordSpecLike
+      with AnyWordSpecLike
       with BeforeAndAfterAll {
 
   override def afterAll(): Unit = {
@@ -45,7 +47,7 @@ class BasicSpec extends TestKit(ActorSystem("BasicSpec"))
       val blackActor = system.actorOf(Props[BlackHoleActor])
       val message = "hello, test!"
       blackActor ! message
-      expectNoMessage(1 second) // till 1 second no message should come
+      expectNoMessage(1.second) // till 1 second no message should come
     }
   }
 

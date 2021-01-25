@@ -82,8 +82,8 @@ object BackoffSupervisorPattern extends App {
     Backoff.onStop( // start this actor after Stop directive after 3s
       Props[FileBasedPersistentActor],
       "stopBackoffActor",
-      6 seconds,
-      30 seconds,
+      6.seconds,
+      30.seconds,
       0.2
     ).withSupervisorStrategy(
       OneForOneStrategy() {
@@ -154,8 +154,8 @@ object ParentHandlingSlaves {
     Backoff.onStop(
       Props[Parent],
       "parent",
-      3 seconds,
-      30 seconds,
+      3.seconds,
+      30.seconds,
       0.2
     ).withSupervisorStrategy(
       OneForOneStrategy() {

@@ -1,5 +1,7 @@
 package basicscala.basics
 
+import scala.collection.parallel.CollectionConverters.ImmutableIterableIsParallelizable
+
 object StringOps extends App {
 
   val str: String = "Hello, I am learning Scala"
