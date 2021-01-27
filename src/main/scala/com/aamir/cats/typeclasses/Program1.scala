@@ -15,7 +15,8 @@ object Program1A extends App {
     def write(a: A): Json
   }
 
-  object JsonInstance {
+  object JsonWriter {
+    //implicit values
      implicit val stringWriter = new JsonWriter[String] {
        def write(a: String): Json = JString(a)
      }
@@ -25,11 +26,11 @@ object Program1A extends App {
     }
   }
 
+  //interface object, type class interface
   object Json {
+    //Type Class Use : Interface Objects
     def toJson[A](a: A)(implicit writer: JsonWriter[A]):Json = writer.write(a)
   }
-
-  import JsonInstance._
 
   Json.toJson("a")
   Json.toJson(Person("aamir", "Bengaluru", 32))
@@ -56,8 +57,14 @@ object Program1B extends App {
     }
   }
 
+  /**
+   * Interface Syntax
+   * We can alternatively use extension methods to extend existing types with interface methods.
+   * Cats refers to this as “syntax” for the type classes
+   * old terms: “type enrichment” or “pimping”
+   */
   object JsonSyntax {
-    implicit class JsonOps[A](a: A) {
+    implicit class JsonWriterOps[A](a: A) {
       def toJson(implicit writer: JsonWriter[A]):Json = writer.write(a)
     }
   }
@@ -94,6 +101,11 @@ object Program1C extends App {
     }
   }
 
+  /**
+   * implicitly is a good fallback for debugging purposes.
+   * We can insert a call to implicitly within the general flow of our code to ensure the compiler
+    can find an instance of a type class and ensure that there are no ambiguous implicit errors
+   */
   object Json {
     def toJson[A : JsonWriter](a: A):Json = implicitly[JsonWriter[A]].write(a)
   }

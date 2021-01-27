@@ -16,3 +16,5 @@ object worksheet {
 	}                                         //> sqrt: (x: Double)Double
 	  
 }
+
+worksheet.sqrt(2)

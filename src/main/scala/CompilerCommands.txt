@@ -1,0 +1,3 @@
+scala> :se -Xprint:parser
+
+scala> { implicit val n: Int = 5 ; ("hi".scaled)(3) }
