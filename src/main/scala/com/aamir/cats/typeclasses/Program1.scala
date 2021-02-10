@@ -93,6 +93,7 @@ object Program1C extends App {
       def write(a: String): Json = JString(a)
     }
 
+    //sam-single abstract method
     implicit val intWriter:JsonWriter[Int] = (i: Int) => JNumber(i)
 
     implicit val personWriter:JsonWriter[Person] = new JsonWriter[Person] {
@@ -114,4 +115,6 @@ object Program1C extends App {
 
   Json.toJson("a")
   Json.toJson(Person("aamir", "Bengaluru"))
+
+
 }

@@ -10,4 +10,6 @@ val sE = println("Side-effect")
 //effectFul(sE, sE)
 effectFul(println("Side-effect"), println("Side-effect"))
 
+println("effects")
+
 

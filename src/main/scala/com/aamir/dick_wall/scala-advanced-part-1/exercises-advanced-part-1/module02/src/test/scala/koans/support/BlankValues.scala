@@ -3,7 +3,7 @@
 
 package koans.support
 
-object BlankValues {
+object   BlankValues {
     class ReplaceWithCorrectException extends Exception
 
     val __ = "Should be filled in"
