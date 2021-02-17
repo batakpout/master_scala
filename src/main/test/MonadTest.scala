@@ -32,27 +32,21 @@ object Monad1  {
 
 }
 
-class MonadTest extends FunSpec with MockitoSugar  {
+class ListMergeTest extends FunSpec with MockitoSugar  {
 
- import Monad1._
-  describe("monad laws") {
-    val x = "monad"
-    val monad: Attempt[String] = Success(x)
-    val f: String => Attempt[String] = (value: String) => Attempt(s"hello $value")
-    val g: String => Attempt[String] = (value: String) => Attempt(s"$value!")
+  describe("list combine test") {
 
-    val l: Attempt[String] = monad.flatMap(f).flatMap(g)
-    val m: Attempt[String] = monad.flatMap(x => f(x).flatMap(g))
 
-    it("should satisfy left-identity law") {
-      assert(monad.flatMap(f) == f(x))
+    val l1 = List(1,2,4, 6, 100)
+    val l2 = List(5, 200)
+    val result =  List(1, 2, 4, 5, 6, 100, 200)
+
+
+    it("should merge the two list and sort them") {
+
+      assert(ListCombine.combine(l1, l2) == result)
     }
-    it("should satisfy right-identity law") {
-      assert(monad.flatMap(Success(_)) == monad)
-    }
-    it("should satisfy associativity law") {
-      assert(monad.flatMap(f).flatMap(g) == monad.flatMap(x => f(x).flatMap(g)))
-    }
+
 
   }
 }

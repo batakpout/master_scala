@@ -1,0 +1,50 @@
+Reactive Architecture Part-2
+Domian Driven Design
+-> Architectural approach used to design large systems.It gives a set of guidelines to break larger domains into smaller domains.
+-> Many of the guidelines and rules in Domain Driven Design are compatible with those in Reactive Architecture.
+-> In the context of software, Domain refers to business or idea that we are modelling.
+-> key goal of DDD is to build a model that the domain experts understand.
+-> Model is not the software,it represents our understanding of the domain, software is implementation of the model.
+-> We use Ubiquitous langauge as a communication channel between s/w developers and domain experts.
+-> Terminology in UL comes from domain experts, words originate in domain and are used in s/w, avoid using s/w terms and introducing them in domain.
+
+-> e.g Restaurant Domain (Orders, Servers, Credit, Reservation, Plate, Cook etc), contains ideas, actions, rules that interact in complex way.
+-> We create sub-domain from large domain (e.g Reservation sub-domain contains[reservation, customer, table, time, location etc])
+-> Sub-domains are created by grouping related ideas, actions and rules. Some concepts may exist in multiple sub-domains (e.g customer)
+-> Each sub-domain has its own ubiquitous language and model, the language and model for a sub-domain is called Bounded-Context.
+-> Concepts/terms can be shared to multiple Sub-domains or BC.
+-> Sub-domains or Bounded Contexts are good starting points for building reactive microservices.
+-> From one BC to the next, the meaning of a word (e.g order) may change greatly.
+-> In RBQQ, while talking to a server, order has a very specific meaning, but for someone managing inventory for RBBQ, order means something different.
+-> Also need to observe how details of a model changes when moving from one BC to another.
+-> In RBBQ, for kitchen preparing an order, they don't care about prices, but when customer pays for order, price is critical.
+-> It is the same order but the relevant details of the Order changes while moving from one BC to another.
+-> Ways to determine Bounded Context, no universal answer, but there are some guidelines, which signal a division:
+   --> Consider human culture and interactions.
+   --> Look for changes in Ubiquitous languages.(if the use or meaning of langugae changes, it suggests a new BC)
+   --> Look for varying or unnecessary information in a context (e.g employee id meaningless in a customer so movie to say Employee sub-domain).
+   --> Strongly separated bounded-context will result in smooth workflows (an awkward workflow signals misunderstanding of the domain), also, if
+	bounded context has too many dependencies, it may be over-complicated.
+
+-> Traditionally, DDD, focused on the objects in the domain e.g, Cook, Reservation, Customer etc (Eric Evens book)
+-> Event First DDD, places the focus on activities or events that occur in a domain e.g: Customer makes a reservation, server places an order,
+   food served to customer etc.
+-> Using EFDDD, we start by defining the activities, then group those activities to find logical system boundaries. (There is a particular techinque
+   called Event Storming for it.)
+
+->Subject-Verb-Object notation to give a consistent way to phrase our activities or our events in domain.
+-> e.g Host checks current reservation, Host(Subject), checks (verb), reservation (object): So, subject is the person who is doing the action performed,
+       verb will be what action it does.
+-> e.g a Host Interviewer Subject-Verb-Object[Host answers phones, Host records reservations, Host greets guests, Host seats guests,
+					      Host checks Reservations, Host record tables as occupied]
+
+-> So, once we have separated our BCs into these nice clean boundaries. Now we have to maintain the purity of those BCs. Using Anti-Corruption Layers
+-> [Reservation Context]--Anti-Corruption-Layer--[Customer context] (ACL, implemented as interfaces, and others (e.g customer) as concrete classes)
+   -> Each BC may have domain concepts that are unique. (e.g address to customer, address doesn't matter in reservation)
+   -> Concepts are not always compatible from one context to another(e.g customer address invalid in reservations),
+	ACL are introuduced to translate these concepts (e.g customer address not needed in reservation, so removed/translated from 1 context to another)
+-> ACL, will prevent BCs to leak into each other, also, helps BCs to stand alone (ACL, uses caching if some feature from BC disappears for some reason)
+-> ACL, can be implemented in Legacy system or in BC or both.
+
+-> Context Maps are ways of visualizing BCs and the relationships between them.
+
