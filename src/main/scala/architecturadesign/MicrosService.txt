@@ -1,0 +1,28 @@
+==Monolithic===
+--> Disadvantages: No clear isolation in the application, complex dependencies, hard to understand and modify. [Ball of mud, applicable only to worst monolith design]
+--> To clean up this ball of mud, we introduce isolation into application, we divide application along clear domain boundaries.
+--> We introduce libraries that help isolate related pieces of code
+-> Libraries provide a clean and consistent interface.
+--> Characteristics of a monolith: [Deployed as a single unit, Single shared database, communicate with synchronous method calls(request/response scenario),
+	Deep Coupling between libraries and components(often through the DB), Big Bang Style release, Long cycle times(weeks to months)
+	Teams carefully synchronize features and releases]
+
+--> Scala a Monolith: [Multiple copies of the monolith are deployed:each copy is independent:they don't communicate with each other, the database
+						provides consistency between deployed instances]
+
+--> Advantages of Monolith: [Easy cross modules refactoring, easy to maintain consistency(single database), Single Deployment Process, Simple this to monitor,
+							Simple Scalability Model]
+--> DisAdvantages of Monolith: [Limited by the maximum size of a single physical machine, only scales as far as database will allow,
+								components must scale as a group, deep coupling leads to inflexibility, development is slow(change is slow, build time long),
+								Serious failure in one component often bring down the whole monolith(Retribution of load  can cause cascading failures
+								(when one monolith goes down it forward load to other instance)]
+
+==Service Oriented Architecture==
+-> In Monolith, for worst case scenario, we have ball of mud, we introduce isolation into application, we divide application along clear domain boundaries.
+-> There is another way we can introduce additional isolation, by using SOA
+-> Here, services don't share a database, this reduces coupling.
+-> All access must go through the API exposed by the service.
+-> Services may live in the same process(monolith) or may be separated(microservice)
+-> why its not same as microservice, it doesn't talk about deployments (we can deploy as a whole, monolith, our choice, our like separately: just like microservices)
+
+==MicroServices==
