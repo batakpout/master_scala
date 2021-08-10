@@ -1,0 +1,1 @@
+# solve optimization problems using greedy(maybe have some drawbacks)), dynamic programming. Recursion also but has some drawbacks(overlapping subproblems).
