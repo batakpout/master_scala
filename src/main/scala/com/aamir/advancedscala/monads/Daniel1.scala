@@ -1,6 +1,6 @@
-package advancedscala.monads
+package com.aamir.advancedscala.monads
 
-import advancedscala.monads.Monad1.{Attempt, Success}
+
 
 object Monad1  {
 
@@ -35,7 +35,7 @@ object Monad1  {
 }
 
 object Monad1Test extends App {
-  import Attempt._
+  import Monad1._
 
   val o1: Attempt[Int] = Success[Int](10)
   val f: Int => Attempt[Int] = (x: Int) => unit(x)

@@ -16,6 +16,7 @@ object BalancedParenthesis extends App {
       } else false
     }
   }
+
  import scala.collection.mutable.Stack
   def areParenthesisBalancedV2(s: String): Boolean =  {
 
