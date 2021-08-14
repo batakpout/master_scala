@@ -33,8 +33,7 @@ object BalancedParenthesis extends App {
          } else false
        }
     }
-    rec(s, new Stack[Char]())
-
+    rec(s,  Stack[Char]())
   }
 
   def isMatching(c1: Char, c2: Char) = (c1, c2) match {

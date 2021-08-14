@@ -8,9 +8,7 @@ class Stack[+A](self: List[A]) {
     case Nil => (None, new Stack(Nil))
     case _   => (Some(self.head), new Stack(self.tail))
   }
-
   def peek: Option[A] = self.headOption
-
   def size: Int = self.size
   def isEmpty:Boolean = self.isEmpty
 
