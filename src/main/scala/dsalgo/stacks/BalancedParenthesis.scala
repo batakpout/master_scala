@@ -3,37 +3,25 @@ package dsalgo.stacks
 
 object BalancedParenthesis extends App {
 
-  def areParenthesisBalanced(inputArray: List[Char], stk: Stack[Char]): Boolean = inputArray match {
-    case Nil       => if (stk.isEmpty) true else false
-    case h :: tail => {
-      if (h == '{' || h == '(' || h == '[') {
-        areParenthesisBalanced(tail, stk.push(h))
-      } else if (h == '}' || h == ')' || h == ']') {
-        if (stk.isEmpty) false else {
-          val (pop, stack) = stk.pop()
-          if (!isMatching(pop.get, h)) false else areParenthesisBalanced(tail, stack)
-        }
-      } else false
-    }
-  }
 
- import scala.collection.mutable.Stack
-  def areParenthesisBalancedV2(s: String): Boolean =  {
 
-    def rec(s: String, stk: Stack[Char]): Boolean = {
+   def areParenthesisBalanced(s: String): Boolean =  {
+
+    def rec(s: String, stk: MyStack[Char]): Boolean = {
        if(s.isEmpty) {
          if(stk.isEmpty) true else false
        } else {
-         if (s.head == '{' || s.head == '(' || s.head == '[') {
-           rec(s.tail, stk.push(s.head))
-         } else if (s.head == '}' || s.head == ')' || s.head == ']') {
+         val ch = s.head
+         if (ch == '{' || ch == '(' || ch == '[') {
+            rec(s.tail, stk.push(ch))
+         } else if (ch == '}' || ch == ')' || ch == ']') {
            if (stk.isEmpty) false else {
-             if (!isMatching(stk.pop(), s.head)) false else rec(s.tail, stk)
+             if (!isMatching(stk.peek.get, ch)) false else rec(s.tail, stk.pop()._2)
            }
-         } else false
+         } else rec(s.tail, stk)
        }
     }
-    rec(s,  Stack[Char]())
+    rec(s,  MyStack[Char]())
   }
 
   def isMatching(c1: Char, c2: Char) = (c1, c2) match {
@@ -44,11 +32,9 @@ object BalancedParenthesis extends App {
   }
 
   println {
-    //val l = List('{', '(', '[', ']', ')', '}')//true
-    val l = List('(', '(', ')', '(', ')', ')')//true
-    //val l = List('{', '(', '[', ')', ')', '}')//false
-   // areParenthesisBalanced(l, Stack.empty)
-    areParenthesisBalancedV2("()[]{}");
+    //areParenthesisBalanced("()[]{}");
+    areParenthesisBalanced("[(a+b)+{(c+d)*(e/f)]}")
+    //areParenthesisBalanced("[(a + b) + {(c + d) * (e / f)}]")
   }
 
 

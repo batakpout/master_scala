@@ -8,12 +8,12 @@ object DuplicateBrackets extends App {
 
   def checkDuplicateBrackets(str: String) = {
 
-    def rec(str: String, st: Stack[Char]): Boolean = {
+    def rec(str: String, st: MyStack[Char]): Boolean = {
       if (str.isEmpty) false else {
         val ch = str.head
         if (ch == ')') {
           if (st.peek.contains('(')) true else {
-            def popStack(stack: Stack[Char]): Stack[Char] = {
+            def popStack(stack: MyStack[Char]): MyStack[Char] = {
               if (!stack.peek.contains('(')) popStack(stack.pop()._2)
               else stack
             }
@@ -24,7 +24,7 @@ object DuplicateBrackets extends App {
       }
     }
 
-    rec(str, Stack[Char]())
+    rec(str, MyStack[Char]())
   }
 
   checkDuplicateBrackets("((a+b)+(c+d))")
