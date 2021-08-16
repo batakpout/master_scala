@@ -40,7 +40,7 @@ object ParallelUtils extends App {
 
   println("parallel time: " + parallelTime)
 
-  println(List(1,2,3).reduce(_ - _))
+  //println(List(1,2,3).ch(_ - _))
   println(List(1,2,3).par.reduce(_ - _))
 
   // synchronization

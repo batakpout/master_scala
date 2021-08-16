@@ -1,3 +1,4 @@
+/*
 package com.aamir.advancedscala.monads
 
 
@@ -91,4 +92,4 @@ object Monad2 extends App {
     }
    */
 
-}
+}*/
