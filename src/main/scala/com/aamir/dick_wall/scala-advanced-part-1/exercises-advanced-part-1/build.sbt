@@ -7,6 +7,7 @@ scalaVersion in ThisBuild := "2.12.4"
 scalacOptions in ThisBuild ++= Seq("-deprecation", "-feature")
 
 libraryDependencies in ThisBuild ++= Seq(
+
   "org.scala-lang.modules" %% "scala-xml" % "1.0.6",
   "org.scala-lang.modules" %% "scala-java8-compat" % "0.8.0",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.7.2",
