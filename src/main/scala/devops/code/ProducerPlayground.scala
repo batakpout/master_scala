@@ -8,6 +8,8 @@ import java.util.Properties
 
 object ProducerPlayground extends App {
 
+  def customPartitioner(key: Int):Int = key % 3
+
   val topicName = "test-1"
   val producerProperties = new Properties()
   producerProperties.setProperty(BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
@@ -24,4 +26,5 @@ object ProducerPlayground extends App {
   producer.send(new ProducerRecord[Int, String](topicName,2,60, "Message 6"))
 
   producer.flush()
+
 }

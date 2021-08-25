@@ -17,7 +17,8 @@ libraryDependencies ++= Seq(
   "org.json4s" %% "json4s-jackson" % "3.6.10",
   "org.mockito" % "mockito-core" % "3.7.7" % Test,
   "org.scalamock" %% "scalamock" % "5.1.0" % Test,
-  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.0"
+  "org.scala-lang.modules" %% "scala-parallel-collections" % "1.0.0",
+  "org.apache.kafka" % "kafka-clients" % "2.8.0"
 
 
 

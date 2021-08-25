@@ -1,1 +1,0 @@
-https://stackoverflow.com/questions/4493001/what-are-the-best-use-cases-for-akka-framework

@@ -1,9 +1,0 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, Some(2599546c-d480-4bdf-b562-55a130f73710), Some(CommandSource(console0)))[0m
-[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/ssspl/Documents/code/udemy_courses/src/main/scala/algorithms/dynamicprogramming/target/scala-2.12/classes ...[0m
-[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.12' for Scala 2.12.12. Compiling...[0m
-[0m[[0m[0minfo[0m] [0m[0m  Compilation completed in 6.53s.[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 10 s, completed 01-Dec-2020, 9:02:07 pm[0m
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
-[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m

@@ -28,6 +28,7 @@ object ConsumerPlaygroundInstance1 extends App {
     for(record <- polledRecord.iterator) {
       println(s"| ${record.key()} | ${record.value()} | ${record.partition()} | ${record.offset()} |")
     }
+    consumer.commitSync(Duration.ofSeconds(1))
     Thread.sleep(3000)
   }
 
