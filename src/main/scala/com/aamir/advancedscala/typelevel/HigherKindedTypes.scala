@@ -44,7 +44,7 @@ object  HigherKindedTypes1 extends App {
   monadList.map(_ * 2) //// from Monad[List, Int] we return List[Int]
 
  println {
-   multiply(new MonadList(List(1, 2)), new MonadList(List('a', 'b')))
+   multiply[List, Int, Char](new MonadList(List(1, 2)), new MonadList(List('a', 'b')))
  }
 
 }

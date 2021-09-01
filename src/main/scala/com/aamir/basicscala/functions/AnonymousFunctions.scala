@@ -1,4 +1,4 @@
-package basicscala.functions
+package com.aamir.basicscala.functions
 
 
 object AnonymousFunctions extends App {

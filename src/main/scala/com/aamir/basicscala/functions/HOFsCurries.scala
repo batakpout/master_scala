@@ -28,8 +28,7 @@ object HOFsCurries extends App {
 
         x
       }
-    }
-    else (x: Int) => {
+    } else (x: Int) => {
       println("xxxx" + x)
       nTimesBetter(f, n - 1)(f(x))
     }
