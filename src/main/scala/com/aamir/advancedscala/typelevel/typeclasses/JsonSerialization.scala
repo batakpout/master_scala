@@ -1,3 +1,4 @@
+/*
 package advancedscala.typelevel.typeclasses
 
 import java.util.Date
@@ -104,4 +105,4 @@ object JsonSerialization extends App {
   ))
 
   println(feed.toJson.stringify)
-}
+}*/
