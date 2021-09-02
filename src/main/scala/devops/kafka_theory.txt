@@ -2,3 +2,4 @@
 --> Now, if we specify a key then default partitioner works and messages appear in different partitions.
 --> we can also pass partition explicitly and all of the message will go to the specified partition.
 --> It is also possible to implement a custom partitioner based on our use case.
+

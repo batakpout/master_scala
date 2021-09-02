@@ -1,8 +1,5 @@
 package com.aamir.basicscala.exercises
 
-
-
-
 abstract class MyList[+A] {
   def head: A
 

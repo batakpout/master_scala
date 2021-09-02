@@ -6,6 +6,8 @@ import org.apache.kafka.common.serialization.{IntegerSerializer, StringSerialize
 
 import java.util.Properties
 
+//Todo: write a consumer that subscribes to multiple topics
+//Todo: Question: Do we have to commit ourselves in consumers, otherwise while restarting it will fetch all records
 object ProducerPlayground extends App {
 
   def customPartitioner(key: Int):Int = key % 3
@@ -28,3 +30,4 @@ object ProducerPlayground extends App {
   producer.flush()
 
 }
+
