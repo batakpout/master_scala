@@ -37,6 +37,13 @@ object JsonWriterInstance {
   /*  implicit val numberWriter: JsonWriter[Int] = new JsonWriter[Int] {
       override def write(value: Int): Json = JsString(value)
     }*/
+
+  implicit def optionWriter[A](implicit writer: JsonWriter[A]):JsonWriter[Option[A]] =   new JsonWriter[Option[A]] {
+    override def write(value: Option[A]): Json = value match {
+      case Some(aValue) => writer.write(aValue)
+      case None         => JsNull
+    }
+  }
 }
 
 //interface object
@@ -115,6 +122,40 @@ object test5 extends App {
     implicit val writer1: JsonWriter[String] = (value: String) => JsString(value)
     implicit val writer2: JsonWriter[String] = (value: String) => JsString(value)
   }
+
   import TCI._
   //Json.toJson("A string") // not able to find implicits, ambiguity
+}
+
+/*
+consider defining a JsonWriter for Option. We would need a
+JsonWriter[Option[A]] instance for every A we care about in our application. We
+could try to brute force the problem by creating a library of implicit
+however, this approach clearly doesn’t scale. We end up requiring two
+implicit vals for every type A in our application: one for A and one for
+Option[A]
+ */
+
+object OptionInstances {
+
+  implicit val optionInstance:JsonWriter[Option[Int]] = new JsonWriter[Option[Int]] {
+    override def write(value: Option[Int]): Json = JsNumber(value.get)
+  }
+  //Now, I have to define Option[String] for String option and for other types too.
+  //Fortunately, we can abstract the code for handling Option[A] into a common constructor based on the instance for A:
+
+}
+
+object GenericOptionTypeClassHandler extends App {
+
+   import JsonWriterInstance._
+   val res: Json = Json.toJson(Option("abc"))
+  println(res)
+  /*
+
+   In this way, implicit resolution becomes a search through the space of possible
+   combinations of implicit definitions, to find a combination that creates a type
+   class instance of the correct overall type.
+
+ */
 }
