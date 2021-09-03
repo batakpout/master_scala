@@ -10,3 +10,37 @@
  --> A type class is an interface or API that represents some functionality we want
      to implement. In Scala a type class is represented by a trait with at least one
      type parameter
+
+ --> Type Class Use: Interface Objects and Interface Syntax.
+
+ --> The Scala standard library provides a generic type class interface called
+     implicitly. Its definition is very simple:
+     def implicitly[A](implicit value: A): A = value
+     We can use implicitly to summon any value from implicit scope
+
+ --> Most type classes in Cats provide other means to summon instances. How‐
+     ever, implicitly is a good fallback for debugging purposes. We can insert a
+     call to implicitly within the general flow of our code to ensure the compiler
+     can find an instance of a type class and ensure that there are no ambiguous
+     implicit errors.
+
+ --> The places where the compiler searches for candidate instances is known as
+     the implicit scope.
+
+ --> The implicit scope which roughly consists of:
+     • local or inherited definitions;
+     • imported definitions;
+     • definitions in the companion object of the type class or the parameter
+       type (in this case JsonWriter or String
+
+--> If the compiler sees multiple candidate type class definitions,
+    it fails with an ambiguous implicit values error.
+
+--> we can package type class instances in roughly four ways:
+    1. by placing them in an object such as JsonWriterInstances;
+    2. by placing them in a trait;
+    3. by placing them in the companion object of the type class;
+    4. by placing them in the companion object of the parameter type.
+    With option 1 we bring instances into scope by importing them. With option
+    2 we bring them into scope with inheritance. With options 3 and 4 instances
+    are always in implicit scope, regardless of where we try to use them
