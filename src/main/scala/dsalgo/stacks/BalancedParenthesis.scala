@@ -1,11 +1,14 @@
 package dsalgo.stacks
 
+import scala.annotation.tailrec
+
 
 object BalancedParenthesis extends App {
 
 
    def areParenthesisBalanced(s: String): Boolean =  {
 
+    @tailrec
     def rec(s: String, stk: MyStack[Char]): Boolean = {
        if(s.isEmpty) {
          if(stk.isEmpty) true else false
@@ -36,44 +39,5 @@ object BalancedParenthesis extends App {
     //areParenthesisBalanced("[(a + b) + {(c + d) * (e / f)}]")
   }
 
-
-}
-
-object Balanced_Parenthesis_Imperative_Style extends App {
-
-  val st = scala.collection.mutable.Stack[Char]()
-  def isParenthesisBalanced(s: String): Boolean = {
-
-    var i = 0;
-    while(i < s.length()) {
-      val ch = s.charAt(i)
-      if(ch == '{' || ch == '(' || ch == '[') {
-        st.push(ch)
-      } else if(ch == '}' || ch == ')' || ch == ']') {
-        if(st.isEmpty) return false;
-        else {
-          if(!isMatchingV2(st.pop(), ch)) return false
-        }
-      }
-      i += 1;
-    }
-    if(st.isEmpty) {
-      return true;
-    }
-    return false;
-  }
-
-  def isMatchingV2(c1: Char, c2: Char):Boolean =  {
-    if(c1 == '(' && c2== ')') return true;
-    else if (c1 == '[' && c2 ==  ']') return true;
-    else if (c1 == '{' && c2 ==  '}') return true;
-    else return false;
-  }
-
-  println {
-    //isParenthesisBalanced("()[]{}");
-    isParenthesisBalanced("[(a+b)+{(c+d)*(e/f)]}")
-    //isParenthesisBalanced("[(a + b) + {(c + d) * (e / f)}]")
-  }
 
 }

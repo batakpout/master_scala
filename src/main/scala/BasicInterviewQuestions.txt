@@ -1,0 +1,14 @@
+================================================================================================================================================================================
+Why Actors are lightweight?
+In the Akka Toolkit, Actors are lightweight. They have only business logic. Other logic like such as supervision, dispatching messages, mail-boxing, and more,
+ are taken care of by other Akka components.
+
+For instance, supervisions will be taken care of by parent Actors. Dispatching messages by the Akka Dispatcher component,
+mail-boxing by the Akka mailbox component, and more.
+
+In the Akka Toolkit, business logic concerns and other concerns are loosely coupled. That's why Akka Actors are very lightweight; they need space to do their job.
+================================================================================================================================================================================
+
+Why we need and use currying?
+How immutability helps?
+Why akka actors helps?
