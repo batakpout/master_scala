@@ -78,10 +78,10 @@ object CsvProcessor {
 
   def processFiles(filesList: List[File]) = {
 
-    val sourceSet  = filesList map { file =>
+    val sourceSet = filesList map { file =>
       val csvFile: Path = Paths.get(file.getPath)
 
-      val source  = FileIO.fromPath(csvFile).
+      val source = FileIO.fromPath(csvFile).
         via(CsvParsing.lineScanner(',')).
         map(_.map(_.utf8String)).
         map(list => list.filterNot(x => x == "sensor-id" || x == "humidity")).filter(_.nonEmpty)
@@ -92,7 +92,7 @@ object CsvProcessor {
         }.mergeSubstreams
 
     }
-    val  combinedSources = sourceSet.fold(Source.empty) { (acc, finalSource) =>
+    val combinedSources = sourceSet.fold(Source.empty) { (acc, finalSource) =>
       Source.combine(finalSource, acc)(Merge(_))
     }
     val mergedSources = combinedSources.groupBy(5, x => x.head._1).
@@ -105,13 +105,16 @@ object CsvProcessor {
     val minAvgMaxedRecords = calculateMinAvgMax(mergedSources)
     for {
       items <- minAvgMaxedRecords.runWith(Sink.seq)
-      recordsAsList  = mapToListTuple(items)
-      partitionedList  = recordsAsList.partition(_._2._1 == "NaN")
+      recordsAsList = mapToListTuple(items)
+      partitionedList = recordsAsList.partition(_._2._1 == "NaN")
       avgIntList = convertAvgStringToInt(partitionedList._2)
       avgStringList = convertAvgIntToString(sortList(avgIntList))
-      _=println("Sensors with highest avg humidity:")
-      result = avgStringList ::: partitionedList._1
-      _=println(result)
+      _ = println("Sensors with highest avg humidity:")
+      _ = println("sensor-id, min, avg, max")
+      _ = (avgStringList ::: partitionedList._1).foreach(sensorRecord =>
+        println(sensorRecord._1, sensorRecord._2._1, sensorRecord._2._2, sensorRecord._2._3)
+      )
+
 
     } yield ()
 
@@ -120,5 +123,15 @@ object CsvProcessor {
 }
 
 object Main extends App {
-  CsvProcessor.processFiles(List(new File("D:/abc1.csv"), new File("D:/abc2.csv")))
+
+  def getListOfFiles(dir: String): List[String] = {
+    val file = new File(dir)
+    file.listFiles.filter(_.isFile)
+      .filter(_.getName.endsWith(".csv"))
+      .map(_.getPath).toList
+  }
+
+  val fileList = getListOfFiles(args(0))
+  println(s"Num of processed files: ${fileList.size}")
+  CsvProcessor.processFiles(fileList.map(new File(_)))
 }
