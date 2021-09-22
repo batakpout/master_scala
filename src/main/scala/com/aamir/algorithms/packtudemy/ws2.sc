@@ -52,7 +52,7 @@ def myDropWhileCurried[A](list: List[A])(f: A => Boolean): List[A] = list match 
   case h :: tail if f(h) => myDropWhileCurried(tail)(f)
   case _                 => list
 }
-myDropWhileCurried(List(2, 4, 5, 7))((x: Int) => x % 2 == 0)
+myDropWhileCurried(List(2, 4, 5, 7))(x => x % 2 == 0)
 
 //concat
 def concat[A](list1: List[A], list2: List[A]): List[A] = list1 match {
