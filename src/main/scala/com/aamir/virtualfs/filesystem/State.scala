@@ -1,8 +1,8 @@
-package virtualfs.filesystem
-import virtualfs.files.Directory
+package com.aamir.virtualfs.filesystem
+import com.aamir.virtualfs.files.Directory
 class State(val root: Directory, val wd: Directory, output: String) {
 
-   def show = {
+   def show(): Unit = {
      println(output)
      println(State.SHELL_TOKEN)
    }

@@ -1,7 +1,7 @@
-package virtualfs.commands
+package com.aamir.virtualfs.commands
 
-import virtualfs.files.{DirEntry, Directory}
-import virtualfs.filesystem.State
+import com.aamir.virtualfs.files.{DirEntry, Directory}
+import com.aamir.virtualfs.filesystem.State
 
 class Mkdir(name: String) extends CreateEntry(name) {
   override def createSpecificEntry(state: State): DirEntry =

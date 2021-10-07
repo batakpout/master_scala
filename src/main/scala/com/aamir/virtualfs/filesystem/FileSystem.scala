@@ -1,9 +1,10 @@
-package virtualfs.filesystem
+package com.aamir.virtualfs.filesystem
+
 
 import java.util.Scanner
 
-import virtualfs.commands.Command
-import virtualfs.files.Directory
+import com.aamir.virtualfs.commands.Command
+import com.aamir.virtualfs.files.Directory
 
 object FileSystem extends App {
 
@@ -11,7 +12,7 @@ object FileSystem extends App {
   val root = Directory.ROOT
   var state = State(root = root, wd = root)
    while(true) {
-     state.show
+     state.show()
      state = Command.from(scanner.nextLine()).apply(state)
    }
 }

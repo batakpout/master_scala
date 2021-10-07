@@ -1,7 +1,8 @@
-package virtualfs.commands
-import virtualfs.files.{DirEntry, Directory}
-import virtualfs.filesystem.State
+package com.aamir.virtualfs.commands
 
+import com.aamir.virtualfs.commands.Command
+import com.aamir.virtualfs.files.{DirEntry, Directory}
+import com.aamir.virtualfs.filesystem._
 import scala.annotation.tailrec
 
 class Cd(dir: String) extends Command {

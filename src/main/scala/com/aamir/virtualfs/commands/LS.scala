@@ -1,7 +1,7 @@
-package virtualfs.commands
+package com.aamir.virtualfs.commands
 
-import virtualfs.files.DirEntry
-import virtualfs.filesystem.State
+import com.aamir.virtualfs.files.DirEntry
+import com.aamir.virtualfs.filesystem.State
 
 class LS extends Command {
   override def apply(state: State): State = {

@@ -1,6 +1,6 @@
-package virtualfs.commands
+package com.aamir.virtualfs.commands
 
-import virtualfs.filesystem.State
+import com.aamir.virtualfs.filesystem.State
 
 trait Command {
   def apply(state: State): State

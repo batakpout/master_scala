@@ -1,6 +1,6 @@
-package virtualfs.files
+package com.aamir.virtualfs.files
 
-import virtualfs.filesystem.FileSystemException
+import com.aamir.virtualfs.filesystem.FileSystemException
 
 class File(override val parentPath: String, override val name: String, contents: String) extends DirEntry(parentPath, name) {
   override def asDirectory: Directory = throw new FileSystemException("A file cannot be converted to a directory")
